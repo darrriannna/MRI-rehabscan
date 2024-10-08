@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import '../styles/index.css';
 
 const Navbar = () => {
     
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light p-3 sticky-top ">
+            <nav className="navbar navbar-expand-lg p-3 sticky-top ">
                 <div className="container">
                     <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/"> 
                         <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="Logo" style={{ height: '70px' }} />
@@ -21,14 +22,15 @@ const Navbar = () => {
                                 <NavLink className="nav-link" to="/">Hem</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/MRI">MRI-services</NavLink>
+                                <NavLink className="nav-link" to="/MRI">MR Prislista</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/about">Om oss</NavLink>
                             </li>
                         </ul>
                         <div className="buttons text-center">
-                            <NavLink to="/bookappointment" className="btn btn-dark m-2"><i></i> Boka tid </NavLink>
+                            <NavLink to="/bookappointment" className="btn-navbar text-decoration-none"> Boka tid </NavLink>
+                            
                         </div>
                     </div>
                 </div>

@@ -10,18 +10,24 @@ const Footer = () => {
           <div className="col-md-6">
             <h5>Information</h5>
             <ul className="list-unstyled">
-              <li><Link to="/om-oss">Om oss</Link></li>
-              <li><Link to="/fragor-svar">Frågor & Svar</Link></li>
-              <li><Link to="/kopvillkor">Köpvillkor</Link></li>
-              <li><Link to="/integritetspolicy">Integritetspolicy</Link></li>
+              <li><Link to="/about">Om oss</Link></li>
+              <li><Link to="/policy">Integritetspolicy</Link></li>
+              
             </ul>
-          </div>
+            <h4>Hitta oss</h4>
+            <p >Karl Johansgatan 100, 414 55 Göteborg</p>
+        <p>070-582 21 42</p>
+        <p >
+          <a className="link" href="mailto:info@nopainclinic.se">info@nopainclinic.se</a>
+        </p>
+        <div>
+        
+          </div></div>
           <div className="col-md-6">
             <h5>Kundservice</h5>
             <ul className="list-unstyled">
-              <li><Link to="/byte-retur">Byte & Retur</Link></li>
-              <li><Link to="/kontakta-oss">Kontakta oss</Link></li>
-              <li><Link to="/varukorg">Varukorg</Link></li>
+              <li><Link to="/contact">Kontakta oss</Link></li>
+              
             </ul>
           </div>
         </div>
