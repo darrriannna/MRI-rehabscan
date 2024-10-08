@@ -5,39 +5,59 @@ const AboutPage = () => {
     <>
       <Navbar />
       <div className="container my-3 py-3">
-        <h1 className="text-center">Om oss</h1>
+        <h1 className="text-center">About Us</h1>
         <hr />
         <p className="lead text-center">
-       NO naprapat&ortopedklinik är en liten klinik med stor drivkraft.
-
-     Vi värnar om att just du ska känna dig sedd och omhändertagen med ditt besvär. Vi tar oss tid för att lyssna, ställa frågor och undersöka dig för att hitta rätt behandlingsplan. Behandlingen kan innebära att vi hjälper dig med manuell behandling, råd och information samt rehabträning.
-     Det kan även innebära att vi hänvisar dig till rätt vårdinstans.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          facere doloremque veritatis odit similique sequi. Odit amet fuga nam
+          quam quasi facilis sed doloremque saepe sint perspiciatis explicabo
+          totam vero quas provident ipsam, veritatis nostrum velit quos
+          recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo
+          earum unde eligendi autem praesentium, doloremque distinctio nesciunt
+          porro tempore quis eaque labore voluptatibus ea necessitatibus
+          exercitationem tempora molestias. Ad consequuntur veniam sequi ullam
+          tempore vel tenetur soluta dolore sunt maxime aliquam corporis est,
+          quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit
+          delectus expedita a alias nam recusandae illo debitis repellat libero,
+          quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam
+          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
         </p>
-        <div className="container">
-          <p className="about-title">Om <a className="link" href="#">NO Kliniken</a></p>
-          <p className="about-text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-check-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-              <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-            </svg>
-            Vår vision är att leverera rätt och snabb behandling med professionell, hög och bred kompetens under samma tak med patientens hela hälsa i fokus för att förbättra och bibehålla god livskvalitet.
-          </p>
-          <p className="about-text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-check-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-              <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-            </svg>
-            Vi har ett helhetstänk genom vår bedömning, behandling och uppföljning och vi vill alltid tillsammans med patienten diskutera vad som kan göras i vardagen så att besvären inte återvänder.
-          </p>   
-          <p className="about-text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-check-circle" viewBox="0 0 16 16">
-              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-              <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
-            </svg>
-            Genom att kombinera välfungerande och beprövade behandlingsmetoder med en helhetssyn kan vi optimera vår bedömning och behandling.
-          </p> 
+
+        <h2 className="text-center py-4">Our Products</h2>
+        <div className="row">
+          <div className="col-md-3 col-sm-6 mb-3 px-3">
+            <div className="card h-100">
+              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <div className="card-body">
+                <h5 className="card-title text-center">Mens's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-3 px-3">
+            <div className="card h-100">
+              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <div className="card-body">
+                <h5 className="card-title text-center">Women's Clothing</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-3 px-3">
+            <div className="card h-100">
+              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <div className="card-body">
+                <h5 className="card-title text-center">Jewelery</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 col-sm-6 mb-3 px-3">
+            <div className="card h-100">
+              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <div className="card-body">
+                <h5 className="card-title text-center">Electronics</h5>
+              </div>
+            </div>
+          </div>
         </div>
-        
       </div>
       <Footer />
     </>
