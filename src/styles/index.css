@@ -1,0 +1,365 @@
+.banner {
+    background-color: #ffffff; /* Light grey background */
+    color: #333; /* Dark text color */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1050; /* Ensure it's above other elements */
+}
+
+.banner-text {
+    font-size: 1.2rem;
+    
+    animation: fade-in-out 3s infinite;
+}
+
+@keyframes fade-in-out {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.navbar {
+        position: sticky;
+        top: 40px; /* Adjust based on the height of the banner */
+        z-index: 1040; /* Ensure it is above the banner */
+}
+
+.banner-images-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  padding: 30px;
+  margin-left: 30px;
+}
+
+.image-front {
+  width: 100%;
+  height: auto;
+}
+
+.circle-animation {
+  position: absolute;
+  max-width: 30px; /* Adjust as needed */
+  max-height: 30px; /* Adjust as needed */
+  background-color: rgba(228, 236, 241, 0.414);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: expanding 2s linear infinite;
+  cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+  z-index: 1;
+}
+
+.circle-animation:hover{
+  z-index: 3;
+}
+.circle-animation:hover .pop-up {
+  display: block; /* Show the pop-up on hover */
+
+}
+
+.pop-up {
+  display: none; /* Hide the pop-up by default */
+  position: absolute;
+  top: -50px; /* Adjust as needed */
+  left: 55%; /* Adjust as needed */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 10px;
+  font-weight: 700px;
+  width: 170px;
+  max-height: 100px;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+.animation-button{
+padding: none;
+align-self: center;
+font-size: 14px;
+vertical-align: middle; 
+}
+
+.animation-text{
+  font-weight: 700;
+  font-size: 14px;
+ 
+}
+
+@keyframes expanding {
+  0% {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(129, 182, 236);
+    z-index: 2;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    border: 7px solid rgb(129, 182, 236);
+    z-index: 2;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(129, 182, 236);
+    z-index: 2;
+  }
+}
+
+/* Specific positions for each circle */
+.circle-animation1 { top: 25%; left: 22%; z-index: 2;}
+.circle-animation2 { top: 25%; left: 40%; z-index: 2;}
+.circle-animation3 { top: 50%; left: 31%; z-index: 2;}
+.circle-animation4 { top: 45%; left: 26%; z-index: 2;}
+.circle-animation5 { top: 45%; left: 36%; z-index: 2;}
+.circle-animation6 { top: 53%; left: 44%; z-index: 2;}
+.circle-animation7 { top: 53%; left: 18%; z-index: 2;}
+.circle-animation8 { top: 69%; left: 28%; z-index: 2;}
+.circle-animation9 { top: 69%; left: 34%; z-index: 2;}
+.circle-animation10 { top: 84%; left: 28%; z-index: 2;}
+.circle-animation11 { top: 84%; left: 33%; z-index: 2;}
+.circle-animation12 { top: 42%; left: 78%; z-index: 2;}
+.circle-animation13 { top: 25%; left: 68%; z-index: 2;}
+.circle-animation14 { top: 38%; left: 68%; z-index: 2;}
+.circle-animation15 { top: 48%; left: 68%; z-index: 2;}
+.circle-animation16 { top: 42%; left: 57%; z-index: 2;}
+
+.mr-services-list {
+  width: 100%;
+  padding: 10px;
+  max-width: 500px; /* Adjust as needed */
+  margin-top: 20px; /* Adjust as needed */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  list-style: none;
+  align-items: center;
+}
+
+.mr-services-list.collapsed {
+  max-height: 0;
+}
+
+.mr-services-list.expanded {
+  max-height: 2400px; /* Adjust as needed to fit content */
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  color: rgb(59, 60, 60);
+}
+
+.mr-service-container {
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.collapsed {
+  transform: rotate(0deg);
+}
+
+.arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.mr-price {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .mr-service-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mr-service-container p,
+  .mr-service-container .btn-primary,
+  .mr-service-container .mr-price {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mr-service-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mr-service-container p,
+  .mr-service-container .btn-primary,
+  .mr-service-container .mr-price {
+    margin: 0 10px;
+  }
+  .circle-animation1 { top: 30%; left: 24%;  z-index: 2}
+.circle-animation2 { top: 30%; left: 41%;  z-index: 2}
+.circle-animation3 { top: 50%; left: 33%;  z-index: 2}
+.circle-animation4 { top: 45%; left: 28%;  z-index: 2}
+.circle-animation5 { top: 45%; left: 37%;  z-index: 2}
+.circle-animation6 { top: 53%; left: 44%;  z-index: 2}
+.circle-animation7 { top: 53%; left: 21%;  z-index: 2}
+.circle-animation8 { top: 69%; left: 30%;  z-index: 2}
+.circle-animation9 { top: 69%; left: 36%;  z-index: 2}
+.circle-animation10 { top: 82%; left: 31%;  z-index: 2}
+.circle-animation11 { top: 82%; left: 35%;  z-index: 2}
+.circle-animation12 { top: 42%; left: 76%; z-index: 2;}
+.circle-animation13 { top: 25%; left: 66%; z-index: 2;}
+.circle-animation14 { top: 36%; left: 66%; z-index: 2;}
+.circle-animation15 { top: 48%; left: 66%; z-index: 2;}
+.circle-animation16 { top: 42%; left: 57%; z-index: 2;}
+
+.circle-animation{
+  max-width: 20px;
+  max-height: 20px;
+}
+
+@keyframes expanding {
+  0% {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(129, 182, 236);
+  }
+  50% {
+    width: 15px;
+    height: 15px;
+    border: 5px solid rgb(129, 182, 236);
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(129, 182, 236);
+  }
+}
+.banner-text{
+  font-size: 16px;
+  animation: fade-in-out 3s infinite;
+}
+}
+
+.phone{
+  display: flex;
+  margin: auto 0;
+}
+
+.header-image-banner{
+  align-self: center;
+  margin: auto;
+  vertical-align: middle;
+
+}
+
+/* Add this to your CSS file or within a style tag */
+.buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 10px;
+}
+
+.filter-button img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.filter-button span {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #000;
+}
+
+.filter-button:hover span {
+  color: #007bff; /* Change to your preferred hover color */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+}
+.footer h5 {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+.footer ul {
+  padding: 0;
+  list-style: none;
+}
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+.footer ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  text-decoration: underline;
+  
+}
+
+
+.carousel-image{
+  display: block;
+  max-width: 1200px;
+  max-height: 700px;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    max-width: 700px;
+  }
+}

@@ -1,0 +1,117 @@
+/* src/BookingForm.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input, select, button {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .submit-button {
+    background-color: #636563;
+    width: 100px;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+  }
+  
+  button:hover {
+    background-color: #cbcecb;
+  }
+  
+  .time-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .time-button {
+    padding: 10px 15px;
+    color: black;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .time-button.selected {
+    background-color: #ccc;
+    cursor: default;
+  }
+  
+  .time-button:not(.selected):hover {
+    background-color: #f0f0f0;
+  }
+  
+  .book-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book-time-text {
+    text-align: center;
+    font-size: 30px; /* Adjust as needed */
+  }
+  
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .header-mri{
+    color: #4275c1;
+    font-weight: 700;
+  }
+  .text-form-mri-container{
+    background-color: #63656327;
+    padding: 3px;
+  }
+  .text-form-mri{
+    font-style: italic;
+    font-size: 13px;
+    padding: 2px;
+  }
+  .error {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .service-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .service-button.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
