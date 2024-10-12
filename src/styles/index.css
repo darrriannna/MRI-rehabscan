@@ -16,6 +16,10 @@ body{
 .main{
   background: linear-gradient(#BFE4E6 0%, #BFE4E6 20%,#FCF2D6 20%, #FCF2D6 70%, #BFE4E6 80%, #FCF2D6 100%);
 }
+.main-pricelist{
+  background: linear-gradient(#BFE4E6 0%, #FCF2D6 30%, #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
+
+}
 .banner-text {
     font-size: 1.2rem;
     
@@ -87,25 +91,28 @@ body{
   width: 100%;
   height: auto;
 }
-
 .circle-animation {
   position: absolute;
-  max-width: 30px; /* Adjust as needed */
-  max-height: 30px; /* Adjust as needed */
-  background-color: rgba(228, 236, 241, 0.414);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: expanding 2s linear infinite;
+  width: 30px; /* Starting width */
+  height: 30px; /* Starting height */
+  background: radial-gradient(circle, #e66465, #e5df91 ); /* Gradient background */
+  border-radius: 50%; /* Make it a circle */
+  transform: translate(-50%, -50%); /* Centering */
+  animation: expanding 2s linear infinite; /* Animation */
   cursor: pointer; /* Change cursor to pointer to indicate interactivity */
   z-index: 1;
+  /* Blurred border effect */
+  box-shadow: 0 0 10px rgba(232, 100, 101, 0.5), 0 0 20px rgba(145, 152, 229, 0.5); /* Adjust as needed */
 }
 
-.circle-animation:hover{
+.circle-animation:hover {
   z-index: 3;
 }
+
 .circle-animation:hover .pop-up {
   display: block; /* Show the pop-up on hover */
-
+  background-color: rgba(49, 187, 199, 0.8); /* Change color on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
 }
 
 .pop-up {
@@ -118,7 +125,7 @@ body{
   border: 1px solid #ccc;
   padding: 5px;
   font-size: 10px;
-  font-weight: 700px;
+  font-weight: bold; /* Corrected from 700px to bold */
   width: 170px;
   max-height: 100px;
   border-radius: 4px;
@@ -128,66 +135,56 @@ body{
   z-index: 4;
 }
 
-.animation-button{
-padding: none;
-align-self: center;
-font-size: 14px;
-vertical-align: middle; 
+
+.animation-text {
+  font-weight: bold; /* Corrected from 700 to bold */
+  font-size: 14px;
 }
 
-.animation-text{
-  font-weight: 700;
-  font-size: 14px;
- 
-}
-.service-info{
+.service-info {
   background-color: #fffaec;
   padding: 20px;
   border-radius: 0.5cm;
 }
 
-
 @keyframes expanding {
   0% {
     width: 30px;
     height: 30px;
-    border: 3px solid rgb(129, 182, 236);
-    z-index: 2;
   }
   50% {
-    width: 30px;
-    height: 30px;
-    border: 7px solid rgb(129, 182, 236);
-    z-index: 2;
+    width: 45px; /* Expand to a larger size */
+    height: 45px; /* Expand to a larger size */
   }
   100% {
-    width: 30px;
-    height: 30px;
-    border: 3px solid rgb(129, 182, 236);
-    z-index: 2;
+    width: 30px; /* Return to the original size */
+    height: 30px; /* Return to the original size */
   }
 }
+
+
 .image-homepage{
   max-width: 550px;
  margin-left: 20px;
+
+}
+@media (max-width: 1000px) {
+  .image-homepage{
+    max-width: 450px;
+    
+  }
 }
 /* Specific positions for each circle */
-.circle-animation1 { top: 25%; left: 22%; z-index: 2;}
-.circle-animation2 { top: 25%; left: 40%; z-index: 2;}
-.circle-animation3 { top: 50%; left: 31%; z-index: 2;}
-.circle-animation4 { top: 45%; left: 26%; z-index: 2;}
-.circle-animation5 { top: 45%; left: 36%; z-index: 2;}
-.circle-animation6 { top: 53%; left: 44%; z-index: 2;}
-.circle-animation7 { top: 53%; left: 18%; z-index: 2;}
-.circle-animation8 { top: 69%; left: 28%; z-index: 2;}
-.circle-animation9 { top: 69%; left: 34%; z-index: 2;}
-.circle-animation10 { top: 84%; left: 28%; z-index: 2;}
-.circle-animation11 { top: 84%; left: 33%; z-index: 2;}
-.circle-animation12 { top: 42%; left: 78%; z-index: 2;}
-.circle-animation13 { top: 25%; left: 68%; z-index: 2;}
-.circle-animation14 { top: 38%; left: 68%; z-index: 2;}
-.circle-animation15 { top: 48%; left: 68%; z-index: 2;}
-.circle-animation16 { top: 42%; left: 57%; z-index: 2;}
+.circle-animation1 { top: 34%; left: 38%; z-index: 2;}
+.circle-animation2 { top: 34%; left: 64%; z-index: 2;}
+.circle-animation3 { top: 56%; left: 34%; z-index: 2;}
+.circle-animation4 { top: 56%; left: 69%; z-index: 2;}
+.circle-animation5 { top: 75%; left: 28%; z-index: 2;}
+.circle-animation6 { top: 75%; left: 75%; z-index: 2;}
+.circle-animation7 { top: 70%; left: 42%; z-index: 2;}
+.circle-animation8 { top: 70%; left: 61%; z-index: 2;}
+.circle-animation9 { top: 78%; left: 51%; z-index: 2;}
+
 
 .mr-services-list {
   width: 100%;
@@ -283,43 +280,24 @@ vertical-align: middle;
   .mr-service-container .mr-price {
     margin: 0 10px;
   }
-  .circle-animation1 { top: 30%; left: 24%;  z-index: 2}
-.circle-animation2 { top: 30%; left: 41%;  z-index: 2}
-.circle-animation3 { top: 50%; left: 33%;  z-index: 2}
-.circle-animation4 { top: 45%; left: 28%;  z-index: 2}
-.circle-animation5 { top: 45%; left: 37%;  z-index: 2}
-.circle-animation6 { top: 53%; left: 44%;  z-index: 2}
-.circle-animation7 { top: 53%; left: 21%;  z-index: 2}
-.circle-animation8 { top: 69%; left: 30%;  z-index: 2}
-.circle-animation9 { top: 69%; left: 36%;  z-index: 2}
-.circle-animation10 { top: 82%; left: 31%;  z-index: 2}
-.circle-animation11 { top: 82%; left: 35%;  z-index: 2}
-.circle-animation12 { top: 42%; left: 76%; z-index: 2;}
-.circle-animation13 { top: 25%; left: 66%; z-index: 2;}
-.circle-animation14 { top: 36%; left: 66%; z-index: 2;}
-.circle-animation15 { top: 48%; left: 66%; z-index: 2;}
-.circle-animation16 { top: 42%; left: 57%; z-index: 2;}
+  
 
-.circle-animation{
-  max-width: 20px;
-  max-height: 20px;
-}
+
 
 @keyframes expanding {
   0% {
-    width: 15px;
-    height: 15px;
-    border: 2px solid rgb(129, 182, 236);
+    width: 20px;
+    height: 20px;
   }
   50% {
-    width: 15px;
-    height: 15px;
-    border: 5px solid rgb(129, 182, 236);
+    width: 35px;
+    height: 35px;
+  
   }
   100% {
-    width: 15px;
-    height: 15px;
-    border: 2px solid rgb(129, 182, 236);
+    width: 20px;
+    height: 20px;
+ 
   }
 }
 .banner-text{
@@ -428,23 +406,24 @@ vertical-align: middle;
   justify-content: space-between;
   align-items: center;
 }
+
 .main-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Default direction: row for larger screens */
   padding: 10px 0;
 }
 
 .left-column {
-  flex: 1;
+  flex: 1; /* Take equal space */
 }
 
 .left-column img {
-  max-width: 500px;
+  max-width: 100%; /* Ensure image is responsive */
   border-radius: 10px;
 }
 
 .right-column {
-  flex: 1;
+  flex: 1; /* Take equal space */
 }
 
 .right-column h2 {
@@ -473,13 +452,13 @@ vertical-align: middle;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .main-content {
-      flex-direction: column !important; 
+@media (max-width: 800px) { /* Adjusting to 800px */
+  .container-home {
+    flex-direction: column; /* Change to column for smaller screens */
   }
   
   .left-column {
-      margin-bottom: 20px;
+    margin-bottom: 20px; /* Space below the image */
   }
 }
 
@@ -488,6 +467,22 @@ vertical-align: middle;
   flex-wrap: wrap; /* Allow wrapping of items */
   justify-content: space-around; /* Space between containers */
   padding: 20px;
+}
+
+.grid-deceases{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-around; /* Space between containers */
+  padding: 20px;
+}
+.containers-deceases{
+  background-color: rgb(246, 251, 231);
+  border-radius: 0.5cm;
+  box-shadow: 2px #31bbc7;
+  padding: 20px;
+  flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+  min-width: 100px; 
 }
 
 .box {
@@ -570,6 +565,7 @@ background-color: #CEF3FF;
   box-shadow: inset 0 0 0 2px #000000;
   background-color: transparent;
   height: 48px;
+  text-decoration: none;
   :hover{
       color: #fff;
       background-color: #616467;
@@ -660,3 +656,44 @@ background-color: #CEF3FF;
       background-color: #616467;
   }
 }
+
+.container-pricelist {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row; /* Default to row for larger screens */
+  align-items: flex-start; /* Align items to the start */
+  padding: 10px 0;
+}
+
+.banner-image {
+  position: relative; /* Necessary for absolute positioning of circles */
+  flex: 1; /* Allow the image to take up available space */
+}
+
+.banner-image img {
+  max-width: 100%; /* Make the image responsive */
+  border-radius: 10px;
+}
+
+.text-content {
+  flex: 1; /* Allow text content to take up available space */
+  padding: 0 20px; /* Add some padding for better spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Stack the image on top of the text */
+  }
+
+  .banner-image {
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+}
+
+/* Additional styles for the circle animation, pop-up, and other elements can remain the same or be adjusted as needed */

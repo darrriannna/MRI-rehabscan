@@ -13,23 +13,22 @@ const Home = () => {
     <div className="main">
       <div className="container">
       <section class="main-content">
-        <div class="container-home">
-            <div class="left-column">
-                <img src="./assets/MRI-3d.png" alt="MRI 3d"/>
-            </div>
-            <div class="right-column">
-                <h2>Undvik köer och väntetider med privat röntgen</h2>
-                <ul>
-                    <li>Få tid för undersökning inom 5 arbetsdagar.</li>
-                    <li>Kontakt med legitimerad läkare under hela processen.</li>
-                    <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
-                    <li>Personlig återkoppling efter undersökning.</li>
-                    <li>Remiss till fortsatt undersökning vid behov.</li>
-                </ul>
-            </div>
-        
-        </div>
-    </section>
+  <div class="container-home">
+    <div class="left-column">
+      <img src="./assets/MRI-3d.png" alt="MRI 3d" />
+    </div>
+    <div class="right-column">
+      <h2>Undvik köer och väntetider med privat röntgen</h2>
+      <ul>
+        <li>Få tid för undersökning inom 5 arbetsdagar.</li>
+        <li>Kontakt med legitimerad läkare under hela processen.</li>
+        <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
+        <li>Personlig återkoppling efter undersökning.</li>
+        <li>Remiss till fortsatt undersökning vid behov.</li>
+      </ul>
+    </div>
+  </div>
+</section>
     <div className='rules-container'>
       <h3 className='center-text'>Hur funkar det?</h3>
      <div class="container-card">
@@ -82,7 +81,7 @@ const Home = () => {
       </div>
     </div>
       </div>
-      <div className='right-column'>
+      <div className='right-column '>
         <img className='image-homepage' src="./assets/Mri.png" alt="doctor with patient" />
       </div>
     </div> <div>
