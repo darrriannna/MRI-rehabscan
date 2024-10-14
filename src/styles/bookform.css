@@ -61,6 +61,11 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: linear-gradient(#BFE4E6 0%, #BFE4E6 20%,#FCF2D6 20%, #FCF2D6 70%, #BFE4E6 80%, #FCF2D6 100%);
+  }
+  .mri-kundinfo{
+    background-color: linear-gradient(#BFE4E6 0%, #BFE4E6 20%,#FCF2D6 20%, #FCF2D6 70%, #BFE4E6 80%, #FCF2D6 100%);
+
   }
   
   .book-time-text {

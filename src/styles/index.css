@@ -361,7 +361,7 @@ body{
 
 
 .footer {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   
   bottom: 0;
 }
@@ -604,16 +604,7 @@ background-color: #CEF3FF;
   font-size: 18px;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-}
+
 
 .animation-button {
   font-size: 14px;
@@ -697,3 +688,81 @@ background-color: #CEF3FF;
 }
 
 /* Additional styles for the circle animation, pop-up, and other elements can remain the same or be adjusted as needed */
+
+/* General Styles */
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #b6f4fae1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown-toggle {
+  background-color: #fff6de;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-button:hover {
+  background-color: #f1f1f1;
+}
+
+.boka-button {
+  background-color: #0bb2b2;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.boka-button:hover {
+  background-color: #31bbc7;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+

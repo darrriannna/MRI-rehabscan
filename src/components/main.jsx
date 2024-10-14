@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../styles/index.css'; // Import your custom CSS file
 import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
+import DynamicForm from './DynamicForm';
 const Home = () => {
   const [openSection, setOpenSection] = useState(null);
 
@@ -87,6 +88,7 @@ const Home = () => {
     </div> <div>
       <h2 className='center-text fw-3 p-3 mb-4'>Prislista</h2>
      <Pricelist/></div>
+     <DynamicForm/>
     </div>
     </div>
   );

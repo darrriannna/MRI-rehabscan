@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import '../styles/index.css';
 
 const Navbar = () => {
@@ -29,7 +28,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="buttons text-center">
-                            <NavLink to="/bookappointment" className="btn-navbar text-decoration-none"> Boka tid </NavLink>
+                            <NavLink to="/bookappointment" className="btn-navbar text-decoration-none"> Boka nu </NavLink>
                             
                         </div>
                     </div>

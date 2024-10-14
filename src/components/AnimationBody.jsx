@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/index.css'; // Import your CSS styles
-import services from '../pages/ServicesData'; // Import the services list
 
 const AnimationBody = () => {
   const navigate = useNavigate();

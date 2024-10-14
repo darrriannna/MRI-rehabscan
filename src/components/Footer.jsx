@@ -4,7 +4,7 @@ import "../styles/index.css";
 
 const Footer = () => {
   return (
-    <footer className="footer mt-auto py-3 bg-light">
+    <footer className="footer">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -15,10 +15,10 @@ const Footer = () => {
               
             </ul>
             <h4>Hitta oss</h4>
-            <p >Karl Johansgatan 100, 414 55 Göteborg</p>
-        <p>070-582 21 42</p>
+      
+        <p>070-873 2929</p>
         <p >
-          <a className="link" href="mailto:info@nopainclinic.se">info@nopainclinic.se</a>
+          <a className="link" href="mailto:info@nopainclinic.se">info@rehabscan.se</a>
         </p>
         <div>
         
