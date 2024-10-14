@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import "../styles/index.css";// Optional: Add your CSS for styling
+import "../styles/index.css";
 
 const services = [
   { id: 1, name: 'Ländrygg', price: '8 200kr' },
@@ -34,7 +34,7 @@ const DynamicForm = () => {
   const [selectedCity, setSelectedCity] = useState('');
   const [showExaminationDropdown, setShowExaminationDropdown] = useState(false);
   const [showCityDropdown, setShowCityDropdown] = useState(false);
-  const navigate = useNavigate();  // For navigation
+  const navigate = useNavigate();  
 
   const cities = ['Borås', 'Göteborg', 'Jönköping', 'Karlstad', 'Malmö', 'Stockholm'];
 
@@ -53,7 +53,7 @@ const DynamicForm = () => {
 
   const selectedService = services.find(service => service.name === selectedExamination);
 
-  // Handle "Boka undersökning" button click
+ 
   const handleBookClick = () => {
     navigate('/mri-booking', {
       state: {

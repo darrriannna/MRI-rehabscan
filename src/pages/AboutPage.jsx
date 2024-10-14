@@ -1,63 +1,47 @@
 import React from 'react'
 import { Footer, Navbar } from "../components";
+import "../styles/index.css";
+
 const AboutPage = () => {
   return (
     <>
       <Navbar />
-      <div className="container my-3 py-3">
-        <h1 className="text-center">About Us</h1>
-        <hr />
-        <p className="lead text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          facere doloremque veritatis odit similique sequi. Odit amet fuga nam
-          quam quasi facilis sed doloremque saepe sint perspiciatis explicabo
-          totam vero quas provident ipsam, veritatis nostrum velit quos
-          recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo
-          earum unde eligendi autem praesentium, doloremque distinctio nesciunt
-          porro tempore quis eaque labore voluptatibus ea necessitatibus
-          exercitationem tempora molestias. Ad consequuntur veniam sequi ullam
-          tempore vel tenetur soluta dolore sunt maxime aliquam corporis est,
-          quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit
-          delectus expedita a alias nam recusandae illo debitis repellat libero,
-          quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam
-          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
-        </p>
+      <div className="container-about-us">
+        <h2 className="text-center py-4">Om Rehabscan</h2>
 
-        <h2 className="text-center py-4">Our Products</h2>
         <div className="row">
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Mens's Clothing</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Women's Clothing</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Jewelery</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Electronics</h5>
-              </div>
-            </div>
-          </div>
+
+        <div class="container-home">
+    <div class="left-column">
+      <img src="./assets/About-pic.png" alt="MRI 3d" />
+    </div>
+    <div class="right-column">
+    <p className='text-about p-4'>RehabScan är en digital hälsoklinik som erbjuder radiologiska undersökningar för att ge dig en bättre inblick i din hälsa.</p>
+    <p className='p-4'>Med RehabScan kan du känna dig trygg i att få den vård och uppmärksamhet du behöver – allt från bekvämligheten av ditt eget hem. Vi sätter alltid din hälsa i första rummet och strävar efter att ge dig den bästa möjliga upplevelsen, oavsett ditt behov.
+    Välkommen till RehabScan, en hälsoklinik i framkant som sätter dig och din hälsa i fokus!</p>
+    </div>
+  </div>
         </div>
+        <div className='rules-container'>
+      <h3 className='center-text'>Hur funkar det?</h3>
+     <div class="container-card">
+        <div class="box box1"><h4>Steg 1</h4>
+        <p>Fyll i en bokningsförfrågan. En läkare ringer upp och bekräftar din bokning. Ingen remiss krävs.</p></div>
+        <div class="box box2">
+          <h4>Steg 2</h4>
+          <p>En läkare ringer upp och bekräftar din bokning och diskuterar dina önskemål.</p>
+        </div>
+        <div class="box box3">
+          <h4>Steg 3</h4>
+          <p>Du erbjuds undersökning inom 5 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
+        </div>
+        <div class="box box4">
+          <h4>Steg 4</h4>
+          <p>Personlig återkoppling med läkare inom 5 arbetsdagar efter utförd undersökning.</p>
+        </div>
+        <div/>
+    </div>
+      </div>
       </div>
       <Footer />
     </>

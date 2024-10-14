@@ -21,7 +21,7 @@ const Home = () => {
     <div class="right-column">
       <h2>Undvik köer och väntetider med privat röntgen</h2>
       <ul>
-        <li>Få tid för undersökning inom 5 arbetsdagar.</li>
+        <li>Få tid för undersökning inom 14 arbetsdagar.</li>
         <li>Kontakt med legitimerad läkare under hela processen.</li>
         <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
         <li>Personlig återkoppling efter undersökning.</li>
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
         <div class="box box3">
           <h4>Steg 3</h4>
-          <p>Du erbjuds undersökning inom 5 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
+          <p>Du erbjuds undersökning inom 14 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
         </div>
         <div class="box box4">
           <h4>Steg 4</h4>
@@ -89,6 +89,8 @@ const Home = () => {
       <h2 className='center-text fw-3 p-3 mb-4'>Prislista</h2>
      <Pricelist/></div>
      <DynamicForm/>
+     <div className='fake-container'>
+     </div>
     </div>
     </div>
   );

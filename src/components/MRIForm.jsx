@@ -102,7 +102,7 @@ const MRIForm = () => {
         <input type="text" name="personnummer" value={formData.personnummer} onChange={handleChange} required />
       </div>
       <div>
-        <label>Medellande:</label>
+        <label>Meddelande:</label>
         <textarea name="message" value={formData.message} onChange={handleChange} required />
       </div>
       <div>
@@ -120,7 +120,7 @@ const MRIForm = () => {
         {error && <div className="error">{error}</div>}
       </div>
       <div>
-        <button type="submit">Betala</button>
+        <button className='submit-button' type="submit">Betala</button>
       </div>
     </form>
     </div>

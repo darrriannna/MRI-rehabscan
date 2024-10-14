@@ -240,16 +240,7 @@ body{
   transform: rotate(180deg);
 }
 
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-}
+
 
 .mr-price {
   margin-top: 10px;
@@ -674,6 +665,7 @@ background-color: #CEF3FF;
 .text-content {
   flex: 1; /* Allow text content to take up available space */
   padding: 0 20px; /* Add some padding for better spacing */
+  font-weight: 300;
 }
 
 /* Responsive Design */
@@ -697,7 +689,7 @@ background-color: #CEF3FF;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #b6f4fae1;
+  background-color: #c7effc;
 }
 
 .form-group {
@@ -710,7 +702,7 @@ button {
 
 /* Dropdown Styles */
 .dropdown-toggle {
-  background-color: #fff6de;
+  background-color: #fefefe;
   border: none;
   padding: 10px 15px;
   margin-top: 10px;
@@ -760,9 +752,11 @@ button {
   background-color: #31bbc7;
 }
 
-p {
-  font-size: 16px;
-  font-weight: bold;
+.text-about{
+  font-size: 20px;
+  font-weight: 500;
 }
-
+.fake-container{
+  height: 30px;
+}
 
