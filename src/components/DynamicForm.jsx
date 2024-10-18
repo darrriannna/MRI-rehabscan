@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation  } from 'react-router-dom'; 
 import "../styles/index.css";
 
 const services = [
@@ -34,9 +34,17 @@ const DynamicForm = () => {
   const [selectedCity, setSelectedCity] = useState('');
   const [showExaminationDropdown, setShowExaminationDropdown] = useState(false);
   const [showCityDropdown, setShowCityDropdown] = useState(false);
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
+  const location = useLocation(); // Use location to access passed state
 
   const cities = ['Borås', 'Göteborg', 'Jönköping', 'Karlstad', 'Malmö', 'Stockholm'];
+
+  // Extract serviceName from the passed state
+  useEffect(() => {
+    if (location.state && location.state.serviceName) {
+      setSelectedExamination(location.state.serviceName);
+    }
+  }, [location.state]);
 
   const toggleExaminationDropdown = () => setShowExaminationDropdown(!showExaminationDropdown);
   const toggleCityDropdown = () => setShowCityDropdown(!showCityDropdown);
@@ -53,7 +61,6 @@ const DynamicForm = () => {
 
   const selectedService = services.find(service => service.name === selectedExamination);
 
- 
   const handleBookClick = () => {
     navigate('/mri-booking', {
       state: {

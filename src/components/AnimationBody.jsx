@@ -6,7 +6,8 @@ const AnimationBody = () => {
   const navigate = useNavigate();
 
   const handleBook = (service) => {
-    navigate('/mri-booking', { state: { serviceId: service.id } });
+    // Navigate to the DynamicForm page and pass the service information via state
+    navigate('/bookappointment', { state: { serviceName: service.name, servicePrice: service.price } });
   };
 
   const services = [
