@@ -73,7 +73,8 @@ const DynamicForm = () => {
 
   return (
     <div className="form-container">
-      <h1>Boka privat röntgen utan remiss</h1>
+      <div></div>
+      <h1 className='text-center'>Boka privat röntgen utan remiss</h1>
 
       <form>
         <div className="form-group">
@@ -121,8 +122,10 @@ const DynamicForm = () => {
               </button>
             </div>
           </>
+
         )}
       </form>
+      <div></div>
     </div>
   );
 };

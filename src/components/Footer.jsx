@@ -4,7 +4,8 @@ import "../styles/index.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+      <div className="footer">
+    <footer >
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -34,6 +35,7 @@ const Footer = () => {
       </div>
       
     </footer>
+    </div>
   );
 };
 

@@ -15,6 +15,7 @@ body{
 }
 .main{
   background: linear-gradient(#BFE4E6 0%, #BFE4E6 20%,#FCF2D6 20%, #FCF2D6 70%, #BFE4E6 80%, #FCF2D6 100%);
+  margin: auto;
 }
 .main-pricelist{
   background: linear-gradient(#BFE4E6 0%, #FCF2D6 30%, #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
@@ -34,7 +35,7 @@ body{
 .navbar {
         position: sticky;
         z-index: 1040; /* Ensure it is above the banner */
-        background-color: white;
+        background-color: rgb(251, 251, 251);
         
 }
 .center-text{
@@ -47,29 +48,43 @@ body{
   align-items: center;  }
 
 .btn-navbar{
-
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  border-radius: 500px;
-  border: 1px solid transparent;
-  letter-spacing: 2px;
-  min-width: 160px;
-  text-transform: uppercase;
-  white-space: normal;
-  font-weight: 700;
-  text-align: center;
-  padding: 16px 14px 18px;
-  color: #1b2d1f;
-  background-color: #31bbc7;
-  height: 48px;
-  :hover{
-      background-color: #444645;
+  margin-top: 5px;
+    touch-action: manipulation;
+    align-self: auto;
+    background-color: #b0f4f4;
+    background-image: linear-gradient(#7ce0ff, #07a1b9, #15ABB3);
+    border-radius: 35px;
+    box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
+    color: #f5fbfb;
+    font-size: 1.3rem;
+    font-weight: 600;
+    left: auto;
+    line-height: 1;
+    padding: 25px;
+ 
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    transition: all .3s ease-in-out;
+    z-index: 2;
   }
+  .btn-navbar {
+    touch-action: manipulation;
+    border-style: initial;
+    border-width: 0;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .btn-navbar:active,
+  .btn-navbar:hover {
+    background-image: linear-gradient(#1bbcc4, #3b97ad);
+  }
+  
+  .btn-navbar:active {
+    box-shadow: rgba(131, 50, 234, .1) 0 3px 6px;
+  }
+  
 
-}
 .banner-images-container {
   width: 100%;
   display: flex;
@@ -146,6 +161,11 @@ body{
   padding: 20px;
   border-radius: 0.5cm;
 }
+.service-info:hover{
+  transition-duration: 1s;
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
 @keyframes expanding {
   0% {
@@ -165,8 +185,9 @@ body{
 
 .image-homepage{
   max-width: 550px;
- margin-left: 20px;
-
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 30px;
 }
 @media (max-width: 1000px) {
   .image-homepage{
@@ -352,13 +373,15 @@ body{
 
 
 .footer {
-  background-color: #ffffff;
-  
+  background-color: #d0faff;
+  left: 0;
+  width: 100%;
   bottom: 0;
+  margin: auto;
+  padding: 20px;
 }
 .footer h5 {
   font-size: 22px;
-
 }
 .footer ul {
   padding: 0;
@@ -373,17 +396,20 @@ body{
 }
 .footer ul li a:hover {
   text-decoration: underline;
-  
 }
 
+
 @media (max-width: 801px){
+  
   .footer h5 {
     font-size: 18px;
     margin-bottom: 1.4rem;
     margin-top: 1rem;
   }
+
   .footer ul {
     padding: 2px;
+    font-size: 14px;
     list-style: none;
   }
  
@@ -482,6 +508,13 @@ body{
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   text-align: center;
   min-width: 100px; /* Minimum width for smaller screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and shadow */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.box:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 @media (max-width: 600px) {
@@ -490,23 +523,31 @@ body{
   }
 }
 
-.box1{
-background-color: #DEFAFC;
+.box1 {
+  background-color: #DEFAFC;
+  box-shadow: 5px #000000;
 }
 
-.box2{
-background-color: #FFF9D6;
+.box2 {
+  background-color: #FFF9D6;
+  box-shadow: 5px #000000;
 }
 
-.box3{
-background-color: #F6E3AD;
+.box3 {
+  background-color: #F6E3AD;
+  box-shadow: 5px #000000;
 }
-.box4{
-background-color: #BFE4E6;
+
+.box4 {
+  background-color: #BFE4E6;
+  box-shadow: 5px #000000;
 }
-.box5{
-background-color: #CEF3FF;
+
+.box5 {
+  background-color: #CEF3FF;
+  box-shadow: 5px #000000;
 }
+
 
 .card-grid {
   display: grid;
@@ -542,27 +583,27 @@ background-color: #CEF3FF;
   font-size: 14px;
   line-height: 1;
   border-radius: 500px;
-  transition-property: background-color,border-color,color,box-shadow,filter;
   transition-duration: .3s;
   border: 1px solid transparent;
   letter-spacing: 2px;
-  min-width: 160px;
+  min-width: 100px;
   text-transform: uppercase;
   white-space: normal;
   font-weight: 700;
   text-align: center;
   padding: 16px 14px 18px;
   color: #000000;
-  box-shadow: inset 0 0 0 2px #000000;
+  box-shadow: inset 0 0 0 1px #000000;
   background-color: transparent;
   height: 48px;
   text-decoration: none;
-  :hover{
-      color: #fff;
-      background-color: #616467;
-  }
+
 
 }
+ .read-more-btn:hover{
+      color: black;
+      background-color:#FFF9D6;
+  }
 .service-grid {
   display: grid;
   padding: 20px;
@@ -629,16 +670,17 @@ background-color: #CEF3FF;
   font-weight: 700;
   text-align: center;
   padding: 16px 14px 18px;
+  margin-top: 10px;
   color: #000000;
-  box-shadow: inset 0 0 0 2px #000000;
-  background-color: #31bbc7;
+  box-shadow: inset 0 0 0 1px #000000;
+  background-color: #59cbd5;
   height: 48px;
-  :hover{
-      color: #fff;
-      background-color: #616467;
-  }
+  
 }
-
+.btn-book-now:hover{
+      color: black;
+      background-color: #c7effc;
+  }
 .container-pricelist {
   width: 90%;
   max-width: 1200px;
@@ -684,8 +726,7 @@ background-color: #CEF3FF;
 /* General Styles */
 .form-container {
   max-width: 800px;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -760,3 +801,51 @@ button {
   height: 30px;
 }
 
+/* Loader.css */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(249, 249, 249);  /* Dark transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* Ensure it's on top of everything */
+}
+
+.loader-img {
+  width: 100px;
+  height: auto;
+}
+
+.scanning-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px; /* Adjust based on the thickness you want */
+  background: linear-gradient(#7ce0ff, #07a1b9, #b0f4f4, #07a1b9, #7ce0ff); /* Light blue scanning line */
+  animation: scan 2s linear infinite; /* Duration and infinite loop */
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.main-book{
+  background: linear-gradient(#dad9be, #FFF9D6);
+}
+
+.navbar-toggler{
+  border-color:  #b0f4f4;
+  border-radius: 0.5cm;
+}

@@ -4,7 +4,7 @@ import '../styles/bookform.css';
 
 const BookTime = () => {
   return (
-    <div>
+    <div className='main-book'>
       <Navbar />
       <DynamicForm/>
       <Footer/>
