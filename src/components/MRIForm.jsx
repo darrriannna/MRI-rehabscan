@@ -107,14 +107,14 @@ const MRIForm = () => {
       </div>
       <div>
         <label>
-          <input type="checkbox" name="noPacemakerConfirmed" checked={formData.noPacemakerConfirmed} onChange={handleChange} />
+          <input type="checkbox" name="noPacemakerConfirmed" checked={formData.noPacemakerConfirmed} onChange={handleChange} required />
           Jag har ingen pacemaker.
         </label>
         {pacemakerError && <div className="error">{pacemakerError}</div>}
       </div>
       <div>
         <label>
-          <input type="checkbox" name="policyConfirmed" checked={formData.policyConfirmed} onChange={handleChange} />
+          <input type="checkbox" name="policyConfirmed" checked={formData.policyConfirmed} onChange={handleChange} required />
           Jag har tagit del av integritetspolicyn.
         </label>
         {error && <div className="error">{error}</div>}

@@ -1,6 +1,9 @@
 body{
   font-family: "Montserrat", sans-serif;
-  
+}
+.body{
+  background: linear-gradient(#BFE4E6 0%, #FCF2D6 30%, #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
+
 }
 .banner {
     background-color: #ffffff; /* Light grey background */
@@ -14,7 +17,6 @@ body{
     z-index: 1050; /* Ensure it's above other elements */
 }
 .main{
-  background: linear-gradient(#BFE4E6 0%, #BFE4E6 20%,#FCF2D6 20%, #FCF2D6 70%, #BFE4E6 80%, #FCF2D6 100%);
   margin: auto;
 }
 .main-pricelist{
@@ -33,9 +35,11 @@ body{
 }
 
 .navbar {
-        position: sticky;
-        z-index: 1040; /* Ensure it is above the banner */
-        background-color: rgb(251, 251, 251);
+  position: sticky;
+  background-color: transparent !important;
+  transition: all 0.3s ease-out 0s !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
         
 }
 .center-text{
@@ -60,7 +64,7 @@ body{
     font-weight: 600;
     left: auto;
     line-height: 1;
-    padding: 25px;
+    padding: 20px;
  
     text-align: center;
     text-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
@@ -97,11 +101,16 @@ body{
 .banner-image {
   position: relative;
   width: 100%;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 700px; /* Adjust as needed */
   padding: 30px;
   margin-left: 30px;
 }
-
+.icons-home{
+  max-width: 70px;
+}
+.text-icon{
+  font-size: 15px;
+}
 .image-front {
   width: 100%;
   height: auto;
@@ -373,7 +382,9 @@ body{
 
 
 .footer {
-  background-color: #d0faff;
+  background-color: transparent !important;
+  box-shadow: 10px 0px 0px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
   left: 0;
   width: 100%;
   bottom: 0;
@@ -539,7 +550,7 @@ body{
 }
 
 .box4 {
-  background-color: #BFE4E6;
+  background-color: #9cd9da;
   box-shadow: 5px #000000;
 }
 
@@ -717,6 +728,7 @@ body{
   }
 
   .banner-image {
+    margin-left: 0;
     margin-bottom: 20px; /* Add space between image and text */
   }
 }
@@ -802,44 +814,6 @@ button {
 }
 
 /* Loader.css */
-.loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(249, 249, 249);  /* Dark transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;  /* Ensure it's on top of everything */
-}
-
-.loader-img {
-  width: 100px;
-  height: auto;
-}
-
-.scanning-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 6px; /* Adjust based on the thickness you want */
-  background: linear-gradient(#7ce0ff, #07a1b9, #b0f4f4, #07a1b9, #7ce0ff); /* Light blue scanning line */
-  animation: scan 2s linear infinite; /* Duration and infinite loop */
-}
-
-@keyframes scan {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 100%;
-  }
-  100% {
-    top: 0;
-  }
-}
 
 .main-book{
   background: linear-gradient(#dad9be, #FFF9D6);
@@ -848,4 +822,88 @@ button {
 .navbar-toggler{
   border-color:  #b0f4f4;
   border-radius: 0.5cm;
+}
+
+/* Loader Container */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 1000;
+  transition: transform 1s ease-in-out, opacity 0.5s ease;
+}
+
+/* Adjust Image Size */
+.loader-img {
+  width: 150px; /* Adjust the size of the corpse image */
+  z-index: 2;
+  position: relative;
+}
+
+/* Scanning Line */
+.scan-line {
+  position: absolute;
+  width: 150px; /* Same width as the image */
+  height: 6px; /* Height of the scanning line, adjusted to look good over bones */
+  background: linear-gradient(#7ce0ff, #d0faff, #59cbd5);
+  box-shadow: #31bbc7;
+  z-index: 3;
+  animation: scan-updown 3s infinite; /* Slower animation (4 seconds instead of 2) */
+  border-radius: 50px; /* Make the scanning line round for better visual */
+}
+
+/* Vertical scan-line animation (moves up and down within the bones area) */
+@keyframes scan-updown {
+  0% {
+    top: 40%; /* Adjust based on where the bones area starts */
+  }
+  50% {
+    top: 57%; /* Adjust based on where the bones area ends */
+  }
+  100% {
+    top: 40%; /* Returns to the start */
+  }
+}
+
+/* Swipe-up exit animation */
+.loader-container.exit {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.btn-close-popup {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
 }

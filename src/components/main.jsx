@@ -39,20 +39,25 @@ const Home = () => {
           <h3 className='center-text'>Hur funkar det?</h3>
           <div className="container-card">
             <div className="box box1">
-              <h4>Steg 1</h4>
-              <p>Fyll i en bokningsförfrågan. En läkare ringer upp och bekräftar din bokning. Ingen remiss krävs.</p>
+              
+              <h4 className='p-2'>Steg 1</h4>
+              <p className='text-icon'>Fyll i en bokningsförfrågan. En läkare ringer upp och bekräftar din bokning. Ingen remiss krävs.</p>
+              
             </div>
             <div className="box box2">
-              <h4>Steg 2</h4>
-              <p>En läkare ringer upp och bekräftar din bokning och diskuterar dina önskemål.</p>
+            
+              <h4 className='p-2'>Steg 2</h4>
+              <p className='text-icon'>En läkare ringer upp och bekräftar din bokning och diskuterar dina önskemål.</p>
             </div>
             <div className="box box3">
-              <h4>Steg 3</h4>
-              <p>Du erbjuds undersökning inom 14 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
+           
+              <h4 className='p-2'>Steg 3</h4>
+              <p className='text-icon'>Du erbjuds undersökning inom 14 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
             </div>
-            <div className="box box4">
-              <h4>Steg 4</h4>
-              <p>Personlig återkoppling med läkare inom 5 arbetsdagar efter utförd undersökning.</p>
+            <div className="box box4">             
+            
+              <h4 className='p-2'>Steg 4</h4>
+              <p className='text-icon'>Personlig återkoppling med läkare inom 5 arbetsdagar efter utförd undersökning.</p>
             </div>
           </div>
           <div className='btn-center'>

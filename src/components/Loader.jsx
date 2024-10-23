@@ -1,21 +1,27 @@
-import React from 'react';
-import '../styles/index.css';  // Your styles
-import { useLoader } from '../context/loaderContext';  // Import the loader context
+import React, { useState, useEffect } from 'react';
+import '../styles/index.css'; // Create this CSS file to style the loader
 
 const Loader = () => {
-  const { loading } = useLoader();  // Get the loading state from context
+  const [exit, setExit] = useState(false);
 
-  if (!loading) return null;  // If not loading, don't show the loader
+  useEffect(() => {
+    // Simulate page content loading and initiate swipe-up effect after loading completes
+    const timer = setTimeout(() => {
+      setExit(true); // Trigger the exit animation
+    }, 1500); // Adjust the duration based on your page load time
+
+    return () => clearTimeout(timer); // Cleanup the timer if the component is unmounted
+  }, []);
 
   return (
-    <div className='loder-container'>
-
+    <div className={`loader-container ${exit ? 'exit' : ''}`}>
       <img src="./assets/Loader-img.png" alt="loader" className="loader-img" />
-      <div className="scanning-line"></div>  {/* Scanning Line */}
+      <div className="scan-line"></div> {/* Scan line over the image */}
     </div>
-    
   );
 };
 
 export default Loader;
+
+
 
