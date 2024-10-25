@@ -74,11 +74,11 @@ const DynamicForm = () => {
   return (
     <div className="form-container">
       <div></div>
-      <h1 className='text-center'>Boka privat röntgen utan remiss</h1>
+      <h1 className='text-center main-title-form'>Boka privat röntgen utan remiss</h1>
 
       <form>
         <div className="form-group">
-          <p>Boka undersökning</p>
+          <p className='form-field-title'>Välj undersökning</p>
           <button type="button" className="dropdown-toggle" onClick={toggleExaminationDropdown}>
             {selectedExamination || 'Välj undersökning'}
           </button>
@@ -95,7 +95,7 @@ const DynamicForm = () => {
 
         {selectedExamination && (
           <div className="form-group">
-            <p>Välj stad</p>
+            <p className='form-field-title'>Välj stad</p>
             <button type="button" className="dropdown-toggle" onClick={toggleCityDropdown}>
               {selectedCity || 'Välj stad'}
             </button>
@@ -114,10 +114,10 @@ const DynamicForm = () => {
         {selectedExamination && selectedCity && (
           <>
             <div className="form-group">
-              <p>Pris: {selectedService?.price}</p>
+              <p className='form-price'>Pris: {selectedService?.price}</p>
             </div>
             <div className="form-group">
-              <button type="button" className="boka-button" onClick={handleBookClick}>
+              <button type="button" className="btn-navbar" onClick={handleBookClick}>
                 Boka undersökning
               </button>
             </div>

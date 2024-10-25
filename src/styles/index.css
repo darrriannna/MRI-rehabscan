@@ -2,7 +2,7 @@ body{
   font-family: "Montserrat", sans-serif;
 }
 .body{
-  background: linear-gradient(#BFE4E6 0%, #FCF2D6 30%, #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
+  background: linear-gradient(#BFE4E6 0%,  #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
 
 }
 .banner {
@@ -97,7 +97,14 @@ body{
   overflow: hidden;
   position: relative;
 }
-
+.question-title{
+font-size: 40px;
+padding: 10px;
+margin-top: 20px;
+font-weight: 800;
+color: #42a2ad;
+text-shadow: 1px 1px 2px #345e64 ;
+}
 .banner-image {
   position: relative;
   width: 100%;
@@ -740,9 +747,10 @@ body{
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #c7effc;
+  background: linear-gradient(180deg, #94D7DB -3.52%, #43d4dc 100%);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
 }
 
 .form-group {
@@ -755,13 +763,16 @@ button {
 
 /* Dropdown Styles */
 .dropdown-toggle {
-  background-color: #fefefe;
+  background: linear-gradient(#DEFAFC, #b1f2f6 );
   border: none;
+  box-shadow: 2px 1px 0px rgb(9, 108, 125);
   padding: 10px 15px;
   margin-top: 10px;
   border-radius: 5px;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
 }
 
 .dropdown-content {
@@ -785,7 +796,18 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
-
+.form-field-title{
+  font-size: 18px;
+  font-weight: 500;
+  color: #054848;
+}
+.form-price{
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-title-form{
+  color: #054848;
+}
 .dropdown-button:hover {
   background-color: #f1f1f1;
 }
@@ -906,4 +928,128 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+.main-container-steps {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.big-steps{
+  padding-top: 20px;
+}
+.card-steps {
+  height: 200px;
+  flex: 1;
+  text-align: center;
+  background-color: #e5df91;
+  transition: 0.3s;
+  border-radius: 40px;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-number {
+  color: #31bbc7;
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 2px 0px 1px #0e6d72;
+  margin: 0;
+}
+
+
+.card-steps:hover .step-text {
+  opacity: 1;
+}
+
+.step-1{
+  background-image: url(../../public/assets/Step-1.png);
+  background-size: 400px;
+}
+.step-2{
+  background-image: url(../../public/assets/Step-2.png);
+  background-size: 450px;
+}
+.step-3{
+  background-image: url(../../public/assets/Step-3.png);
+  background-size: 500px;
+}
+
+.card-steps:hover {
+  flex:2;
+}
+.main-container-steps {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-steps {
+  height: 200px;
+  flex: 1;
+  text-align: center;
+  background-color: #e5df91;
+  transition: 0.3s;
+  border-radius: 40px;
+  margin-right: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures smooth clipping during transition */
+}
+
+.step-number {
+  color: #31bbc7;
+  font-size: 60px;
+  font-weight: 600;
+  text-shadow: 2px 0px 1px #0e6d72;
+  margin: 0;
+}
+
+.card-steps:hover .step-text {
+  opacity: 1;
+  transform: translateY(0); /* Final position: smoothly slide up */
+}
+
+/* Media Query for screens smaller than 800px */
+@media (max-width: 800px) {
+  .main-container-steps {
+    flex-direction: column;
+  }
+
+  .card-steps {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .step-text {
+    position: static;
+    opacity: 1;
+    transform: translateY(0); /* Slide-up effect not needed on small screens */
+  }
+}
+.step-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #edf0f0;
+  text-shadow: 1px 0px 1px rgb(7, 75, 75);
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transform: translateY(20px); /* Start position */
+  -webkit-transform: translateY(20px); /* Vendor prefix */
+  text-align: center;
+}
+
+.card-steps:hover .step-text {
+  opacity: 1;
+  transform: translateY(0); /* Slide into position */
+  -webkit-transform: translateY(0);
 }

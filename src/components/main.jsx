@@ -3,6 +3,7 @@ import '../styles/index.css'; // Import your custom CSS file
 import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
 import DynamicForm from './DynamicForm';
+import Steps from './Steps';
   // Import loader context
 
 
@@ -34,40 +35,22 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <div className='rules-container'>
-          <h3 className='center-text'>Hur funkar det?</h3>
-          <div className="container-card">
-            <div className="box box1">
-              
-              <h4 className='p-2'>Steg 1</h4>
-              <p className='text-icon'>Fyll i en bokningsförfrågan. En läkare ringer upp och bekräftar din bokning. Ingen remiss krävs.</p>
-              
-            </div>
-            <div className="box box2">
-            
-              <h4 className='p-2'>Steg 2</h4>
-              <p className='text-icon'>En läkare ringer upp och bekräftar din bokning och diskuterar dina önskemål.</p>
-            </div>
-            <div className="box box3">
-           
-              <h4 className='p-2'>Steg 3</h4>
-              <p className='text-icon'>Du erbjuds undersökning inom 14 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
-            </div>
-            <div className="box box4">             
-            
-              <h4 className='p-2'>Steg 4</h4>
-              <p className='text-icon'>Personlig återkoppling med läkare inom 5 arbetsdagar efter utförd undersökning.</p>
-            </div>
-          </div>
+        <div>
+<DynamicForm /></div>
+<Steps/>
+        
           <div className='btn-center'>
             <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
           </div>
+          <div>
           <p className='center-text'>Du får kontakt med en läkare inom 24h för att ta ditt ärende vidare till undersökning</p>
         </div>
 
         <div className='container-home'>
-          <div className='left-column'> 
+          <div className='left-column'>
+             <div className='text-center'>
+                  <h2 className='question-title'>Q&A</h2>
+                </div>
             <div className="faq-container">
               <div className="service-info">
                 <div className="faq-question" onClick={() => toggleSection(0)}>
@@ -82,6 +65,7 @@ const Home = () => {
               </div>
 
               <div className="service-info">
+                
                 <div className="faq-question" onClick={() => toggleSection(1)}>
                   <h4>Hur får man remiss till magnetröntgen?</h4>
                   <span>{openSection === 1 ? '▲' : '▼'}</span>
@@ -94,17 +78,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className='right-column'>
-            <img className='image-homepage' src="./assets/Mri.png" alt="doctor with patient" />
-          </div>
         </div>
 
         <div>
           <h2 className='center-text fw-3 p-3 mb-4'>Prislista</h2>
           <Pricelist />
         </div>
-        <DynamicForm />
+        
       </div>
     </div>
   );
