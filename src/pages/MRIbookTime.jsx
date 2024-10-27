@@ -18,11 +18,8 @@ const MRIbookTime = () => {
   console.log('Resolved serviceTitle:', serviceTitle); // Debugging line
 
   return (
-    <div>
+    <div className='body'>
       <Navbar />
-      <div className="book-time-container">
-        <h2 className="book-time-text">Din undersökning</h2>
-      </div>
       <MRIForm serviceTitle={serviceTitle} />
       <Footer />
     </div>

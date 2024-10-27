@@ -5,6 +5,7 @@ import "../styles/index.css";
 const AboutPage = () => {
   return (
     <>
+    <div className='body'>
       <Navbar />
       <div className="container-about-us">
         <h2 className="text-center py-4">Om Rehabscan</h2>
@@ -43,7 +44,7 @@ const AboutPage = () => {
     </div>
       </div>
       </div>
-      <Footer />
+      <Footer /></div>
     </>
   )
 }

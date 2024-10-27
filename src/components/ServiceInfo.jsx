@@ -42,7 +42,7 @@ const ServiceInfo = () => {
       <div className="main-content"> 
        <div className="text-content">
         <div className='title-container'>
-          <h2 className='p-2'> {service.title}</h2>
+          <h2 className='title-service'> {service.title}</h2>
         </div>
             <div>
                 <h4>Varför magnetröntgen av {service.name}?</h4>
@@ -53,7 +53,7 @@ const ServiceInfo = () => {
                 <p>Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist. Därefter går vår läkare igenom resultatet med dig via telefon och vid behov remitteras du vidare. Du får också ditt resultat skriftligt.</p>
             </div>
         </div>
-        <div className="banner-image">
+        <div >
             <DynamicForm/>
         </div>
       

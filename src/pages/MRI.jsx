@@ -5,9 +5,11 @@ import AnimationBody from '../components/AnimationBody.jsx'
 const MRI = () => {
   return (
     <>
+    <div className='body'>
       <Navbar />
       <AnimationBody/>
       <Footer />
+      </div>
     </>
   )
 }

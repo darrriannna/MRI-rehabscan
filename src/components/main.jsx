@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
 import DynamicForm from './DynamicForm';
 import Steps from './Steps';
+import MapSection from './MapSection';
   // Import loader context
 
 
@@ -45,7 +46,7 @@ const Home = () => {
           <div>
           <p className='center-text'>Du får kontakt med en läkare inom 24h för att ta ditt ärende vidare till undersökning</p>
         </div>
-
+<MapSection/>
         <div className='container-home'>
           <div className='left-column'>
              <div className='text-center'>

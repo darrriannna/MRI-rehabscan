@@ -6,3 +6,4 @@ export { default as MRIForm } from './MRIForm';
 export { default as Loader } from './Loader';
 export { default as ServiceInfo } from './ServiceInfo';
 export { default as Steps } from './Steps';
+export { default as MapSection } from './MapSection';

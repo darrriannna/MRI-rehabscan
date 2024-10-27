@@ -5,6 +5,11 @@ body{
   background: linear-gradient(#BFE4E6 0%,  #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
 
 }
+.title-service{
+  font-weight: 600;
+  color: #043737;
+  
+}
 .banner {
     background-color: #ffffff; /* Light grey background */
     color: #333; /* Dark text color */
@@ -967,19 +972,19 @@ button {
 
 .step-1{
   background-image: url(../../public/assets/Step-1.png);
-  background-size: 400px;
+  background-size: 500px;
 }
 .step-2{
   background-image: url(../../public/assets/Step-2.png);
-  background-size: 450px;
+  background-size: 500px;
 }
 .step-3{
   background-image: url(../../public/assets/Step-3.png);
-  background-size: 500px;
+  background-size: 550px;
 }
 
 .card-steps:hover {
-  flex:2;
+  flex:1.5;
 }
 .main-container-steps {
   padding: 20px;
@@ -1052,4 +1057,59 @@ button {
   opacity: 1;
   transform: translateY(0); /* Slide into position */
   -webkit-transform: translateY(0);
+}
+/* src/styles/MapSection.css */
+
+.map-section {
+  display: flex;
+  align-items: center;
+
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-content h2 {
+  font-size: 2em;
+  color: #2c7aba;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.map-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Location markers (dots) */
+.location-marker {
+  position: absolute;
+  width: 24px; /* Adjust based on the size of your dot image */
+  height: 24px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
