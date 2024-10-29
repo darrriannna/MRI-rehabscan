@@ -7,3 +7,4 @@ export { default as Loader } from './Loader';
 export { default as ServiceInfo } from './ServiceInfo';
 export { default as Steps } from './Steps';
 export { default as MapSection } from './MapSection';
+export { default as Success } from './Success';

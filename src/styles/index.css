@@ -1113,3 +1113,39 @@ button {
     transform: translateY(-5px);
   }
 }
+.payment-success {
+  text-align: center;
+  padding: 50px;
+}
+
+.payment-success h1 {
+  font-size: 2.5em;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.payment-success p {
+  font-size: 1.2em;
+  color: #333;
+  margin: 15px 0;
+}
+
+.actions {
+  margin-top: 30px;
+}
+
+.btn-home, .btn-orders {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 1em;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-home:hover, .btn-orders:hover {
+  background-color: #45A049;
+}

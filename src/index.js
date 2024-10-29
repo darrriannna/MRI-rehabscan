@@ -6,7 +6,7 @@ import '../src/styles/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { Home, AboutPage, ContactPage, Checkout, PageNotFound, BookTime, MRIbookTime, CheckoutMRI, ServicesPage } from "./pages";
+import { Home, AboutPage, ContactPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage } from "./pages";
 import MRI from './pages/MRI';
 import { DynamicForm } from './components';
 import ScrollToTop from './components/ScrollToTop';
@@ -26,10 +26,8 @@ root.render(
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/bookappointment" element={<BookTime />} />
-          <Route path="/checkout" element={<Checkout />} />
           <Route path="/dynamic-form" element={<DynamicForm />} />
           <Route path="/mri-booking" element={<MRIbookTime />} />
-          <Route path="/checkoutMRI" element={<CheckoutMRI />} />
           <Route path="/service-page" element={<ServicesPage />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/product/*" element={<PageNotFound />} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { addService } from '../redux/action/serviceAction';
@@ -8,7 +8,6 @@ import '../styles/bookform.css';
 const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0exPkzlA0bYoP7ZsKVuxUyc9jjttFLkLtZWYmJb6Ikf6bKp867CB7005UMRqkzR'); // Replace with your actual Stripe publishable key
 
 const MRIForm = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
   
