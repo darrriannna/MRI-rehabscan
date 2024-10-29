@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/index.css';
-import { Link } from 'react-router-dom';
 const Steps = () => {
     const [hoveredStep, setHoveredStep] = useState(null);
 
