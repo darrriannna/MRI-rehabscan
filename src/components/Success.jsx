@@ -4,13 +4,14 @@ import '../styles/index.css';
 
 const PaymentSuccess = () => {
   return (
+    
     <div className="payment-success">
-         <i class="fa fa-check-circle" aria-hidden="true"></i>
+         <img className='icon-success' src="./assets/Success.png" alt="" />
       <h1>Tack för att du valde oss! </h1>
       <p>Din betalning lyckades, och vi kommer att skicka ett bekräftelsemail med detaljer. </p>
       
       <div className="actions">
-        <Link to="/" className="btn-home">Go Back to Home</Link>
+        <Link to="/" className="btn-navbar">Tillbaka till Hemsida</Link>
       </div>
     </div>
   );

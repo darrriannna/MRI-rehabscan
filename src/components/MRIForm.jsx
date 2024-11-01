@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useDispatch } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { addService } from '../redux/action/serviceAction';
@@ -10,7 +10,8 @@ const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0e
 const MRIForm = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  
+  const navigate = useNavigate(); // Initialize navigate
+
   // Extract passed data from location state
   const { serviceName, city, price, stripeProductId } = location.state || {};
 
@@ -74,18 +75,34 @@ const MRIForm = () => {
     dispatch(addService(mriService));
 
     // Stripe checkout integration
-    const stripe = await stripePromise;
+    try {
+      const stripe = await stripePromise;
 
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [{ price: stripeProductId, quantity: 1 }],
-      mode: 'payment',
-      successUrl: `${window.location.origin}/success`,
-      cancelUrl: `${window.location.origin}/cancel`,
-      customerEmail: formData.email,
-    });
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: stripeProductId, quantity: 1 }],
+        mode: 'payment',
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: `${window.location.origin}/failed`,
+        customerEmail: formData.email,
+      });
 
-    if (error) {
-      console.error('Stripe checkout error:', error);
+      if (error) {
+        console.error('Stripe checkout error:', error);
+        navigate('/failed', {
+          state: {
+            stripeProductId, // Pass the actual product ID used in the checkout
+            customerEmail: formData.email, // Pass the customer's email for retry
+          },
+        });
+      }
+    } catch (error) {
+      console.error('Error initializing Stripe checkout:', error);
+      navigate('/failed', {
+        state: {
+          stripeProductId,
+          customerEmail: formData.email,
+        },
+      });
     }
   };
 
@@ -156,6 +173,7 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
 
 
 

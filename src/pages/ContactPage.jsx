@@ -3,15 +3,18 @@ import { Footer, Navbar } from "../components";
 const ContactPage = () => {
   return (
     <>
+    <div className="body">
       <Navbar />
       <div className="container my-3 py-3">
-        <h1 className="text-center">Contact Us</h1>
+        <h1 className="text-center">Kontakta oss</h1>
         <hr />
+        
         <div class="row my-4 h-100">
+          
           <div className="col-md-4 col-lg-4 col-sm-8 mx-auto">
             <form>
               <div class="form my-3">
-                <label for="Name">Name</label>
+                <label for="Name">Namn</label>
                 <input
                   type="email"
                   class="form-control"
@@ -29,7 +32,7 @@ const ContactPage = () => {
                 />
               </div>
               <div class="form  my-3">
-                <label for="Password">Message</label>
+                <label for="Password">Meddelande</label>
                 <textarea
                   rows={5}
                   class="form-control"
@@ -37,20 +40,22 @@ const ContactPage = () => {
                   placeholder="Enter your message"
                 />
               </div>
+              <div className="small-text">Genom att trycka på skicka godkänner du vår integritetspolicy. Vi svarar enbart på frågor som vi har kunskap om och som är relaterade till de undersökningar vi erbjuder.</div>
               <div className="text-center">
+                
                 <button
-                  class="my-2 px-4 mx-auto btn btn-dark"
+                  class="btn-navbar"
                   type="submit"
                   disabled
                 >
-                  Send
+                  Skicka
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /></div>
     </>
   );
 };

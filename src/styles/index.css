@@ -934,7 +934,7 @@ button {
   border: none;
   cursor: pointer;
 }
-.main-container-steps {
+.ainer-steps {
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -987,7 +987,7 @@ button {
   flex:1.5;
 }
 .main-container-steps {
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
 }
@@ -1063,64 +1063,99 @@ button {
 .map-section {
   display: flex;
   align-items: center;
-
 }
 
 .text-content {
   flex: 1;
-  padding: 20px;
+  max-width: 600px;
+  padding: 30px;
+  margin-left: 20px;
 }
 
 .text-content h2 {
-  font-size: 2em;
-  color: #2c7aba;
+  font-size: 2.4em;
+  color: #107a8b;
   margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .text-content p {
-  font-size: 1.1em;
+  font-size: 16px;
   color: #333;
   line-height: 1.6;
+  font-weight: 400;
+}
+.map-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  margin-left: 30px;
+}
+
+.text-content {
+  flex: 1;
 }
 
 .map-container {
   position: relative;
   flex: 1;
-  display: flex;
-  justify-content: center;
+  max-width: 100%;
 }
 
 .map-image {
   width: 100%;
-  max-width: 600px;
+  min-width: 400px;
+  max-width: 500px;
   height: auto;
 }
 
-/* Location markers (dots) */
+/* Marker styling with bounce */
 .location-marker {
   position: absolute;
-  width: 24px; /* Adjust based on the size of your dot image */
-  height: 24px;
+  width: 45px;
+  height: 45px;
+  background-image: url('../../public/assets/Dots.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
   animation: bounce 1.5s infinite;
+  transform: translate(-50%, -50%);
 }
 
-/* Bounce animation */
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0);
+    transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translate(-50%, -60%) scale(1.1);
   }
 }
-.payment-success {
-  text-align: center;
-  padding: 50px;
+@media (max-width: 850px){
+  .map-image{
+    max-width: 400px;
+  }
 }
+/* Responsive layout for smaller screens */
+@media (max-width: 850px) {
+  .map-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
 
 .payment-success h1 {
   font-size: 2.5em;
-  color: #4CAF50;
+  color: #107a8b;
   margin-bottom: 20px;
 }
 
@@ -1134,18 +1169,66 @@ button {
   margin-top: 30px;
 }
 
-.btn-home, .btn-orders {
-  display: inline-block;
-  padding: 12px 20px;
-  margin: 10px;
-  font-size: 1em;
-  color: white;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
+
+
+
+
+.small-text{
+  font-size: 14px;
+  font-style: italic;
+}
+.list-map-container{
+  list-style: none;
+  padding-top: 20px;
+ text-align: left;
+ font-size: 24px;
+ font-weight: 400;
+ color: #0e6d72;
 }
 
-.btn-home:hover, .btn-orders:hover {
-  background-color: #45A049;
+.container-about-us{
+  padding: 20px;
+}
+.payment-success{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+.icon-success{
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+}
+
+.failed-payment-page{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+.link-failed{
+  margin-top: 5px;
+    touch-action: manipulation;
+    align-self: auto;
+    margin-left: 20px;
+    background-color: #b0f4f4;
+    border: #000;
+    border-radius: 35px;
+    box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
+    color: #107a8b;
+    font-size: 1.3rem;
+    font-weight: 600;
+    left: auto;
+    line-height: 1;
+    padding: 20px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    transition: all .3s ease-in-out;
+    z-index: 2;
+}
+.title-failed{
+  padding: 10px;
+  font-size: 36px;
+  color: #0e6d72;
 }

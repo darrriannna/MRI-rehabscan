@@ -1,11 +1,12 @@
 import React from 'react'
-import { Footer, Navbar } from "../components";
+import { Link } from 'react-router-dom';
+import { Footer, Navbar, Steps } from "../components";
 import "../styles/index.css";
 
 const AboutPage = () => {
   return (
     <>
-    <div className='body'>
+    <div className='body '>
       <Navbar />
       <div className="container-about-us">
         <h2 className="text-center py-4">Om Rehabscan</h2>
@@ -23,26 +24,10 @@ const AboutPage = () => {
     </div>
   </div>
         </div>
-        <div className='rules-container'>
-      <h3 className='center-text'>Hur funkar det?</h3>
-     <div class="container-card">
-        <div class="box box1"><h4>Steg 1</h4>
-        <p>Fyll i en bokningsförfrågan. En läkare ringer upp och bekräftar din bokning. Ingen remiss krävs.</p></div>
-        <div class="box box2">
-          <h4>Steg 2</h4>
-          <p>En läkare ringer upp och bekräftar din bokning och diskuterar dina önskemål.</p>
-        </div>
-        <div class="box box3">
-          <h4>Steg 3</h4>
-          <p>Du erbjuds undersökning inom 5 arbetsdagar. Kallelse skickas via Kivra eller per post.</p>
-        </div>
-        <div class="box box4">
-          <h4>Steg 4</h4>
-          <p>Personlig återkoppling med läkare inom 5 arbetsdagar efter utförd undersökning.</p>
-        </div>
-        <div/>
-    </div>
-      </div>
+       <Steps/>
+       <div className='btn-center'>
+            <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
+          </div>
       </div>
       <Footer /></div>
     </>

@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home, AboutPage, ContactPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage } from "./pages";
 import MRI from './pages/MRI';
-import { DynamicForm } from './components';
+import { DynamicForm, Success, Failed } from './components';
 import ScrollToTop from './components/ScrollToTop';
 import Loader from './components/Loader';
 import { LoaderProvider } from './context/loaderContext';  // Import the LoaderProvider
@@ -30,6 +30,8 @@ root.render(
           <Route path="/mri-booking" element={<MRIbookTime />} />
           <Route path="/service-page" element={<ServicesPage />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/failed" element={<Failed />} />
           <Route path="/product/*" element={<PageNotFound />} />
         </Routes>
       </LoaderProvider>
