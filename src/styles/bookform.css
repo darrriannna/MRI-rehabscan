@@ -99,7 +99,11 @@ form {
     color: red;
     margin-top: 5px;
   }
-  
+  .input-field{
+    border-radius: 15px;
+    border: none;
+    min-height: 50px;
+  }
   .service-buttons {
     display: flex;
     flex-direction: column;

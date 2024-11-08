@@ -743,7 +743,9 @@ text-shadow: 1px 1px 2px #345e64 ;
 /* Responsive Design */
 @media (max-width: 768px) {
   .main-content {
-    flex-direction: column; /* Stack the image on top of the text */
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;/* Stack the image on top of the text */
   }
 
   .banner-image {
@@ -1083,8 +1085,8 @@ button {
 .text-content {
   flex: 1;
   max-width: 600px;
-  padding: 30px;
-  margin-left: 20px;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .text-content h2 {
@@ -1107,7 +1109,7 @@ button {
   justify-content: space-between;
   gap: 40px;
   padding: 20px;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 
 .text-content {
@@ -1149,6 +1151,11 @@ button {
   }
 }
 @media (max-width: 850px){
+  .map-image{
+    max-width: 400px;
+  }
+}
+@media (min-width: 850px){
   .map-image{
     max-width: 400px;
   }

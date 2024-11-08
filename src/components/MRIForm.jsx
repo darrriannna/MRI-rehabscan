@@ -11,7 +11,22 @@ const MRIForm = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate(); // Initialize navigate
-
+  const handlePersonnummerChange = (event) => {
+    let { value } = event.target;
+    
+    // Remove all non-digits and apply formatting
+    value = value.replace(/\D/g, ''); // Remove non-digits
+    if (value.length > 6) {
+      value = `${value.slice(0, 6)}-${value.slice(6)}`; // Insert dash after 6 digits
+    }
+    
+    // Set the value in formData
+    setFormData({
+      ...formData,
+      personnummer: value
+    });
+  };
+  
   // Extract passed data from location state
   const { serviceName, city, price, stripeProductId } = location.state || {};
 
@@ -20,6 +35,7 @@ const MRIForm = () => {
     email: '',
     personnummer: '',
     message: '',
+    telefonnummer: '',
     policyConfirmed: false,
     noPacemakerConfirmed: false,
     serviceTitle: serviceName || 'Default Service',
@@ -112,31 +128,53 @@ const MRIForm = () => {
         <div>
           <h2 className="header-mri">Kundinformation</h2>
           <label>Service:</label>
-          <input type="text" name="serviceTitle" value={formData.serviceTitle} readOnly />
+          <input className='input-field' type="text" name="serviceTitle" value={formData.serviceTitle} readOnly />
         </div>
         <div>
           <label>Stad:</label>
-          <input type="text" name="city" value={formData.city} readOnly />
+          <input className='input-field' type="text" name="city" value={formData.city} readOnly />
         </div>
         <div>
           <label>Pris:</label>
-          <input type="text" name="price" value={formData.price} readOnly />
+          <input className='input-field' type="text" name="price" value={formData.price} readOnly />
         </div>
         <div>
           <label>Namn:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+          <input className='input-field' type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div>
           <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+          <input className='input-field' type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div>
-          <label>Personnummer:</label>
-          <input type="text" name="personnummer" value={formData.personnummer} onChange={handleChange} required />
-        </div>
+  <label>Personnummer:</label>
+  <input
+    className='input-field'
+    type="text"
+    name="personnummer"
+    value={formData.personnummer}
+    onChange={handlePersonnummerChange} // Use a custom handler for formatting
+    required
+    placeholder="ÅÅMMDD-XXXX"
+    pattern="\d{6}-\d{4}" // Ensures format 6 digits, dash, then 4 digits
+    maxLength="11" // Limits input to 11 characters (10 digits + 1 dash)
+  />
+</div>
+
+<div>
+  <label>Telefonnummer:</label>
+  <input
+    className='input-field'
+    type="text"
+    name="telefonnummer" // Ensure the name is 'telefonnummer'
+    value={formData.telefonnummer} // Use formData.telefonnummer here
+    onChange={handleChange} // Use the general handleChange function
+    required
+  />
+</div>
         <div>
           <label>Meddelande:</label>
-          <textarea name="message" value={formData.message} onChange={handleChange} required />
+          <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required />
         </div>
         <div>
           <label>
