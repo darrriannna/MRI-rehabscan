@@ -716,6 +716,12 @@ text-shadow: 1px 1px 2px #345e64 ;
   align-items: flex-start; /* Align items to the start */
   padding: 10px 0;
 }
+.main-content-info {
+  display: flex;
+  flex-direction: row; /* Default to row for larger screens */
+  align-items: flex-start; /* Align items to the start */
+  padding: 10px 0;
+}
 
 .banner-image {
   position: relative; /* Necessary for absolute positioning of circles */
@@ -731,6 +737,7 @@ text-shadow: 1px 1px 2px #345e64 ;
   flex: 1; /* Allow text content to take up available space */
   padding: 0 20px; /* Add some padding for better spacing */
   font-weight: 300;
+  flex-direction: column;
 }
 
 /* Responsive Design */
@@ -742,6 +749,14 @@ text-shadow: 1px 1px 2px #345e64 ;
   .banner-image {
     margin-left: 0;
     margin-bottom: 20px; /* Add space between image and text */
+  }
+  .main-content-info {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    text-align: left;
+     /* Center align items horizontally */
+   /* Center align text within container */
+    
   }
 }
 

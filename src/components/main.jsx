@@ -1,94 +1,118 @@
-import React, {  useState } from 'react';
-import '../styles/index.css'; // Import your custom CSS file
+import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Import motion for animations
+import '../styles/index.css';
 import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
 import DynamicForm from './DynamicForm';
 import Steps from './Steps';
 import MapSection from './MapSection';
-  // Import loader context
-
 
 const Home = () => {
   const [openSection, setOpenSection] = useState(null);
-  
+
   // Function to toggle FAQ sections
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
   };
 
+  // Animation settings
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: 'easeOut' },
+  };
+
   return (
-    <div className="main"> 
-      <div className="container">
-        <section className="main-content">
-          <div className="container-home">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+      <div className="main">
+        <div className="container">
+          <motion.section className="main-content" {...fadeIn}>
+            <div className="container-home">
+              <motion.div className="left-column" {...fadeIn} transition={{ delay: 0.2 }}>
+                <img src="./assets/MRI-3d.png" alt="MRI 3d" />
+              </motion.div>
+              <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
+                <h2>Undvik köer och väntetider med privat röntgen</h2>
+                <ul>
+                  <li>Få tid för undersökning inom 14 arbetsdagar.</li>
+                  <li>Kontakt med legitimerad läkare under hela processen.</li>
+                  <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
+                  <li>Personlig återkoppling efter undersökning.</li>
+                  <li>Remiss till fortsatt undersökning vid behov.</li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          <motion.div {...fadeIn} transition={{ delay: 0.6 }}>
+            <DynamicForm />
+          </motion.div>
+
+          <motion.div {...fadeIn} transition={{ delay: 0.8 }}>
+            <Steps />
+          </motion.div>
+
+          <motion.div className="btn-center" {...fadeIn} transition={{ delay: 1 }}>
+            <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">
+              Boka undersökning
+            </Link>
+          </motion.div>
+
+          <motion.div {...fadeIn} transition={{ delay: 1.2 }}>
+            <p className="center-text">
+              Du får kontakt med en läkare inom 24h för att ta ditt ärende vidare till undersökning
+            </p>
+          </motion.div>
+
+          <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
+            <MapSection />
+          </motion.div>
+
+          <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
             <div className="left-column">
-              <img src="./assets/MRI-3d.png" alt="MRI 3d" />
-            </div>
-            <div className="right-column">
-              <h2>Undvik köer och väntetider med privat röntgen</h2>
-              <ul>
-                <li>Få tid för undersökning inom 14 arbetsdagar.</li>
-                <li>Kontakt med legitimerad läkare under hela processen.</li>
-                <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
-                <li>Personlig återkoppling efter undersökning.</li>
-                <li>Remiss till fortsatt undersökning vid behov.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <div>
-<DynamicForm /></div>
-<Steps/>
-        
-          <div className='btn-center'>
-            <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
-          </div>
-          <div>
-          <p className='center-text'>Du får kontakt med en läkare inom 24h för att ta ditt ärende vidare till undersökning</p>
-        </div>
-<MapSection/>
-        <div className='container-home'>
-          <div className='left-column'>
-             <div className='text-center'>
-                  <h2 className='question-title'>Q&A</h2>
-                </div>
-            <div className="faq-container">
-              <div className="service-info">
-                <div className="faq-question" onClick={() => toggleSection(0)}>
-                  <h4>Vad är magnetröntgen?</h4>
-                  <span>{openSection === 0 ? '▲' : '▼'}</span>
-                </div>
-                {openSection === 0 && (
-                  <p className="faq-answer">
-                    Magnetkameraundersökning, även kallad MR, är en högspecialiserad undersökningsmetod som används för att upptäcka och diagnostisera sjukdomar och se skador i kroppen. Magnetkameran skapar den mest kompletta undersökningen på marknaden genom att kombinera magnetfält och radiovågor till bilder som kan avbilda näst intill alla organ i kroppen.
-                  </p>
-                )}
+              <div className="text-center">
+                <h2 className="question-title">Q&A</h2>
               </div>
+              <div className="faq-container">
+                <motion.div className="service-info" {...fadeIn} transition={{ delay: 1.8 }}>
+                  <div className="faq-question" onClick={() => toggleSection(0)}>
+                    <h4>Vad är magnetröntgen?</h4>
+                    <span>{openSection === 0 ? '▲' : '▼'}</span>
+                  </div>
+                  {openSection === 0 && (
+                    <p className="faq-answer">
+                      Magnetkameraundersökning, även kallad MR, är en högspecialiserad
+                      undersökningsmetod som används för att upptäcka och diagnostisera sjukdomar
+                      och se skador i kroppen.
+                    </p>
+                  )}
+                </motion.div>
 
-              <div className="service-info">
-                
-                <div className="faq-question" onClick={() => toggleSection(1)}>
-                  <h4>Hur får man remiss till magnetröntgen?</h4>
-                  <span>{openSection === 1 ? '▲' : '▼'}</span>
-                </div>
-                {openSection === 1 && (
-                  <p className="faq-answer">
-                    Hos RehabScan behöver du ingen remiss för MR. Du kontaktar oss direkt för att boka din undersökning. För att få en remiss till en magnetkameraundersökning inom offentlig vård behöver du vanligtvis kontakta din primärvårdsläkare eller en annan specialistläkare.
-                  </p>
-                )}
+                <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
+                  <div className="faq-question" onClick={() => toggleSection(1)}>
+                    <h4>Hur får man remiss till magnetröntgen?</h4>
+                    <span>{openSection === 1 ? '▲' : '▼'}</span>
+                  </div>
+                  {openSection === 1 && (
+                    <p className="faq-answer">
+                      Hos RehabScan behöver du ingen remiss för MR. Du kontaktar oss direkt för att
+                      boka din undersökning.
+                    </p>
+                  )}
+                </motion.div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
 
-        <div>
-          <h2 className='center-text fw-3 p-3 mb-4'>Prislista</h2>
-          <Pricelist />
+          <motion.div {...fadeIn} transition={{ delay: 2.2 }}>
+            <h2 className="center-text fw-3 p-3 mb-4">Prislista</h2>
+            <Pricelist />
+          </motion.div>
         </div>
-        
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default Home;
+

@@ -38,7 +38,7 @@ const ServiceInfo = () => {
     <div className='main-pricelist'>
     <div className="container-pricelist">
       
-      <div className="main-content"> 
+      <div className="main-content-info"> 
        <div className="text-content">
         <div className='title-container'>
           <h2 className='title-service'> {service.title}</h2>
