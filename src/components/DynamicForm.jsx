@@ -73,6 +73,7 @@ const DynamicForm = () => {
   };
 
   return (
+    <div className='container-form-main'>
     <div className="form-container">
       <div></div>
       <h1 className='text-center main-title-form'>Boka privat röntgen utan remiss</h1>
@@ -127,6 +128,7 @@ const DynamicForm = () => {
         )}
       </form>
       <div></div>
+    </div>
     </div>
   );
 };

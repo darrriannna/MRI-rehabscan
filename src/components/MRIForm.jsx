@@ -32,6 +32,7 @@ const MRIForm = () => {
 
   const [formData, setFormData] = useState({
     name: '',
+    lastname: '',
     email: '',
     personnummer: '',
     message: '',
@@ -143,6 +144,17 @@ const MRIForm = () => {
           <input className='input-field' type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div>
+  <label>Efternamn:</label>
+  <input
+    className='input-field'
+    type="text"
+    name="lastname"
+    value={formData.lastname}
+    onChange={handleChange}
+    required
+  />
+</div>
+        <div>
           <label>Email:</label>
           <input className='input-field' type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
@@ -155,8 +167,8 @@ const MRIForm = () => {
     value={formData.personnummer}
     onChange={handlePersonnummerChange} // Use a custom handler for formatting
     required
-    placeholder="ÅÅMMDD-XXXX"
-    pattern="\d{6}-\d{4}" // Ensures format 6 digits, dash, then 4 digits
+    placeholder="ÅÅÅÅMMDD-XXXX"
+    pattern="\d{8}-\d{4}" // Ensures format 6 digits, dash, then 4 digits
     maxLength="11" // Limits input to 11 characters (10 digits + 1 dash)
   />
 </div>
@@ -173,7 +185,7 @@ const MRIForm = () => {
   />
 </div>
         <div>
-          <label>Meddelande:</label>
+          <label>Beskriv dina besvär:</label>
           <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required />
         </div>
         <div>

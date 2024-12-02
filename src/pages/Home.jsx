@@ -1,4 +1,4 @@
-import { Navbar, Main, Footer } from "../components";
+import { Navbar, Main, Footer, StartHome } from "../components";
 import React, { useEffect, useState } from 'react'; 
 import Loader from '../components/Loader'; 
 function Home() {
@@ -19,6 +19,7 @@ function Home() {
       {!loading && (
         <div className="body">
       <Navbar />
+      <StartHome/>
       <Main />
       <Footer /></div>
       )}

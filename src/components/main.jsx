@@ -25,7 +25,10 @@ const Home = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <div className="main">
-        <div className="container">
+        <div className="container"> 
+         <motion.div {...fadeIn} transition={{ delay: 0.6 }}>
+            <DynamicForm />
+          </motion.div>
           <motion.section className="main-content" {...fadeIn}>
             <div className="container-home">
               <motion.div className="left-column" {...fadeIn} transition={{ delay: 0.2 }}>
@@ -34,19 +37,17 @@ const Home = () => {
               <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
                 <h2>Undvik köer och väntetider med privat röntgen</h2>
                 <ul>
-                  <li>Få tid för undersökning inom 14 arbetsdagar.</li>
-                  <li>Kontakt med legitimerad läkare under hela processen.</li>
-                  <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
-                  <li>Personlig återkoppling efter undersökning.</li>
-                  <li>Remiss till fortsatt undersökning vid behov.</li>
+                  <li className='list-home-main'>Få tid för undersökning inom 7-14 arbetsdagar.</li>
+                  <li className='list-home-main'>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
+                  <li className='list-home-main'>Vi skickar din remiss, därefter får du kallelse till undersökning</li>
+                  <li className='list-home-main'>Möjlighet att diskutera dina röntgen svar med legitimerad personal.</li>
+                  <li className='list-home-main'>Billigast i Sverige.</li>
                 </ul>
               </motion.div>
             </div>
           </motion.section>
 
-          <motion.div {...fadeIn} transition={{ delay: 0.6 }}>
-            <DynamicForm />
-          </motion.div>
+        
 
           <motion.div {...fadeIn} transition={{ delay: 0.8 }}>
             <Steps />

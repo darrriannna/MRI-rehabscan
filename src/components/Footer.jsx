@@ -19,7 +19,7 @@ const Footer = () => {
       
         <p>070-873 2929</p>
         <p >
-          <a className="link" href="mailto:info@nopainclinic.se">info@rehabscan.se</a>
+          <a className="link" href="mailto:info@rehabscan.se">info@rehabscan.se</a>
         </p>
         <div>
         

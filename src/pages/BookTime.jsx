@@ -5,8 +5,10 @@ import '../styles/bookform.css';
 const BookTime = () => {
   return (
     <div className='main-book'>
+      <div className='image-back'>
       <Navbar />
       <DynamicForm/>
+      </div>
       <Footer/>
     </div>
   );

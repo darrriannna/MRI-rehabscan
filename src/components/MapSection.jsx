@@ -5,12 +5,15 @@ const MapSection = () => {
   
 
   return (
-    <div className="map-section">
-      <div className="text-content">
-        <h2>Vi finns över hela Sverige</h2>
+    <div className='map-section-container'>
+  <h2>Vi finns över hela Sverige</h2>
         <p>
           <strong>RehabScan</strong> är en digital klinik, så vi kan ordna din MR-skanning närmast ditt hem. Fyll bara i formuläret och boka din tid utan månader av väntan.
         </p>
+    <div className="map-section">
+      
+      <div className="text-content">
+        
         <ul className='list-map-container'>
             <li className='list-map'>Stockholm</li>
             <li className='list-map'>Göteborg</li>
@@ -25,7 +28,7 @@ const MapSection = () => {
       <div className="map-container">
         <img src="./assets/Map.png" alt="Map of Sweden" className="map-image" />
       </div>
-    </div>
+    </div></div>
   );
 };
 

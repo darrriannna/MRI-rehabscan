@@ -2,12 +2,17 @@ body{
   font-family: "Montserrat", sans-serif;
 }
 .body{
-  background: linear-gradient(#BFE4E6 0%,  #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
+  background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
 
 }
 .title-service{
   font-weight: 600;
   color: #043737;
+  
+}
+.image-back{
+  background-image: url("../../public/assets/Mr-machine.png") ;
+  background-size: cover;
   
 }
 .banner {
@@ -25,7 +30,7 @@ body{
   margin: auto;
 }
 .main-pricelist{
-  background: linear-gradient(#BFE4E6 0%, #FCF2D6 30%, #FCF2D6 50%, #BFE4E6 70%, #FCF2D6 100%);
+  background: linear-gradient(#fefeff 0%,  #7bc9fa 50%, #419ee6 70%, #4b81f6 100%);
 
 }
 .banner-text {
@@ -61,7 +66,7 @@ body{
     touch-action: manipulation;
     align-self: auto;
     background-color: #b0f4f4;
-    background-image: linear-gradient(#7ce0ff, #07a1b9, #15ABB3);
+    background-image: linear-gradient(#3aadf9, #5a9cf8, #3b75d2);
     border-radius: 35px;
     box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
     color: #f5fbfb;
@@ -579,11 +584,11 @@ text-shadow: 1px 1px 2px #345e64 ;
 }
 
 .card {
-  background: #CEF3FF;
-  border: 1px solid #ccc;
+  background: #f5f5f5;
   border-radius: 8px;
+  border: none;
   padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(83, 109, 238);
 }
 
 .card-content h4 {
@@ -607,7 +612,7 @@ text-shadow: 1px 1px 2px #345e64 ;
   line-height: 1;
   border-radius: 500px;
   transition-duration: .3s;
-  border: 1px solid transparent;
+  border: 2px solid black;
   letter-spacing: 2px;
   min-width: 100px;
   text-transform: uppercase;
@@ -616,11 +621,11 @@ text-shadow: 1px 1px 2px #345e64 ;
   text-align: center;
   padding: 16px 14px 18px;
   color: #000000;
-  box-shadow: inset 0 0 0 1px #000000;
-  background-color: transparent;
   height: 48px;
   text-decoration: none;
-
+background: #fdfdfd;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
 
 }
  .read-more-btn:hover{
@@ -682,8 +687,6 @@ text-shadow: 1px 1px 2px #345e64 ;
   cursor: pointer;
   font-size: 14px;
   line-height: 1;
-  border-radius: 500px;
-  transition-property: background-color,border-color,color,box-shadow,filter;
   transition-duration: .3s;
   border: 1px solid transparent;
   letter-spacing: 2px;
@@ -695,10 +698,11 @@ text-shadow: 1px 1px 2px #345e64 ;
   padding: 16px 14px 18px;
   margin-top: 10px;
   color: #000000;
-  box-shadow: inset 0 0 0 1px #000000;
-  background-color: #59cbd5;
   height: 48px;
-  
+background: #399bfc;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
 }
 .btn-book-now:hover{
       color: black;
@@ -715,12 +719,15 @@ text-shadow: 1px 1px 2px #345e64 ;
   flex-direction: row; /* Default to row for larger screens */
   align-items: flex-start; /* Align items to the start */
   padding: 10px 0;
+  gap: 20px;
 }
 .main-content-info {
+  
   display: flex;
   flex-direction: row; /* Default to row for larger screens */
   align-items: flex-start; /* Align items to the start */
   padding: 10px 0;
+  
 }
 
 .banner-image {
@@ -769,8 +776,8 @@ text-shadow: 1px 1px 2px #345e64 ;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(180deg, #94D7DB -3.52%, #43d4dc 100%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  background: white;
+  box-shadow: 0px 6px 4px rgb(57, 119, 252);
   border-radius: 20px;
 
 }
@@ -860,11 +867,12 @@ button {
 /* Loader.css */
 
 .main-book{
-  background: linear-gradient(#dad9be, #FFF9D6);
+  background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
+
 }
 
 .navbar-toggler{
-  border-color:  #b0f4f4;
+  border-color:  #5397ef;
   border-radius: 0.5cm;
 }
 
@@ -885,7 +893,7 @@ button {
 
 /* Adjust Image Size */
 .loader-img {
-  width: 150px; /* Adjust the size of the corpse image */
+  width: 120px; /* Adjust the size of the corpse image */
   z-index: 2;
   position: relative;
 }
@@ -893,10 +901,9 @@ button {
 /* Scanning Line */
 .scan-line {
   position: absolute;
-  width: 150px; /* Same width as the image */
+  width: 120px; /* Same width as the image */
   height: 6px; /* Height of the scanning line, adjusted to look good over bones */
-  background: linear-gradient(#7ce0ff, #d0faff, #59cbd5);
-  box-shadow: #31bbc7;
+  background: linear-gradient(#7cbdff, #d0faff, #1873f1);
   z-index: 3;
   animation: scan-updown 3s infinite; /* Slower animation (4 seconds instead of 2) */
   border-radius: 50px; /* Make the scanning line round for better visual */
@@ -908,7 +915,7 @@ button {
     top: 40%; /* Adjust based on where the bones area starts */
   }
   50% {
-    top: 57%; /* Adjust based on where the bones area ends */
+    top: 54%; /* Adjust based on where the bones area ends */
   }
   100% {
     top: 40%; /* Returns to the start */
@@ -1088,10 +1095,14 @@ button {
   padding: 10px;
   margin-left: 10px;
 }
-
-.text-content h2 {
+.map-section-container{
+  padding: 20px;
+}
+.map-section-container h2 {
   font-size: 2.4em;
-  color: #107a8b;
+  color: #fbfcfd;
+  text-shadow: 0px 3px 3px  #234e7c;
+  font-weight: 600;
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
@@ -1107,7 +1118,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 0;
   padding: 20px;
   margin-left: 10px;
 }
@@ -1130,40 +1141,21 @@ button {
 }
 
 /* Marker styling with bounce */
-.location-marker {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  background-image: url('../../public/assets/Dots.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  animation: bounce 1.5s infinite;
-  transform: translate(-50%, -50%);
-}
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -60%) scale(1.1);
-  }
-}
 @media (max-width: 850px){
   .map-image{
-    max-width: 400px;
+    min-width: 400px;
   }
 }
 @media (min-width: 850px){
   .map-image{
-    max-width: 400px;
+    min-width: 400px;
   }
 }
 /* Responsive layout for smaller screens */
 @media (max-width: 850px) {
   .map-section {
-    flex-direction: column;
+   
     align-items: center;
   }
 
@@ -1253,4 +1245,111 @@ button {
   padding: 10px;
   font-size: 36px;
   color: #0e6d72;
+}
+/* Container Styling */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background Image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Content */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  
+  border-radius: 10px;
+}
+
+/* Title and Subtitle */
+.hero-title {
+  font-size: 2.9rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 2.7rem;
+  margin: 0.5rem 0;
+}
+
+/* Button */
+.hero-button {
+  display: inline-block;
+margin-top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  border: 2px solid white;
+  transition-duration: .3s;
+  letter-spacing: 2px;
+  min-width: 170px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: white;
+  height: 55px;
+  background-color: transparent;
+  text-decoration: none;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+}
+
+.hero-button:hover {
+  background-color: #2024f063;
+}
+
+/* Footer Text */
+.hero-footer {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .hero-footer {
+    font-size: 0.9rem;
+  }
+}
+.container-form-main{
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
