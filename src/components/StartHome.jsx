@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/index.css'; // Create a CSS file for styling
+import { NavLink } from 'react-router-dom';
 
 const StartHome = () => {
   return (
@@ -13,7 +14,7 @@ const StartHome = () => {
         <div className="hero-overlay">
           <h1 className="hero-title">Undersökning utan remiss</h1>
           <p className="hero-subtitle">i 7-14 dagar</p>
-          <button className="hero-button">BOKA NU</button>
+          <NavLink to="/bookappointment" className="hero-button"> Boka nu </NavLink>
           <p className="hero-footer">Billigast i Sverige</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Footer, Navbar, Steps, MapSection } from "../components";
+import { Footer, Navbar, Steps } from "../components";
 
 import "../styles/index.css";
 
@@ -30,7 +30,6 @@ const AboutPage = () => {
             <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
           </div>
       </div>
-    <MapSection/>
       <Footer /></div>
     </>
   )

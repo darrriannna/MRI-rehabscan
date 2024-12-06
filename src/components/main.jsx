@@ -72,7 +72,7 @@ const Home = () => {
           <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
             <div className="left-column">
               <div className="text-center">
-                <h2 className="question-title">Q&A</h2>
+                <h2 className="question-title">Vanliga frågor</h2>
               </div>
               <div className="faq-container">
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 1.8 }}>
@@ -98,6 +98,17 @@ const Home = () => {
                     <p className="faq-answer">
                       Hos RehabScan behöver du ingen remiss för MR. Du kontaktar oss direkt för att
                       boka din undersökning.
+                    </p>
+                  )}
+                </motion.div>
+                <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
+                  <div className="faq-question" onClick={() => toggleSection(2)}>
+                    <h4>Vem har tillgång till mina resultat?</h4>
+                    <span>{openSection === 2 ? '▲' : '▼'}</span>
+                  </div>
+                  {openSection === 2 && (
+                    <p className="faq-answer">
+                     Vi följer samma lagar och regler gällande sekretess som vårdcentraler och sjukhus. Vi lyder under patientdatalagen, hälso- och sjukvårdslagen och står under tillsyn av Inspektionen för vård och omsorg (IVO). Det innebär att all data och alla undersökningsresultat hanteras i enlighet med dessa lagar och förordningar.
                     </p>
                   )}
                 </motion.div>

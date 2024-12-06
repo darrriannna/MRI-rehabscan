@@ -111,9 +111,9 @@ body{
 font-size: 40px;
 padding: 10px;
 margin-top: 20px;
-font-weight: 800;
-color: #42a2ad;
-text-shadow: 1px 1px 2px #345e64 ;
+font-weight: 700;
+color: white;
+text-shadow: 1px 4px 2px #0745f1fe ;
 }
 .banner-image {
   position: relative;
@@ -472,15 +472,17 @@ text-shadow: 1px 1px 2px #345e64 ;
 }
 
 .right-column h2 {
-  font-size: 30px;
-  color: #004d3a;
-  margin-bottom: 20px;
-  padding-left: 10px;
+  font-size: 2.4em;
+  color: #fbfcfd;
+  text-shadow: 0px 3px 3px  #234e7c;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .right-column ul {
   list-style: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .right-column ul li {
@@ -1097,6 +1099,9 @@ button {
 }
 .map-section-container{
   padding: 20px;
+  width: 50%;
+  margin: auto;
+  
 }
 .map-section-container h2 {
   font-size: 2.4em;
@@ -1151,14 +1156,17 @@ button {
   .map-image{
     min-width: 400px;
   }
+ 
 }
 /* Responsive layout for smaller screens */
 @media (max-width: 850px) {
   .map-section {
-   
+   flex-direction: column;
     align-items: center;
   }
-
+ .map-section-container{
+    width: 100%;
+  }
   .text-content {
     text-align: center;
     margin-bottom: 20px;
@@ -1195,9 +1203,12 @@ button {
   list-style: none;
   padding-top: 20px;
  text-align: left;
- font-size: 24px;
- font-weight: 400;
- color: #0e6d72;
+ font-size: 20px;
+ font-weight: 600;
+ color: #fbfbfb;
+ 
+
+ text-shadow: 0px 5px 4px  #055ab5;
 }
 
 .container-about-us{
@@ -1296,7 +1307,7 @@ button {
 /* Button */
 .hero-button {
   display: inline-block;
-margin-top: 20px;
+  margin-top: 20px;
   cursor: pointer;
   font-size: 18px;
   line-height: 1;
@@ -1308,6 +1319,7 @@ margin-top: 20px;
   white-space: normal;
   font-weight: 700;
   text-align: center;
+  
   padding: 16px 14px 18px;
   color: white;
   height: 55px;
@@ -1340,7 +1352,9 @@ border-radius: 30px;
   }
 
   .hero-button {
-    font-size: 0.9rem;
+    text-align: center;
+    
+    height: 45px;
     padding: 0.6rem 1.5rem;
   }
 
