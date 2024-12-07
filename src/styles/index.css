@@ -3,7 +3,7 @@ body{
 }
 .body{
   background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
-
+  
 }
 .title-service{
   font-weight: 600;
@@ -30,7 +30,7 @@ body{
   margin: auto;
 }
 .main-pricelist{
-  background: linear-gradient(#fefeff 0%,  #7bc9fa 50%, #419ee6 70%, #4b81f6 100%);
+  background: linear-gradient(#fefeff 0%,  #7bc9fa 50%, #419ee6 70%, #6892ee 100%);
 
 }
 .banner-text {
@@ -108,7 +108,7 @@ body{
   position: relative;
 }
 .question-title{
-font-size: 40px;
+font-size: 30px;
 padding: 10px;
 margin-top: 20px;
 font-weight: 700;
@@ -357,6 +357,13 @@ text-shadow: 1px 4px 2px #0745f1fe ;
 }
 .nav-link{
   font-size: 18px;
+  font-weight: 500;
+ 
+}
+
+.nav-link:hover{
+  color: #082e58;
+  text-shadow: 0px 2px 3px #4099f9;
 }
 
 .mr-title{
@@ -407,9 +414,16 @@ text-shadow: 1px 4px 2px #0745f1fe ;
   bottom: 0;
   margin: auto;
   padding: 20px;
+  margin-top: 40px;
 }
-.footer h5 {
+.link-footer{
+  text-decoration: none;
+  color: white;
+}
+.footer-header {
   font-size: 22px;
+  color: white;
+  text-shadow: 0px 2px 3px #1873f1;
 }
 .footer ul {
   padding: 0;
@@ -419,8 +433,9 @@ text-shadow: 1px 4px 2px #0745f1fe ;
   margin-bottom: 0.5rem;
 }
 .footer ul li a {
-  color: #000;
+  color: white;
   text-decoration: none;
+  text-shadow: 3px 2px 4px #055ab5;
 }
 .footer ul li a:hover {
   text-decoration: underline;
@@ -794,7 +809,7 @@ button {
 
 /* Dropdown Styles */
 .dropdown-toggle {
-  background: linear-gradient(#DEFAFC, #b1f2f6 );
+  background: linear-gradient(#75befa, #528ef6 );
   border: none;
   box-shadow: 2px 1px 0px rgb(9, 108, 125);
   padding: 10px 15px;
@@ -803,7 +818,7 @@ button {
   width: 100%;
   font-size: 18px;
   font-weight: 500;
-  color: #000;
+  color:white;
 }
 
 .dropdown-content {
@@ -1099,7 +1114,7 @@ button {
 }
 .map-section-container{
   padding: 20px;
-  width: 50%;
+  width: 70%;
   margin: auto;
   
 }
@@ -1201,14 +1216,14 @@ button {
 }
 .list-map-container{
   list-style: none;
-  padding-top: 20px;
+  padding-top: 26px;
  text-align: left;
- font-size: 20px;
+ font-size: 26px;
  font-weight: 600;
  color: #fbfbfb;
- 
 
- text-shadow: 0px 5px 4px  #055ab5;
+
+ text-shadow: 0px 3px 4px  #082e58;
 }
 
 .container-about-us{
@@ -1365,5 +1380,5 @@ border-radius: 30px;
 .container-form-main{
   margin-top: 20px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }

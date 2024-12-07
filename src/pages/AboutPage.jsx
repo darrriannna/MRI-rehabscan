@@ -14,11 +14,11 @@ const AboutPage = () => {
 
         <div className="row">
 
-        <div class="container-home">
-    <div class="left-column">
+        <div className="container-home">
+    <div className="left-column">
       <img src="./assets/About-pic.png" alt="MRI 3d" />
     </div>
-    <div class="right-column">
+    <div className="right-column">
     <p className='text-about p-4'>RehabScan är en digital hälsoklinik som erbjuder radiologiska undersökningar för att ge dig en bättre inblick i din hälsa.</p>
     <p className='p-4'>Med RehabScan kan du känna dig trygg i att få den vård och uppmärksamhet du behöver – allt från bekvämligheten av ditt eget hem. Vi sätter alltid din hälsa i första rummet och strävar efter att ge dig den bästa möjliga upplevelsen, oavsett ditt behov.
     Välkommen till RehabScan, en hälsoklinik i framkant som sätter dig och din hälsa i fokus!</p>

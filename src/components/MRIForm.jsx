@@ -1,42 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loadStripe } from '@stripe/stripe-js';
 import { addService } from '../redux/action/serviceAction';
+import { loadStripe } from '@stripe/stripe-js';
+import emailjs from 'emailjs-com'; // Import EmailJS library
 import '../styles/bookform.css';
 
-const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0exPkzlA0bYoP7ZsKVuxUyc9jjttFLkLtZWYmJb6Ikf6bKp867CB7005UMRqkzR'); // Replace with your actual Stripe publishable key
+// Stripe initialization
+const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0exPkzlA0bYoP7ZsKVuxUyc9jjttFLkLtZWYmJb6Ikf6bKp867CB7005UMRqkzR');
 
 const MRIForm = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const navigate = useNavigate(); // Initialize navigate
-  const handlePersonnummerChange = (event) => {
-    let { value } = event.target;
-    
-    // Remove all non-digits and apply formatting
-    value = value.replace(/\D/g, ''); // Remove non-digits
-    if (value.length > 6) {
-      value = `${value.slice(0, 6)}-${value.slice(6)}`; // Insert dash after 6 digits
-    }
-    
-    // Set the value in formData
-    setFormData({
-      ...formData,
-      personnummer: value
-    });
-  };
-  
+  const navigate = useNavigate();
+
   // Extract passed data from location state
   const { serviceName, city, price, stripeProductId } = location.state || {};
 
   const [formData, setFormData] = useState({
     name: '',
-    lastname: '',
+    lastname: '', // Added lastname field
     email: '',
     personnummer: '',
-    message: '',
     telefonnummer: '',
+    message: '',
     policyConfirmed: false,
     noPacemakerConfirmed: false,
     serviceTitle: serviceName || 'Default Service',
@@ -48,7 +35,7 @@ const MRIForm = () => {
   const [pacemakerError, setPacemakerError] = useState('');
 
   useEffect(() => {
-    setFormData(prevData => ({ ...prevData, serviceTitle: serviceName, city, price }));
+    setFormData((prevData) => ({ ...prevData, serviceTitle: serviceName, city, price }));
   }, [serviceName, city, price]);
 
   const handleChange = (e) => {
@@ -59,10 +46,25 @@ const MRIForm = () => {
     });
   };
 
+  const handlePersonnummerChange = (event) => {
+    let { value } = event.target;
+    value = value.replace(/\D/g, '');
+    if (value.length > 6) {
+      value = `${value.slice(0, 6)}-${value.slice(6)}`;
+    }
+    setFormData({
+      ...formData,
+      personnummer: value,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('handleSubmit triggered'); // Debug log
+
     let hasError = false;
 
+    // Validation checks
     if (!formData.policyConfirmed) {
       setError('Du måste intyga att du har tagit del av integritetspolicyn för att gå vidare.');
       hasError = true;
@@ -79,22 +81,21 @@ const MRIForm = () => {
 
     if (hasError) return;
 
-    // Dispatch service to redux state if needed
-    const mriService = {
-      id: new Date().getTime(),
-      title: formData.serviceTitle,
+    // Prepare data for EmailJS
+    const emailJsData = {
+      name: formData.name,
+      lastname: formData.lastname,
+      email: formData.email,
+      telefonnummer: formData.telefonnummer,
+      personnummer: formData.personnummer,
+      city: formData.city,
       price: formData.price,
-      qty: 1,
-      type: 'service',
-      formData,
+      message: formData.message,
+      serviceTitle: formData.serviceTitle, // Include the service name
     };
 
-    dispatch(addService(mriService));
-
-    // Stripe checkout integration
     try {
       const stripe = await stripePromise;
-
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: stripeProductId, quantity: 1 }],
         mode: 'payment',
@@ -103,23 +104,23 @@ const MRIForm = () => {
         customerEmail: formData.email,
       });
 
-      if (error) {
+      if (!error) {
+        // Send email with EmailJS
+        emailjs
+          .send('service_xpfsnsz', 'template_3x5x92l', emailJsData, 'NiSS0VC0DjOLtm-iN')
+          .then((result) => {
+            console.log('Email sent successfully:', result.text);
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error);
+          });
+      } else {
         console.error('Stripe checkout error:', error);
-        navigate('/failed', {
-          state: {
-            stripeProductId, // Pass the actual product ID used in the checkout
-            customerEmail: formData.email, // Pass the customer's email for retry
-          },
-        });
+        navigate('/failed', { state: { stripeProductId, customerEmail: formData.email } });
       }
     } catch (error) {
       console.error('Error initializing Stripe checkout:', error);
-      navigate('/failed', {
-        state: {
-          stripeProductId,
-          customerEmail: formData.email,
-        },
-      });
+      navigate('/failed', { state: { stripeProductId, customerEmail: formData.email } });
     }
   };
 
@@ -140,52 +141,37 @@ const MRIForm = () => {
           <input className='input-field' type="text" name="price" value={formData.price} readOnly />
         </div>
         <div>
-          <label>Namn:</label>
+          <label>Förnamn:</label>
           <input className='input-field' type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div>
-  <label>Efternamn:</label>
-  <input
-    className='input-field'
-    type="text"
-    name="lastname"
-    value={formData.lastname}
-    onChange={handleChange}
-    required
-  />
-</div>
+          <label>Efternamn:</label>
+          <input className='input-field' type="text" name="lastname" value={formData.lastname} onChange={handleChange} required />
+        </div>
         <div>
           <label>Email:</label>
           <input className='input-field' type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div>
-  <label>Personnummer:</label>
-  <input
-    className='input-field'
-    type="text"
-    name="personnummer"
-    value={formData.personnummer}
-    onChange={handlePersonnummerChange} // Use a custom handler for formatting
-    required
-    placeholder="ÅÅÅÅMMDD-XXXX"
-    pattern="\d{8}-\d{4}" // Ensures format 6 digits, dash, then 4 digits
-    maxLength="11" // Limits input to 11 characters (10 digits + 1 dash)
-  />
-</div>
-
-<div>
-  <label>Telefonnummer:</label>
-  <input
-    className='input-field'
-    type="text"
-    name="telefonnummer" // Ensure the name is 'telefonnummer'
-    value={formData.telefonnummer} // Use formData.telefonnummer here
-    onChange={handleChange} // Use the general handleChange function
-    required
-  />
-</div>
+          <label>Personnummer:</label>
+          <input
+            className='input-field'
+            type="text"
+            name="personnummer"
+            value={formData.personnummer}
+            onChange={handlePersonnummerChange}
+            required
+            placeholder="ÅÅMMDD-XXXX"
+            pattern="\d{6}-\d{4}"
+            maxLength="11"
+          />
+        </div>
         <div>
-          <label>Beskriv dina besvär:</label>
+          <label>Telefonnummer:</label>
+          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Meddelande:</label>
           <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required />
         </div>
         <div>
@@ -223,6 +209,7 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
 
 
 

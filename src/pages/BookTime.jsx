@@ -7,7 +7,8 @@ const BookTime = () => {
     <div className='main-book'>
       <div className='image-back'>
       <Navbar />
-      <DynamicForm/>
+      <div className='form-wrapper'>
+      <DynamicForm/></div>
       </div>
       <Footer/>
     </div>
