@@ -6,7 +6,7 @@ const Steps = () => {
     return (
         <div className='text-center big-steps'>
             <h2>Hur funkar det?</h2>
-            <p>Få dina MR-resultat i 3 steg</p>
+            <p className='small-text-steps'>Få dina MR-resultat i 3 steg</p>
             <div className="main-container-steps">
                 <div 
                     className='card-steps step-1'

@@ -1,5 +1,8 @@
 body{
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 .body{
   background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
@@ -13,7 +16,7 @@ body{
 .image-back{
   background-image: url("../../public/assets/Mr-machine.png") ;
   background-size: cover;
-  
+  flex: 1;
 }
 .banner {
     background-color: #ffffff; /* Light grey background */
@@ -409,13 +412,12 @@ text-shadow: 1px 4px 2px #0745f1fe ;
   background-color: transparent !important;
   box-shadow: 10px 0px 0px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
-  left: 0;
   width: 100%;
-  bottom: 0;
-  margin: auto;
   padding: 20px;
-  margin-top: 40px;
+  position: relative; /* Or 'absolute' for sticky footer */
+  margin-top: 0; /* Avoid unnecessary space above footer */
 }
+
 .link-footer{
   text-decoration: none;
   color: white;
@@ -729,12 +731,15 @@ border-radius: 30px;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start !important; /* Align items to the start */
+  text-align: left !important;
 }
 
 .main-content {
   display: flex;
   flex-direction: row; /* Default to row for larger screens */
-  align-items: flex-start; /* Align items to the start */
+  align-items: flex-start !important; /* Align items to the start */
+  text-align: left !important;
   padding: 10px 0;
   gap: 20px;
 }
@@ -742,9 +747,9 @@ border-radius: 30px;
   
   display: flex;
   flex-direction: row; /* Default to row for larger screens */
-  align-items: flex-start; /* Align items to the start */
+  align-items: flex-start !important; /* Align items to the start */
   padding: 10px 0;
-  
+  text-align: left !important;
 }
 
 .banner-image {
@@ -766,37 +771,56 @@ border-radius: 30px;
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .main-content {
-    flex-direction: column; 
-    align-items: center;
-    text-align: left;/* Stack the image on top of the text */
+  .main-pricelist {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center all children horizontally */
   }
 
-  .banner-image {
-    margin-left: 0;
-    margin-bottom: 20px; /* Add space between image and text */
+  .container-pricelist {
+    width: 100%; /* Ensure it takes up the full width */
+    padding: 0 20px; /* Add padding for spacing on smaller screens */
   }
+
   .main-content-info {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
-    text-align: left;
-     /* Center align items horizontally */
-   /* Center align text within container */
-    
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: flex-start; /* Align child elements to the left */
+    text-align: left; /* Ensure text is aligned to the left */
+    width: 100%; /* Take full width of the parent container */
+  }
+
+  .text-content {
+    width: 100%; /* Ensure full width for the text container */
+    padding: 0; /* Adjust padding if necessary */
+  }
+
+  .title-container {
+    margin-bottom: 20px; /* Add spacing under the title */
+  }
+
+  h2.title-service,
+  h4,
+  p {
+    text-align: left; /* Force left alignment for all text elements */
   }
 }
+
+
+
 
 /* Additional styles for the circle animation, pop-up, and other elements can remain the same or be adjusted as needed */
 
 /* General Styles */
 .form-container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   background: white;
   box-shadow: 0px 6px 4px rgb(57, 119, 252);
   border-radius: 20px;
-
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -885,7 +909,9 @@ button {
 
 .main-book{
   background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
-
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh;
 }
 
 .navbar-toggler{
@@ -982,6 +1008,12 @@ button {
 }
 .big-steps{
   padding-top: 20px;
+  text-align: center;
+}
+.small-text-steps{
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center;
 }
 .card-steps {
   height: 200px;
@@ -1360,10 +1392,12 @@ border-radius: 30px;
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
+    text-align: center;
   }
 
   .hero-subtitle {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .hero-button {
@@ -1375,10 +1409,27 @@ border-radius: 30px;
 
   .hero-footer {
     font-size: 0.9rem;
+    text-align: center;
   }
 }
 .container-form-main{
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.white{
+  font-weight: 400;
+  color: #d0faff;
+}
+.container-policy{
   padding: 20px;
-  margin-bottom: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.error-text {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
 }

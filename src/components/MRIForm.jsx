@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addService } from '../redux/action/serviceAction';
 import { loadStripe } from '@stripe/stripe-js';
-import emailjs from 'emailjs-com'; // Import EmailJS library
 import '../styles/bookform.css';
 
 // Stripe initialization
 const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0exPkzlA0bYoP7ZsKVuxUyc9jjttFLkLtZWYmJb6Ikf6bKp867CB7005UMRqkzR');
 
 const MRIForm = () => {
-  const dispatch = useDispatch();
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Extract passed data from location state
   const { serviceName, city, price, stripeProductId } = location.state || {};
 
   const [formData, setFormData] = useState({
     name: '',
-    lastname: '', // Added lastname field
+    lastname: '',
     email: '',
     personnummer: '',
     telefonnummer: '',
@@ -31,69 +26,102 @@ const MRIForm = () => {
     price: price || 'N/A',
   });
 
-  const [error, setError] = useState('');
-  const [pacemakerError, setPacemakerError] = useState('');
-
-  useEffect(() => {
-    setFormData((prevData) => ({ ...prevData, serviceTitle: serviceName, city, price }));
-  }, [serviceName, city, price]);
+  const [errors, setErrors] = useState({}); // State to track errors
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
+
+    if (name === 'personnummer') {
+      // Remove non-numeric characters and add a hyphen after the first 6 digits
+      let formattedValue = value.replace(/\D/g, ''); // Remove all non-numeric characters
+      if (formattedValue.length > 6) {
+        formattedValue = formattedValue.slice(0, 6) + '-' + formattedValue.slice(6, 10);
+      }
+      setFormData({
+        ...formData,
+        [name]: formattedValue,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === 'checkbox' ? checked : value,
+      });
+    }
   };
 
-  const handlePersonnummerChange = (event) => {
-    let { value } = event.target;
-    value = value.replace(/\D/g, '');
-    if (value.length > 6) {
-      value = `${value.slice(0, 6)}-${value.slice(6)}`;
+  const validatePersonnummer = () => {
+    const { personnummer } = formData;
+
+    // Simple regex to check if it follows the ÅÅMMDD-XXXX pattern
+    const regex = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
+    if (!regex.test(personnummer)) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        personnummer: "Personnummer must follow the format ÅÅMMDD-XXXX with valid dates.",
+      }));
+      return false;
     }
-    setFormData({
-      ...formData,
-      personnummer: value,
-    });
+
+    // Validate the date part of the personnummer
+    const year = parseInt(personnummer.slice(0, 2), 10);
+    const month = parseInt(personnummer.slice(2, 4), 10);
+    const day = parseInt(personnummer.slice(4, 6), 10);
+
+    const isValidDate = (y, m, d) => {
+      const date = new Date(`20${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
+      return date.getFullYear() === 2000 + y && date.getMonth() + 1 === m && date.getDate() === d;
+    };
+
+    if (!isValidDate(year, month, day)) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        personnummer: "Invalid date in Personnummer.",
+      }));
+      return false;
+    }
+
+    // Clear the error if validation passes
+    setErrors(prevErrors => ({ ...prevErrors, personnummer: null }));
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('handleSubmit triggered'); // Debug log
 
     let hasError = false;
 
-    // Validation checks
+    // Validate all fields here
     if (!formData.policyConfirmed) {
-      setError('Du måste intyga att du har tagit del av integritetspolicyn för att gå vidare.');
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        policy: "Du måste intyga att du har tagit del av integritetspolicyn för att gå vidare.",
+      }));
       hasError = true;
     } else {
-      setError('');
+      setErrors(prevErrors => ({ ...prevErrors, policy: null }));
     }
 
     if (!formData.noPacemakerConfirmed) {
-      setPacemakerError('Du måste intyga att du inte har pacemaker för att gå vidare.');
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        pacemaker: "Du måste intyga att du inte har pacemaker för att gå vidare.",
+      }));
       hasError = true;
     } else {
-      setPacemakerError('');
+      setErrors(prevErrors => ({ ...prevErrors, pacemaker: null }));
+    }
+
+    // Run personnummer validation
+    if (!validatePersonnummer()) {
+      hasError = true;
     }
 
     if (hasError) return;
 
-    // Prepare data for EmailJS
-    const emailJsData = {
-      name: formData.name,
-      lastname: formData.lastname,
-      email: formData.email,
-      telefonnummer: formData.telefonnummer,
-      personnummer: formData.personnummer,
-      city: formData.city,
-      price: formData.price,
-      message: formData.message,
-      serviceTitle: formData.serviceTitle, // Include the service name
-    };
+    // Store form data in localStorage
+    localStorage.setItem('formData', JSON.stringify(formData));
 
+    // Stripe payment process
     try {
       const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({
@@ -101,26 +129,16 @@ const MRIForm = () => {
         mode: 'payment',
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/failed`,
-        customerEmail: formData.email,
+        customerEmail: formData.email, // Add customerEmail here
       });
 
-      if (!error) {
-        // Send email with EmailJS
-        emailjs
-          .send('service_xpfsnsz', 'template_3x5x92l', emailJsData, 'NiSS0VC0DjOLtm-iN')
-          .then((result) => {
-            console.log('Email sent successfully:', result.text);
-          })
-          .catch((error) => {
-            console.error('EmailJS Error:', error);
-          });
-      } else {
+      if (error) {
         console.error('Stripe checkout error:', error);
-        navigate('/failed', { state: { stripeProductId, customerEmail: formData.email } });
+        navigate('/failed');
       }
     } catch (error) {
       console.error('Error initializing Stripe checkout:', error);
-      navigate('/failed', { state: { stripeProductId, customerEmail: formData.email } });
+      navigate('/failed');
     }
   };
 
@@ -129,7 +147,7 @@ const MRIForm = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <h2 className="header-mri">Kundinformation</h2>
-          <label>Service:</label>
+          <label>Tjänst:</label>
           <input className='input-field' type="text" name="serviceTitle" value={formData.serviceTitle} readOnly />
         </div>
         <div>
@@ -155,16 +173,17 @@ const MRIForm = () => {
         <div>
           <label>Personnummer:</label>
           <input
-            className='input-field'
+            className="input-field"
             type="text"
             name="personnummer"
             value={formData.personnummer}
-            onChange={handlePersonnummerChange}
+            onChange={handleChange}
             required
             placeholder="ÅÅMMDD-XXXX"
-            pattern="\d{6}-\d{4}"
             maxLength="11"
+            onBlur={validatePersonnummer}
           />
+          {errors.personnummer && <p className="error-text">{errors.personnummer}</p>}
         </div>
         <div>
           <label>Telefonnummer:</label>
@@ -185,7 +204,7 @@ const MRIForm = () => {
             />
             Jag har ingen pacemaker.
           </label>
-          {pacemakerError && <div className="error">{pacemakerError}</div>}
+          {errors.pacemaker && <div className="error">{errors.pacemaker}</div>}
         </div>
         <div>
           <label>
@@ -198,7 +217,7 @@ const MRIForm = () => {
             />
             Jag har tagit del av integritetspolicyn.
           </label>
-          {error && <div className="error">{error}</div>}
+          {errors.policy && <div className="error">{errors.policy}</div>}
         </div>
         <div>
           <button className='submit-button' type="submit">Betala</button>
@@ -209,6 +228,10 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
+
+
+
 
 
 
