@@ -469,11 +469,7 @@ text-shadow: 1px 4px 2px #0745f1fe ;
   align-items: center;
 }
 
-.main-content {
-  display: flex;
-  flex-direction: row; /* Default direction: row for larger screens */
-  padding: 10px 0;
-}
+
 
 .left-column {
   flex: 1; /* Take equal space */
@@ -568,7 +564,7 @@ text-shadow: 1px 4px 2px #0745f1fe ;
   .box {
       flex: 1 1 100%; /* Full width on small screens */
   }
-  
+
 }
 
 .box1 {
@@ -780,6 +776,17 @@ border-radius: 30px;
   .container-pricelist {
     width: 100%; /* Ensure it takes up the full width */
     padding: 0 20px; /* Add padding for spacing on smaller screens */
+  } 
+  .main-content {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    align-items: center; /* Center align for consistency */
+  }
+  .banner-image,
+  .text-content {
+    width: 100%; /* Ensure full width for both image and text */
+  }
+  .banner-image img {
+    margin-bottom: 20px; /* Add spacing below the image */
   }
 
   .main-content-info {
