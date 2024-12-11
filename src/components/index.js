@@ -10,3 +10,4 @@ export { default as MapSection } from './MapSection';
 export { default as Success } from './Success';
 export { default as Failed } from './Failed';
 export { default as StartHome } from './StartHome';
+export { default as WhyMR } from './WhyMR';
