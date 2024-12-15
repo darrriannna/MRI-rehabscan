@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import '../styles/bookform.css';
@@ -17,7 +17,7 @@ const MRIForm = () => {
     lastname: '',
     email: '',
     personnummer: '',
-    telefonnummer: '',
+    telefonnummer: '+46',
     message: '',
     policyConfirmed: false,
     noPacemakerConfirmed: false,
@@ -28,26 +28,64 @@ const MRIForm = () => {
 
   const [errors, setErrors] = useState({}); // State to track errors
 
+  // Load form data from localStorage if available
+  useEffect(() => {
+    const savedData = localStorage.getItem('formData');
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
+  
+    let updatedFormData = { ...formData };
+  
     if (name === 'personnummer') {
-      // Remove non-numeric characters and add a hyphen after the first 6 digits
       let formattedValue = value.replace(/\D/g, ''); // Remove all non-numeric characters
       if (formattedValue.length > 6) {
         formattedValue = formattedValue.slice(0, 6) + '-' + formattedValue.slice(6, 10);
       }
-      setFormData({
-        ...formData,
-        [name]: formattedValue,
-      });
+      updatedFormData[name] = formattedValue;
+    } else if (name === 'telefonnummer') {
+      // Ensure `+46` is fixed and only digits can be appended after it
+      const rest = value.replace(/^\+46/, ''); // Remove any existing `+46` from the input
+      updatedFormData[name] = `+46${rest.replace(/\D/g, '')}`; // Keep only digits after `+46`
     } else {
-      setFormData({
-        ...formData,
-        [name]: type === 'checkbox' ? checked : value,
-      });
+      updatedFormData[name] = type === 'checkbox' ? checked : value;
     }
+  
+    setFormData(updatedFormData);
+    localStorage.setItem('formData', JSON.stringify(updatedFormData)); // Update localStorage
   };
+  
+  
+  const validateTelefonnummer = () => {
+    const { telefonnummer } = formData;
+    console.log('Validating:', telefonnummer);
+  
+    const regex = /^\+46(7\d{8})$/;
+    const isValid = regex.test(telefonnummer);
+  
+    console.log('Is valid:', isValid);
+  
+    if (!isValid) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        telefonnummer: 'Telefonnumret måste börja med +46 och följa formatet +4670XXXXXXX.',
+      }));
+      return false;
+    }
+  
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      telefonnummer: null,
+    }));
+    return true;
+  };
+  
+  
+  
 
   const validatePersonnummer = () => {
     const { personnummer } = formData;
@@ -55,9 +93,9 @@ const MRIForm = () => {
     // Simple regex to check if it follows the ÅÅMMDD-XXXX pattern
     const regex = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
     if (!regex.test(personnummer)) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: "Personnummer must follow the format ÅÅMMDD-XXXX with valid dates.",
+        personnummer: 'Personnummer must follow the format ÅÅMMDD-XXXX with valid dates.',
       }));
       return false;
     }
@@ -73,54 +111,63 @@ const MRIForm = () => {
     };
 
     if (!isValidDate(year, month, day)) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: "Invalid date in Personnummer.",
+        personnummer: 'Invalid date in Personnummer.',
       }));
       return false;
     }
 
     // Clear the error if validation passes
-    setErrors(prevErrors => ({ ...prevErrors, personnummer: null }));
+    setErrors((prevErrors) => ({ ...prevErrors, personnummer: null }));
     return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     let hasError = false;
-
+  
     // Validate all fields here
     if (!formData.policyConfirmed) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        policy: "Du måste intyga att du har tagit del av integritetspolicyn för att gå vidare.",
+        policy: 'Du måste intyga att du har tagit del av integritetspolicyn för att gå vidare.',
       }));
       hasError = true;
     } else {
-      setErrors(prevErrors => ({ ...prevErrors, policy: null }));
+      setErrors((prevErrors) => ({ ...prevErrors, policy: null }));
     }
-
+  
     if (!formData.noPacemakerConfirmed) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        pacemaker: "Du måste intyga att du inte har pacemaker för att gå vidare.",
+        pacemaker: 'Du måste intyga att du inte har pacemaker för att gå vidare.',
       }));
       hasError = true;
     } else {
-      setErrors(prevErrors => ({ ...prevErrors, pacemaker: null }));
+      setErrors((prevErrors) => ({ ...prevErrors, pacemaker: null }));
     }
-
+  
     // Run personnummer validation
     if (!validatePersonnummer()) {
       hasError = true;
     }
-
+    if (!validateTelefonnummer()) {
+      hasError = true;
+    }
+  
     if (hasError) return;
-
+  
+    // Validate stripeProductId
+    if (!stripeProductId || typeof stripeProductId !== 'string') {
+      console.error('Stripe Product ID is missing or invalid:', stripeProductId);
+      return;
+    }
+  
     // Store form data in localStorage
     localStorage.setItem('formData', JSON.stringify(formData));
-
+  
     // Stripe payment process
     try {
       const stripe = await stripePromise;
@@ -129,18 +176,22 @@ const MRIForm = () => {
         mode: 'payment',
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/failed`,
-        customerEmail: formData.email, // Add customerEmail here
+        customerEmail: formData.email,
       });
-
+  
       if (error) {
         console.error('Stripe checkout error:', error);
         navigate('/failed');
+      } else {
+        // Clear localStorage upon success
+        localStorage.removeItem('formData');
       }
     } catch (error) {
       console.error('Error initializing Stripe checkout:', error);
       navigate('/failed');
     }
   };
+  
 
   return (
     <div className='mri-kundinfo'>
@@ -187,11 +238,13 @@ const MRIForm = () => {
         </div>
         <div>
           <label>Telefonnummer:</label>
-          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required />
+          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required placeholder="+46" maxLength="13" // +46 + 9 digits
+ />
+          {errors.telefonnummer && <p className="error-text">{errors.telefonnummer}</p>}
         </div>
         <div>
           <label>Meddelande:</label>
-          <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required />
+          <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required placeholder='Berätta om din problem' />
         </div>
         <div>
           <label>
@@ -228,6 +281,7 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
 
 
 

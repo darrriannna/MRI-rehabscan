@@ -27,9 +27,9 @@ const services = [
   { id: 22, name: 'Knä', price: '4 800kr', stripeProductId: 'price_1QEqTNLGp7g0cFk2ioJlNa5f'  },
   { id: 23, name: 'Orbita', price: '4 800kr', stripeProductId: 'price_1QEqqmLGp7g0cFk2DZly1Dg0' },
   { id: 24, name: 'Prostata', price: '11 700kr', stripeProductId: 'price_1QEqrLLGp7g0cFk2ewa2TNot' },
-  {id: 24, name: 'Överarm', price: '4 800kr' },
-    {id: 25, name: 'Underarm', price: '4 800kr' },
-    {id: 26, name: 'Handled', price: '4 800kr' },
+  {id: 25, name: 'Överarm', price: '4 800kr' },
+    {id: 26, name: 'Underarm', price: '4 800kr' },
+    {id: 27, name: 'Handled', price: '4 800kr' },
 ];
 
 const DynamicForm = () => {
@@ -65,15 +65,28 @@ const DynamicForm = () => {
   const selectedService = services.find(service => service.name === selectedExamination);
 
   const handleBookClick = () => {
-    navigate('/mri-booking', {
-      state: {
-        serviceName: selectedExamination,
-        city: selectedCity,
-        price: selectedService?.price,
-        stripeProductId: selectedService?.stripeProductId,
-      }
-    });
-  };
+    // Save selected service details in localStorage
+  localStorage.setItem(
+    'bookingData',
+    JSON.stringify({
+      serviceName: selectedExamination,
+      city: selectedCity,
+      price: selectedService?.price,
+      stripeProductId: selectedService?.stripeProductId,
+    })
+  );
+
+  // Navigate to the booking page with the selected details
+  navigate('/mri-booking', {
+    state: {
+      serviceName: selectedExamination,
+      city: selectedCity,
+      price: selectedService?.price,
+      stripeProductId: selectedService?.stripeProductId,
+    },
+  });
+};
+
 
   return (
     <div className='container-form-main'>

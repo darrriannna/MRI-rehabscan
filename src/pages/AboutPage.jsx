@@ -10,13 +10,12 @@ const AboutPage = () => {
     <div className='body '>
       <Navbar />
       <div className="container-about-us">
-        <h2 className="text-center py-4">Om Rehabscan</h2>
 
         <div className="row">
 
         <div className="container-home">
     <div className="left-column">
-      <img src="./assets/About-pic.png" alt="MRI 3d" />
+      <img src="./assets/logo.png" alt="logo" />
     </div>
     <div className="right-column">
     <p className='text-about p-4'>RehabScan är en digital hälsoklinik som erbjuder radiologiska undersökningar för att ge dig en bättre inblick i din hälsa.</p>
