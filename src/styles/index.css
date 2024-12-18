@@ -1178,8 +1178,11 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 0;
+  flex: 1 ;
+  background-color: #c7effcb0;
+  border-radius: 30px;
   padding: 20px;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .text-content {
@@ -1188,13 +1191,13 @@ button {
 
 .map-container {
   position: relative;
-  flex: 1;
+  
   max-width: 100%;
 }
 
 .map-image {
   width: 100%;
-  min-width: 400px;
+  min-width: 200px;
   max-width: 500px;
   height: auto;
 }
@@ -1203,7 +1206,7 @@ button {
 
 @media (max-width: 850px){
   .map-image{
-    min-width: 400px;
+    min-width: 260px;
   }
 }
 @media (min-width: 850px){
@@ -1215,15 +1218,18 @@ button {
 /* Responsive layout for smaller screens */
 @media (max-width: 850px) {
   .map-section {
-   flex-direction: column;
     align-items: center;
+    margin: auto ;
   }
  .map-section-container{
     width: 100%;
   }
-  .text-content {
+  .text-content p {
     text-align: center;
     margin-bottom: 20px;
+  }
+  .list-map-container li{
+    font-size: 18px;
   }
 }
 
@@ -1440,3 +1446,90 @@ border-radius: 30px;
   font-size: 0.9em;
   margin-top: 4px;
 }
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  
+  padding: 3rem 2rem;
+  text-align: center;
+  flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+}
+
+.statistics-section {
+  text-align: center;
+  flex: 1;
+  margin: 2rem 0;
+}
+
+.statistics-text {
+  font-size: 1.4rem;
+  color: #091670b7;
+  margin-top: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.counter-container {
+  display: inline-block;
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #091670b7;
+}
+
+.counter-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #091670b7;
+}
+
+.percentage-sign {
+  font-size: 2rem;
+  color: #091670b7;
+}
+
+.stat-image {
+  width: 80%; /* Adjust to fit better in smaller screens */
+  max-width: 200px; /* Max width to prevent stretching */
+  margin-bottom: 1rem; /* Space between image and counter */
+}
+
+@media screen and (max-width: 768px) {
+  .statistics-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .statistics-section {
+    width: 100%;
+    margin: 1rem 0; /* Smaller margin on mobile */
+  }
+
+  .counter-number {
+    font-size: 3rem; /* Smaller font size on mobile */
+  }
+
+  .percentage-sign {
+    font-size: 1.5rem; /* Smaller percentage sign on mobile */
+  }
+}
+
+
+.add-info-statictics{
+  background: rgba(255, 255, 255, 0.472);
+  border-radius: 12px;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+
+}
+.add-info-statictics p {
+padding-right: 20px;
+padding-left: 20px;
+}
+.add-info-statictics h3 {
+  padding-right: 20px;
+  padding-left: 20px;
+  }

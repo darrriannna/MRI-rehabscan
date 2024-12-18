@@ -1,8 +1,11 @@
 import React from "react";
 import "../styles/ad-info.css"; // Import the CSS file
+import Statistics from "./Statistics";
+import DynamicForm from "./DynamicForm";
 
 const WhyMR = () => {
   return (
+    <div>
     <div className="container-varfor">
       <div className="content-varfor">
         <h1 className="title-varfor">Varför Magnetröntgen</h1>
@@ -50,8 +53,19 @@ const WhyMR = () => {
         src="./assets/Mri-why.png" // Replace with your image link
         alt="MRI Illustration"
       />
-      
-    </div>
+     
+
+    </div>  <div className="add-info-statictics">
+     <Statistics/>
+   
+        <h3>Tidig upptäckt – bästa behandling</h3>
+        <p>
+        Bästa behandling vid allvarlig sjukdom som cancer och hjärt-kärlsjukdom är idag tidig upptäckt, vilket kan förhindra utveckling till något allvarligt. 
+        Genom att göra en MR-Helkropp undersökning så ökar dina chanser att upptäcka eventuella sjukdomar i god tid och där förhoppningsvis prognosen för en god behandling fortfarande är god </p>
+     </div>
+     <DynamicForm/>
+     </div>
+     
   );
 };
 

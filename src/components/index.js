@@ -11,3 +11,5 @@ export { default as Success } from './Success';
 export { default as Failed } from './Failed';
 export { default as StartHome } from './StartHome';
 export { default as WhyMR } from './WhyMR';
+export { default as Counter } from './Counter';
+export { default as Statistics } from './Statistics';
