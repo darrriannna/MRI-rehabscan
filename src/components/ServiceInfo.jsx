@@ -38,7 +38,7 @@ const ServiceInfo = () => {
   const service = services.find(s => s.name === serviceName);
 
   return (
-    <div className='main-pricelist'>
+    <div className='main-info-service'>
     <div className="container-pricelist">
       
       <div className="main-content-info"> 

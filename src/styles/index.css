@@ -5,7 +5,7 @@ body{
   height: 100%;
 }
 .body{
-  background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
+  background: linear-gradient(#fefeff 0%,  #9dd6fa 60%, #9cc6f0 70%, #4b81f6 100%);
   
 }
 .title-service{
@@ -34,7 +34,6 @@ body{
 }
 .main-pricelist{
   background: linear-gradient(#fefeff 0%,  #7bc9fa 50%, #419ee6 70%, #6892ee 100%);
-
 }
 .banner-text {
     font-size: 1.2rem;
@@ -49,9 +48,9 @@ body{
 
 .navbar {
   position: sticky;
-  background-color: transparent !important;
+  background-color: transparent;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  box-shadow: 0px 10px 10px 0px rgba(25, 102, 255, 0.171) !important;
   backdrop-filter: blur(15px) !important;
         
 }
@@ -497,6 +496,7 @@ text-shadow: 1px 4px 2px #2961fafe ;
 .right-column ul {
   list-style: none;
   font-size: 20px;
+  font-style: italic;
 }
 
 .right-column ul li {
@@ -721,6 +721,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 
 }
+
 .btn-book-now:hover{
       color: black;
       background-color: #c7effc;
@@ -1009,137 +1010,6 @@ button {
   border: none;
   cursor: pointer;
 }
-.ainer-steps {
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-}
-.big-steps{
-  padding-top: 20px;
-  text-align: center;
-}
-.small-text-steps{
-    padding-top: 20px;
-    font-size: 18px;
-    text-align: center;
-}
-.card-steps {
-  height: 200px;
-  flex: 1;
-  text-align: center;
-  background-color: #e5df91;
-  transition: 0.3s;
-  border-radius: 40px;
-  margin-right: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.step-number {
-  color: #31bbc7;
-  font-size: 60px;
-  font-weight: 600;
-  text-shadow: 2px 0px 1px #0e6d72;
-  margin: 0;
-}
-
-
-.card-steps:hover .step-text {
-  opacity: 1;
-}
-
-.step-1{
-  background-image: url(../../public/assets/Step-1.png);
-  background-size: 500px;
-}
-.step-2{
-  background-image: url(../../public/assets/Step-2.png);
-  background-size: 500px;
-}
-.step-3{
-  background-image: url(../../public/assets/Step-3.png);
-  background-size: 550px;
-}
-
-.card-steps:hover {
-  flex:1.5;
-}
-.main-container-steps {
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-}
-
-.card-steps {
-  height: 200px;
-  flex: 1;
-  text-align: center;
-  background-color: #e5df91;
-  transition: 0.3s;
-  border-radius: 40px;
-  margin-right: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Ensures smooth clipping during transition */
-}
-
-.step-number {
-  color: #31bbc7;
-  font-size: 60px;
-  font-weight: 600;
-  text-shadow: 2px 0px 1px #0e6d72;
-  margin: 0;
-}
-
-.card-steps:hover .step-text {
-  opacity: 1;
-  transform: translateY(0); /* Final position: smoothly slide up */
-}
-
-/* Media Query for screens smaller than 800px */
-@media (max-width: 800px) {
-  .main-container-steps {
-    flex-direction: column;
-  }
-
-  .card-steps {
-    margin-right: 0;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  .step-text {
-    position: static;
-    opacity: 1;
-    transform: translateY(0); /* Slide-up effect not needed on small screens */
-  }
-}
-.step-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #edf0f0;
-  text-shadow: 1px 0px 1px rgb(7, 75, 75);
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transform: translateY(20px); /* Start position */
-  -webkit-transform: translateY(20px); /* Vendor prefix */
-  text-align: center;
-}
-
-.card-steps:hover .step-text {
-  opacity: 1;
-  transform: translateY(0); /* Slide into position */
-  -webkit-transform: translateY(0);
-}
-/* src/styles/MapSection.css */
 
 .map-section {
   display: flex;
@@ -1225,7 +1095,6 @@ button {
     width: 100%;
   }
   .text-content p {
-    text-align: center;
     margin-bottom: 20px;
   }
   .list-map-container li{

@@ -1,55 +1,53 @@
-import React, { useState } from 'react';
-import '../styles/index.css';
-const Steps = () => {
-    const [hoveredStep, setHoveredStep] = useState(null);
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import "../styles/ad-info.css";
 
-    return (
-        <div className='text-center big-steps'>
-            <h2>Hur funkar det?</h2>
-            <p className='small-text-steps'>Få dina MR-resultat i 3 steg</p>
-            <div className="main-container-steps">
-                <div 
-                    className='card-steps step-1'
-                    onMouseEnter={() => setHoveredStep(1)}
-                    onMouseLeave={() => setHoveredStep(null)}
-                >
-                    <h3><span className='step-number'>1</span></h3>
-                    {hoveredStep === 1 && (
-                        <p className='step-text'>
-                        Fyll i en bokningsförfrågan. 
-                        </p>
-                    )}
-                </div>
-                <div 
-                    className='card-steps step-2'
-                    onMouseEnter={() => setHoveredStep(2)}
-                    onMouseLeave={() => setHoveredStep(null)}
-                >
-                    <h3><span className='step-number'>2</span></h3>
-                    {hoveredStep === 2 && (
-                        <p className='step-text'>
-                           Garanterad undersökning inom 14 arbetsdagar.
-                        </p>
-                    )}
-                </div>
-                <div 
-                    className='card-steps step-3'
-                    onMouseEnter={() => setHoveredStep(3)}
-                    onMouseLeave={() => setHoveredStep(null)}
-                >
-                    <h3><span className='step-number'>3</span></h3>
-                    {hoveredStep === 3 && (
-                        <p className='step-text'>
-                           Fa dina resultat
-                        </p>
-                    )}
-                </div>
-               
-            </div>
+const GifToggle = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => setIsOpen(!isOpen);
+
+  return (
+    <div className="gif-toggle-container">
+      {/* Background GIF */}
+      <div className="gif-background">
+        <div className="overlay-content">
+          {/* Overlay Text */}
+          <h2>
+            Få din magnetröntgen undersökning bara i <span>3 steg</span>
+          </h2>
+
+          {/* Toggle Arrow */}
+          <button
+            className={`arrow-icon ${isOpen ? "open" : ""}`}
+            onClick={toggleOpen}
+          >
+            <span className="left-bar"></span>
+            <span className="right-bar"></span>
+          </button>
         </div>
-    );
+      </div>
+
+      {/* Toggle Steps */}
+      <motion.div
+        className="steps-container"
+        animate={{ height: isOpen ? "auto" : "0px" }}
+        initial={{ height: "0px" }}
+        transition={{ type: "spring", stiffness: 100 }}
+      >
+        <div className="step-box"><span className="step-number">1.</span> Fyll i en bokningsförfrågan  </div>
+        <div className="step-box"><span className="step-number">2.</span> Vi garanterar undersökning inom 14 arbetsdagar </div>
+        <div className="step-box"><span className="step-number">3.</span> Fa dina resultat</div>
+      </motion.div>
+    </div>
+  );
 };
 
-export default Steps;
+export default GifToggle;
+
+
+
+
+
 
 
