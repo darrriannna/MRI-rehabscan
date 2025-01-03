@@ -1068,7 +1068,7 @@ button {
 .map-image {
   width: 100%;
   min-width: 200px;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
 }
 
@@ -1076,12 +1076,12 @@ button {
 
 @media (max-width: 850px){
   .map-image{
-    min-width: 260px;
+    min-width: 100px;
   }
 }
 @media (min-width: 850px){
   .map-image{
-    min-width: 400px;
+    max-width: 350px;
   }
  
 }
@@ -1096,6 +1096,7 @@ button {
   }
   .text-content p {
     margin-bottom: 20px;
+    padding: 20px;
   }
   .list-map-container li{
     font-size: 18px;

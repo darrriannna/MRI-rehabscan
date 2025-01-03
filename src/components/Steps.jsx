@@ -37,7 +37,7 @@ const GifToggle = () => {
       >
         <div className="step-box"><span className="step-number">1.</span> Fyll i en bokningsförfrågan  </div>
         <div className="step-box"><span className="step-number">2.</span> Vi garanterar undersökning inom 14 arbetsdagar </div>
-        <div className="step-box"><span className="step-number">3.</span> Fa dina resultat</div>
+        <div className="step-box"><span className="step-number">3.</span> Få dina resultat</div>
       </motion.div>
     </div>
   );
