@@ -15,7 +15,7 @@ const AboutPage = () => {
 
         <div className="container-home">
     <div className="left-column">
-      <img src="./assets/About-img.png" alt="logo" />
+      <img src="./assets/About-img.png" alt="RehabScan Sverige - Magnetröntgen utan remiss" />
     </div>
     <div className="right-column">
     <p className='text-about p-4'>RehabScan är en digital hälsoklinik som erbjuder radiologiska undersökningar för att ge dig en bättre inblick i din hälsa.</p>

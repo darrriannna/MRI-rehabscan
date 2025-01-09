@@ -8,6 +8,7 @@ body{
   background: linear-gradient(#fefeff 0%,  #9dd6fa 60%, #9cc6f0 70%, #4b81f6 100%);
   
 }
+
 .title-service{
   font-weight: 600;
   color: #043737;
@@ -310,6 +311,12 @@ color: black;
   }
 }
 
+.logo-navbar{
+  height: 65px;
+}
+.flag-navbar{
+height: 35px; 
+}
 @media (max-width: 500px) {
   .mr-service-container {
     flex-direction: row;
@@ -321,8 +328,12 @@ color: black;
   .mr-service-container .mr-price {
     margin: 0 10px;
   }
-  
-
+  .logo-navbar{
+    height: 50px;
+  }
+.flag-navbar{
+  height: 25px;
+}
 
 
 @keyframes expanding {

@@ -21,7 +21,7 @@ const Statistics = () => {
       <img
           className="stat-image"
           src="./assets/Cancer.png" // Replace with your image path
-          alt="Cancer"
+          alt="Magnetröntgen utan remiss - RehabScan"
         />
         <Counter endNumber={26} duration={2000} />
         <p className="statistics-text">

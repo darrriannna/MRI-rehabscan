@@ -8,7 +8,7 @@ const StartHome = () => {
       <div className="hero-section">
         <img
           src="./assets/Mr-machine.png" // Update with the correct path
-          alt="MRI machine"
+          alt="MR utan remiss hos RehabScan"
           className="hero-image"
         />
         <div className="hero-overlay">

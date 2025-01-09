@@ -28,7 +28,7 @@ const Footer = () => {
         </p>
           </div>
           <div className="col-md-4" >
-            <img src="./assets/logo-wh.png" alt="" style={{ height: '65px' }} />
+            <img src="./assets/logo-wh.png" alt="Magnetröntgen uatn remiss Sverige - RehabScan" style={{ height: '65px' }} />
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const FindUs = () => {
             </div>
 
           <div className='right-column'>
-            <img className='image-homepage' src="./assets/Map.png" alt="Map of Sweden" />
+            <img className='image-homepage' src="./assets/Map.png" alt="MR utan remiss, billigast i Sverige" />
           </div>
         </div>
         
