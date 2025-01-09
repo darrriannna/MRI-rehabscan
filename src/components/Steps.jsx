@@ -28,6 +28,7 @@ const GifToggle = () => {
         </div>
       </div>
 
+
       {/* Toggle Steps */}
       <motion.div
         className="steps-container"

@@ -6,8 +6,8 @@ const MapSection = () => {
 
   return (
     <div className='map-section-container'>
-  <h2>Vi finns över hela Sverige</h2>
-        <p>
+  <h2 className='map-section-text-h'>Vi finns över hela Sverige</h2>
+        <p className='map-section-text-p'>
           <strong>RehabScan</strong> är en digital klinik, så vi kan ordna din MR-skanning närmast ditt hem. Fyll bara i formuläret och boka din tid utan månader av väntan.
         </p>
     <div className="map-section">

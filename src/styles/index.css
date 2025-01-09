@@ -113,9 +113,9 @@ body{
 font-size: 30px;
 padding: 10px;
 margin-top: 20px;
-font-weight: 700;
-color: white;
-text-shadow: 1px 4px 2px #2961fafe ;
+font-weight: 500;
+color: black;
+
 }
 .banner-image {
   position: relative;
@@ -1023,8 +1023,7 @@ button {
   margin-left: 10px;
 }
 .map-section-container{
-  padding: 20px;
-  width: 70%;
+  width: 100%;
   margin: auto;
   background-color: #f1f1f16b;
   border-radius: 30px;
@@ -1032,11 +1031,18 @@ button {
 }
 .map-section-container h2 {
   font-size: 2.4em;
-  color: #fbfcfd;
-  text-shadow: 0px 3px 3px  #234e7c;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 10px;
   padding-bottom: 20px;
+}
+.map-section-text-h{
+  text-align: center;
+  color: #000;
+}
+.map-section-text-p{
+  font-size: 20px;
+  padding: 20px;
+  color: #000;
 }
 
 .text-content p {
@@ -1070,6 +1076,7 @@ button {
   min-width: 200px;
   max-width: 400px;
   height: auto;
+  
 }
 
 /* Marker styling with bounce */
@@ -1095,11 +1102,12 @@ button {
     width: 100%;
   }
   .text-content p {
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 40px;
+    
   }
+
   .list-map-container li{
-    font-size: 18px;
+    font-size: 30px;
   }
 }
 
@@ -1133,10 +1141,10 @@ button {
   list-style: none;
   padding-top: 26px;
  text-align: left;
- font-size: 26px;
+ font-size: 36px;
  font-weight: 600;
  color: #fbfbfb;
-
+ 
 
  text-shadow: 0px 3px 4px  #082e58;
 }

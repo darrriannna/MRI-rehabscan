@@ -31,9 +31,6 @@ const Home = () => {
           </motion.div>
           <motion.section className="main-content" {...fadeIn}>
             <div className="container-home">
-              <motion.div className="left-column" {...fadeIn} transition={{ delay: 0.2 }}>
-                <img src="./assets/MRI-3d.png" alt="MRI 3d" />
-              </motion.div>
               <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
                 <h2>Undvik köer och väntetider med privat röntgen</h2>
                 <ul>
