@@ -6,7 +6,7 @@ import '../src/styles/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR } from "./pages";
+import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions } from "./pages";
 import MRI from './pages/MRI';
 import { DynamicForm, Success, Failed } from './components';
 import ScrollToTop from './components/ScrollToTop';
@@ -35,6 +35,7 @@ root.render(
           <Route path="/failed" element={<Failed />} />
           <Route path="/integrity-policy" element={<IntegrityPolicy />} />
           <Route path="/" element={<Failed />} />
+          <Route path="/restrictions" element={<Restrictions />} />
           <Route path="/product/*" element={<PageNotFound />} />
         </Routes>
       </LoaderProvider>

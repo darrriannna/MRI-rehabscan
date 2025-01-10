@@ -6,6 +6,7 @@ export { default as BookTime } from './BookTime';
 export { default as MRIbookTime } from './MRIbookTime';
 export { default as  IntegrityPolicy} from './Policy';
 export { default as ServicesPage } from './ServicesPage';
+export { default as Restrictions } from './Restrictions';
 
 
 

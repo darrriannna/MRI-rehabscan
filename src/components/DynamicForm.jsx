@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation  } from 'react-router-dom'; 
+import { useNavigate, useLocation  } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; 
 import "../styles/index.css";
 
 const services = [
@@ -96,7 +97,7 @@ const DynamicForm = () => {
 
       <form>
         <div className="form-group">
-          <p className='form-field-title'>Välj undersökning</p>
+         
           <button type="button" className="dropdown-toggle" onClick={toggleExaminationDropdown}>
             {selectedExamination || 'Välj undersökning'}
           </button>
@@ -142,6 +143,8 @@ const DynamicForm = () => {
           </>
 
         )}
+        <NavLink to="/restrictions" className="restrictions"> Villkor och Begränsningar </NavLink>
+
       </form>
       <div></div>
     </div>

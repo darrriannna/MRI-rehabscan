@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'; // Import motion for animations
 import '../styles/index.css';
 import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
-import DynamicForm from './DynamicForm';
 import Steps from './Steps';
 import MapSection from './MapSection';
 
@@ -26,9 +25,6 @@ const Home = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <div className="main">
         <div className="container"> 
-         <motion.div {...fadeIn} transition={{ delay: 0.6 }}>
-            <DynamicForm />
-          </motion.div>
           <motion.section className="main-content" {...fadeIn}>
             <div className="container-home">
               <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
