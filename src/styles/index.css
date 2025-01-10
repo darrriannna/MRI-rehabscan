@@ -489,6 +489,7 @@ height: 35px;
 .left-column img {
   max-width: 100%; /* Ensure image is responsive */
   border-radius: 10px;
+  
 }
 
 .right-column {
