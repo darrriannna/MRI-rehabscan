@@ -16,6 +16,9 @@ const PaymentSuccess = () => {
         personnummer: formData.personnummer,
         city: formData.city,
         price: formData.price,
+        adress: formData.adress,
+        postcity: formData.postcity,
+        postnum: formData.postnum,
         message: formData.message,
         serviceTitle: formData.serviceTitle,
       };

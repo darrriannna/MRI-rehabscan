@@ -19,6 +19,9 @@ const MRIForm = () => {
     personnummer: '',
     telefonnummer: '+46',
     message: '',
+    adress: '',
+    postcity: '',
+    postnum: '',
     policyConfirmed: false,
     noPacemakerConfirmed: false,
     serviceTitle: serviceName || 'Default Service',
@@ -243,8 +246,20 @@ const MRIForm = () => {
           {errors.telefonnummer && <p className="error-text">{errors.telefonnummer}</p>}
         </div>
         <div>
+          <label>Adress:</label>
+          <input className='input-field' type="text" name="adress" value={formData.adress} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Postort:</label>
+          <input className='input-field' type="text" name="postcity" value={formData.postcity} onChange={handleChange} required />
+        </div>
+        <div>
+          <label>Postnummer:</label>
+          <input className='input-field' type="text" name="postnum" value={formData.postnum} onChange={handleChange} required />
+        </div>
+        <div>
           <label>Meddelande:</label>
-          <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required placeholder='Berätta om din problem' />
+          <textarea className='input-field' name="message" value={formData.message} onChange={handleChange} required placeholder='Berätta om dina besvär här' />
         </div>
         <div>
           <label>
