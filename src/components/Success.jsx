@@ -35,6 +35,7 @@ const PaymentSuccess = () => {
 
       // Clear form data after sending email
       localStorage.removeItem('formData');
+      localStorage.removeItem('bookingData');
     }
   }, []);
 
