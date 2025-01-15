@@ -88,11 +88,9 @@ const MRIForm = () => {
   };
   
   
-  
-
   const validatePersonnummer = () => {
     const { personnummer } = formData;
-
+  
     // Simple regex to check if it follows the ÅÅMMDD-XXXX pattern
     const regex = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
     if (!regex.test(personnummer)) {
@@ -102,29 +100,65 @@ const MRIForm = () => {
       }));
       return false;
     }
-
-    // Validate the date part of the personnummer
+  
+    // Extract year, month, and day from personnummer
     const year = parseInt(personnummer.slice(0, 2), 10);
     const month = parseInt(personnummer.slice(2, 4), 10);
     const day = parseInt(personnummer.slice(4, 6), 10);
-
+  
+    // Determine the century dynamically
+    const currentYear = new Date().getFullYear() % 100; // Last two digits of the current year
+    const fullYear = year <= currentYear ? 2000 + year : 1900 + year;
+  
+    // Validate the date
     const isValidDate = (y, m, d) => {
-      const date = new Date(`20${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
-      return date.getFullYear() === 2000 + y && date.getMonth() + 1 === m && date.getDate() === d;
+      const date = new Date(`${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
+      return date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d;
     };
-
-    if (!isValidDate(year, month, day)) {
+  
+    if (!isValidDate(fullYear, month, day)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         personnummer: 'Invalid date in Personnummer.',
       }));
       return false;
     }
-
+  
     // Clear the error if validation passes
     setErrors((prevErrors) => ({ ...prevErrors, personnummer: null }));
     return true;
   };
+  
+  const validateSwedishAddress = () => {
+    const { adress, postcity, postnum } = formData;
+  
+    let isValid = true;
+    const newErrors = {};
+  
+    // Validate Adress
+    if (!adress || !/^[a-zA-Z0-9 ,.-]+$/.test(adress)) {
+      newErrors.adress = 'Adress får endast innehålla bokstäver, siffror, mellanslag och tillåtna tecken (, . -).';
+      isValid = false;
+    }
+  
+    // Validate Postort (City)
+    if (!postcity || !/^[a-zA-ZåäöÅÄÖ ]+$/.test(postcity)) {
+      newErrors.postcity = 'Postort får endast innehålla bokstäver och mellanslag.';
+      isValid = false;
+    }
+  
+    // Validate Postnummer (Postal Code)
+    if (!postnum || !/^\d{3}\s?\d{2}$/.test(postnum)) {
+      newErrors.postnum = 'Postnummer måste följa formatet "12345" eller "123 45".';
+      isValid = false;
+    }
+  
+    // Update errors if any
+    setErrors((prevErrors) => ({ ...prevErrors, ...newErrors }));
+  
+    return isValid;
+  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -247,15 +281,15 @@ const MRIForm = () => {
         </div>
         <div>
           <label>Adress:</label>
-          <input className='input-field' type="text" name="adress" value={formData.adress} onChange={handleChange} required />
+          <input className='input-field' type="text" name="adress" value={formData.adress}  onBlur={validateSwedishAddress} onChange={handleChange} required />
         </div>
         <div>
           <label>Postort:</label>
-          <input className='input-field' type="text" name="postcity" value={formData.postcity} onChange={handleChange} required />
+          <input className='input-field' type="text" name="postcity" value={formData.postcity} onBlur={validateSwedishAddress} onChange={handleChange} required />
         </div>
         <div>
           <label>Postnummer:</label>
-          <input className='input-field' type="text" name="postnum" value={formData.postnum} onChange={handleChange} required />
+          <input className='input-field' type="text" name="postnum" value={formData.postnum} onBlur={validateSwedishAddress} onChange={handleChange} required />
         </div>
         <div>
           <label>Meddelande:</label>
