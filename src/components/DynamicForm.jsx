@@ -38,7 +38,7 @@ const services = [
   {id: 32, name: 'Vänster Underarm', price: '3 900kr', stripeProductId: 'price_1QhTrZLGp7g0cFk2RJgQVAfP' },
   {id: 33, name: 'Höger Handled', price: '3 900kr', stripeProductId: 'price_1QhBUrLGp7g0cFk23tRV1Zik'  },
   {id: 34, name: 'Vänster Handled', price: '3 900kr', stripeProductId: 'price_1QhU7eLGp7g0cFk2Clh9fAht'  },
-
+  {id: 35, name: 'test', price: '0kr', stripeProductId: 'price_1QhBwlLGp7g0cFk22ijTJItk'  },
 ];
 
 const DynamicForm = () => {
@@ -101,7 +101,7 @@ const DynamicForm = () => {
     <div className='container-form-main'>
     <div className="form-container">
       <div></div>
-      <h1 className='text-center main-title-form'>Boka privat röntgen utan remiss</h1>
+      <h2 className='text-center main-title-form'>Boka privat magnetröntgen utan remiss</h2>
 
       <form>
         <div className="form-group">

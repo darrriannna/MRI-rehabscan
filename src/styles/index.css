@@ -484,7 +484,7 @@ height: 35px;
 }
 .container-home {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -504,7 +504,9 @@ height: 35px;
 }
 
 .right-column {
-  flex: 1; /* Take equal space */
+  flex: au; /* Take equal space */
+  padding: 20px;
+
 }
 
 .right-column h2 {
@@ -518,7 +520,7 @@ height: 35px;
 
 .right-column ul {
   list-style: none;
-  font-size: 20px;
+  font-size: 16px;
   font-style: italic;
 }
 
@@ -1051,7 +1053,7 @@ button {
   margin-left: 10px;
 }
 .map-section-container{
-  width: 100%;
+  width: 75%;
   margin: auto;
   background-color: #f1f1f16b;
   border-radius: 30px;
