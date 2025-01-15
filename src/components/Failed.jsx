@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import '../styles/index.css';
 
 // Initialize Stripe
-const stripePromise = loadStripe('pk_test_51QAvFDLGp7g0cFk2T75zMYcOMdDqzfzb6tE0exPkzlA0bYoP7ZsKVuxUyc9jjttFLkLtZWYmJb6Ikf6bKp867CB7005UMRqkzR');
+const stripePromise = loadStripe('pk_live_51QAvFDLGp7g0cFk2pdHbOh0iIz1ThLFf6qVHlIQq6ZTLgfN42QVnjkKkDxe3FQdy1Oxg9D4k6Qw0OqN4hqJBeESQ00U76MFWeK');
 
 const Failed = () => {
   const navigate = useNavigate();
