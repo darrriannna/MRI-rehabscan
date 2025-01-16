@@ -15,7 +15,7 @@ const Restrictions = () => {
         <section>
           <h5>Uppföljning</h5>
           <p>
-          Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist. Därefter går vår läkare igenom resultatet med dig via telefon och vid behov remitteras du vidare. Du får också ditt resultat skriftligt.
+          Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist.  Du får ditt resultat skriftligt.
 
           </p>
         </section>

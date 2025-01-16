@@ -21,7 +21,7 @@ const MapSection = () => {
             <li className='list-map'>Nynäshamn</li>
             <li className='list-map'>Bäckefors</li>
             <li className='list-map'>Malmö</li>
-            <li className='list-map'>Umea</li>
+            <li className='list-map'>Umeå</li>
             <li className='list-map'>Borås</li>
             <li className='list-map'>Karlstad</li>
             <li className='list-map'>Sundsvall</li>
