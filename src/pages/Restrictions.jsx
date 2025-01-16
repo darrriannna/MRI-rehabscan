@@ -15,7 +15,7 @@ const Restrictions = () => {
         <section>
           <h5>Uppföljning</h5>
           <p>
-          Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist.  Du får ditt resultat skriftligt.
+          Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist, därefter får du ditt röntgen svar via post.
 
           </p>
         </section>
@@ -29,7 +29,7 @@ const Restrictions = () => {
         <section>
           <h5>Hur bokas min undersökning in efter beställning?</h5>
           <p>
-          Efter att du har gjort din beställning kommer vi att kontakta kliniken och boka den första tillgängliga tiden för din undersökning. Om du har frågor eller behöver boka om, har du ett direktnummer att ringa för snabb och smidig service.
+          Efter att du har gjort din beställning kommer vi att kontakta kliniken och dom bokar sedan in dig vid första tillgängliga undersökning. Om du har frågor vänligen kontakta oss på info@rehabscan.se, Även att ringa oss går bra på 070-783 29 29. 
           </p>
          
         </section>

@@ -54,7 +54,7 @@ const Home = () => {
 
           <motion.div {...fadeIn} transition={{ delay: 1.2 }}>
             <p className="center-text">
-              Du får kontakt med en läkare inom 24h för att ta ditt ärende vidare till undersökning
+              En erfaren röntgenläkare undersöker alltid röntgen bilderna
             </p>
           </motion.div>
 
