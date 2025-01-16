@@ -17,11 +17,14 @@ const MapSection = () => {
         <ul className='list-map-container'>
             <li className='list-map'>Stockholm</li>
             <li className='list-map'>Göteborg</li>
+            <li className='list-map'>Strömstad</li>
+            <li className='list-map'>Nynäshamn</li>
+            <li className='list-map'>Bäckefors</li>
             <li className='list-map'>Malmö</li>
             <li className='list-map'>Umea</li>
             <li className='list-map'>Borås</li>
             <li className='list-map'>Karlstad</li>
-            <li className='list-map'>Sundvall</li>
+            <li className='list-map'>Sundsvall</li>
             <li className='list-map'>Jönköping</li>
         </ul>
       </div>
