@@ -6,7 +6,7 @@ import '../src/styles/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions } from "./pages";
+import {  AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions } from "./pages";
 import MRI from './pages/MRI';
 import { DynamicForm, Success, Failed } from './components';
 import ScrollToTop from './components/ScrollToTop';
@@ -22,7 +22,7 @@ root.render(
       <LoaderProvider>  {/* Wrap the app with LoaderProvider */}
       <Loader/>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PageNotFound  />} />
           <Route path="/MRI" element={<MRI />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/bookappointment" element={<BookTime />} />
