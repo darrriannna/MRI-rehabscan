@@ -10,8 +10,7 @@ const IntegrityPolicy = () => {
       <div className="container-policy">
         <h3 className="title">Integritetspolicy</h3>
         <p className="intro">
-          RehabScan, org. Nr. 930225-2177, med adress Margaretaplatsen 6
-          , Helsingborg 25222 Sverige, (”RehabScan”, ”vi”, ”vår”, eller
+          RehabScan, (”RehabScan”, ”vi”, ”vår”, eller
           ”oss”) är ett företag etablerat i Sverige, och som sådant, följer vi
           tillämplig dataskyddslagstiftning i Sverige. Genom att använda
           RehabScans tjänster, accepterar du denna dataskyddspolicy och vår

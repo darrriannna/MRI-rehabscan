@@ -22,7 +22,6 @@ const Footer = () => {
           <div className="col-md-4">
            <h4 className="footer-header">Kontakta oss</h4>
       
-        <p className="link-footer">070-783 2929</p>
         <p >
           <a className="link-footer" href="mailto:info@rehabscan.se">info@rehabscan.se</a>
         </p>

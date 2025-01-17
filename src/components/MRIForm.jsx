@@ -96,7 +96,7 @@ const MRIForm = () => {
     if (!regex.test(personnummer)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: 'Personnummer must follow the format ÅÅMMDD-XXXX with valid dates.',
+        personnummer: 'Personnummer måste följa formatet ÅÅMMDD-XXXX.',
       }));
       return false;
     }
@@ -119,7 +119,7 @@ const MRIForm = () => {
     if (!isValidDate(fullYear, month, day)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: 'Invalid date in Personnummer.',
+        personnummer: 'Invalid d in Personnummer.',
       }));
       return false;
     }
