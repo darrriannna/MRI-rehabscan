@@ -38,6 +38,8 @@ const services = [
   {id: 32, name: 'Vänster Underarm', price: '3 900kr', stripeProductId: 'price_1QhTrZLGp7g0cFk2RJgQVAfP' },
   {id: 33, name: 'Höger Handled', price: '3 900kr', stripeProductId: 'price_1QhBUrLGp7g0cFk23tRV1Zik'  },
   {id: 34, name: 'Vänster Handled', price: '3 900kr', stripeProductId: 'price_1QhU7eLGp7g0cFk2Clh9fAht'  },
+  {id: 35, name: 'test', price: '3 kr', stripeProductId: 'price_1QhqwALGp7g0cFk2lPdHCyPs'  },
+
 ];
 
 const DynamicForm = () => {
@@ -48,7 +50,7 @@ const DynamicForm = () => {
   const navigate = useNavigate();
   const location = useLocation(); // Use location to access passed state
 
-  const cities = ['Borås', 'Nynäshamn', 'Bäckefors', 'Strömstad', 'Göteborg', 'Jönköping', 'Karlstad', 'Malmö', 'Stockholm', 'Sundsvall', 'Umeå'];
+  const cities = ['Stockholm', 'Göteborg','Malmö', 'Jönköping', 'Karlstad', 'Umeå',  'Sundsvall','Borås', 'Nynäshamn', 'Bäckefors', 'Strömstad' ];
 
   // Extract serviceName from the passed state
   useEffect(() => {
