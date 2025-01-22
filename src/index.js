@@ -23,19 +23,19 @@ root.render(
       <Loader/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/MRI" element={<MRI />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/bookappointment" element={<BookTime />} />
+          <Route path="/prislista" element={<MRI />} />
+          <Route path="/om-oss" element={<AboutPage />} />
+          <Route path="/bokanu" element={<BookTime />} />
           <Route path="/dynamic-form" element={<DynamicForm />} />
-          <Route path="/mri-booking" element={<MRIbookTime />} />
-          <Route path="/service-page" element={<ServicesPage />} />
+          <Route path="/mri-boka" element={<MRIbookTime />} />
+          <Route path="/lasmer" element={<ServicesPage />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/success" element={<Success />} />
           <Route path="/varfor-mr" element={<VarforMR />} />
           <Route path="/failed" element={<Failed />} />
           <Route path="/integrity-policy" element={<IntegrityPolicy />} />
           <Route path="/" element={<Failed />} />
-          <Route path="/restrictions" element={<Restrictions />} />
+          <Route path="/villkor" element={<Restrictions />} />
           <Route path="/product/*" element={<PageNotFound />} />
         </Routes>
       </LoaderProvider>

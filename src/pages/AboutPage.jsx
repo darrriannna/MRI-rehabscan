@@ -26,7 +26,7 @@ const AboutPage = () => {
         </div>
        <Steps/>
        <div className='btn-center'>
-            <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
+            <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
           </div>
       </div>
       <Footer /></div>

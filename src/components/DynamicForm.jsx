@@ -87,7 +87,7 @@ const DynamicForm = () => {
   );
 
   // Navigate to the booking page with the selected details
-  navigate('/mri-booking', {
+  navigate('/mri-boka', {
     state: {
       serviceName: selectedExamination,
       city: selectedCity,
@@ -152,7 +152,7 @@ const DynamicForm = () => {
           </>
 
         )}
-        <NavLink to="/restrictions" className="restrictions"> Villkor och Begränsningar </NavLink>
+        <NavLink to="/villkor" className="restrictions"> Villkor och Begränsningar </NavLink>
 
       </form>
       <div></div>

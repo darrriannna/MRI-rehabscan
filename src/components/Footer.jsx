@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-md-4">
             <h4 className="footer-header">Information</h4>
             <ul className="list-unstyled">
-              <li><Link to="/about">Om oss</Link></li>
+              <li><Link to="/om-oss">Om oss</Link></li>
               <li><Link to="/integrity-policy">Integritetspolicy</Link></li>
               
             </ul>

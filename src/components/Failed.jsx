@@ -14,7 +14,7 @@ const Failed = () => {
   
     if (!bookingData || !bookingData.stripeProductId) {
       console.error('No booking data or Stripe product ID found. Redirecting to form.');
-      navigate('/mri-booking'); // Redirect to form if data is missing
+      navigate('/mri-boka'); // Redirect to form if data is missing
       return;
     }
   

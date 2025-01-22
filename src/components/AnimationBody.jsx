@@ -7,11 +7,11 @@ const AnimationBody = () => {
 
   const handleBook = (service) => {
     // Navigate to the DynamicForm page and pass the service information via state
-    navigate('/bookappointment', { state: { serviceName: service.name, servicePrice: service.price } });
+    navigate('/bokanu', { state: { serviceName: service.name, servicePrice: service.price } });
   };
   const handleLearnMore = (service) => {
     // Navigate to the ServiceInfo page and pass the service information
-    navigate('/service-page', { state: { serviceName: service.name, serviceTitle: service.title, serviceDetail: service.detail } });
+    navigate('/lasmer', { state: { serviceName: service.name, serviceTitle: service.title, serviceDetail: service.detail } });
   };
 
 

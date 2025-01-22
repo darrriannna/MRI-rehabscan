@@ -15,7 +15,7 @@ const StartHome = () => {
         <div className="hero-overlay">
           <h1 className="hero-subtitle">Undersökning utan remiss i 7-14 dagar</h1>
           <DynamicForm/>
-          <NavLink to="/bookappointment" className="hero-button"> Boka nu </NavLink>
+          <NavLink to="/bokanu" className="hero-button"> Boka nu </NavLink>
           <p className="hero-footer">Billigast i Sverige</p>
         </div>
       </div>

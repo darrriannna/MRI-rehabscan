@@ -66,17 +66,17 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/">Hem</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/MRI">MR Prislista</NavLink>
+                            <NavLink className="nav-link" to="/prislista">MR Prislista</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/about">Om oss</NavLink>
+                            <NavLink className="nav-link" to="/om-oss">Om oss</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/varfor-mr">Varför MR</NavLink>
                         </li>
                     </ul>
                     <div className="buttons text-center">
-                        <NavLink to="/bookappointment" className="btn-navbar text-decoration-none">
+                        <NavLink to="/bokanu" className="btn-navbar text-decoration-none">
                             Boka nu
                         </NavLink>
                     </div>
