@@ -47,7 +47,7 @@ const Home = () => {
           </motion.div>
 
           <motion.div className="btn-center" {...fadeIn} transition={{ delay: 1 }}>
-            <Link to="/bookappointment" className="btn-navbar m-3 text-decoration-none">
+            <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">
               Boka undersökning
             </Link>
           </motion.div>
