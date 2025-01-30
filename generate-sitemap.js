@@ -4,11 +4,11 @@ const { createWriteStream } = require('fs');
 const hostname = 'https://rehabscan.se'; // Replace with your site URL
 const routes = [
   '/',                // Add all your routes here
-  '/about',
-  '/bookappointment',
-  '/mri-booking',
-  '/service-page',
-  '/restrictions',
+  '/om-oss',
+  '/bokanu',
+  '/lasmer',
+  '/prislista',
+  '/varfor-mr',
 ];
 
 (async () => {
