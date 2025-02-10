@@ -28,9 +28,9 @@ const Home = () => {
           <motion.section className="main-content" {...fadeIn}>
             <div className="container-home">
               <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
-                <h2>Undvik köer och väntetider med privat röntgen</h2>
+                <h2>Undvik köer och väntetider med privat magnetröntgen</h2>
                 <ul>
-                  <li className='list-home-main'>Få tid för undersökning inom 7-14 arbetsdagar.</li>
+                  <li className='list-home-main'>Få tid för magnetkameraundersökning inom 7-14 arbetsdagar.</li>
                   <li className='list-home-main'>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
                   <li className='list-home-main'>Vi skickar din remiss, därefter får du kallelse till undersökning</li>
                   <li className='list-home-main'>Möjlighet att diskutera dina röntgen svar med legitimerad personal.</li>
