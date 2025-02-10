@@ -21,11 +21,13 @@ const Footer = () => {
           </div></div>
           <div className="col-md-4">
            <h4 className="footer-header">Kontakta oss</h4>
-           <p className="link-footer">070-783 2929</p>
-
-        <p >
+           <p className="link-footer">010-210 2231</p>
+             <p >
           <a className="link-footer" href="mailto:info@rehabscan.se">info@rehabscan.se</a>
         </p>
+           <h4 className="footer-header">Öppettider</h4>
+           <p className="link-footer">Mån-Fre  07:00 - 19:00</p>
+      
           </div>
           <div className="col-md-4" >
             <img src="./assets/logo-wh.png" alt="Magnetröntgen uatn remiss Sverige - RehabScan" style={{ height: '65px' }} />
