@@ -13,7 +13,7 @@ const StartHome = () => {
           className="hero-image"
         />
         <div className="hero-overlay">
-          <h1 className="hero-subtitle">Magnetkameraundersökning utan remiss i 7-14 dagar</h1>
+          <h1 className="hero-subtitle">Magnetröntgen undersökning utan remiss i 7-14 dagar</h1>
           <DynamicForm/>
           <NavLink to="/bokanu" className="hero-button"> Boka nu </NavLink>
           <p className="hero-footer">Billigast i Sverige</p>
