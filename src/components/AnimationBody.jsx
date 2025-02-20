@@ -51,6 +51,7 @@ const AnimationBody = () => {
     {id: 33, name: 'Höger Handled', price: '3 900kr', title:'Magnetröntgen Handled', detail: 'Handleden är en väldigt komplex struktur av olika ben och leder som kan vinklas och röras i olika ställningar samtidigt som den klarar av att överföra stor kraft. Handleden kan drabbas av skador, inte minst från fallolyckor, samt drabbas av sjukdomar i leder och ligament som förstör motoriken. Skador och anomalier i handleden kan vara svåra att upptäcka samt besvärliga att särskilja då de ofta har likartade symptom. MR är en bra undersökningsmetod för att upptäcka och särskilja frakturer, artrit eller skador på ligament och leder. När du gör en MR av handleden är det viktigt att se till så att handen ligger mitt i tunneln vid själva bildtagningen. ' },
     {id: 34, name: 'Vänster Handled', price: '3 900kr', title:'Magnetröntgen Handled', detail: 'Handleden är en väldigt komplex struktur av olika ben och leder som kan vinklas och röras i olika ställningar samtidigt som den klarar av att överföra stor kraft. Handleden kan drabbas av skador, inte minst från fallolyckor, samt drabbas av sjukdomar i leder och ligament som förstör motoriken. Skador och anomalier i handleden kan vara svåra att upptäcka samt besvärliga att särskilja då de ofta har likartade symptom. MR är en bra undersökningsmetod för att upptäcka och särskilja frakturer, artrit eller skador på ligament och leder. När du gör en MR av handleden är det viktigt att se till så att handen ligger mitt i tunneln vid själva bildtagningen. ' },
    // {id: 35, name: 'test', price: '3kr'}
+  
 
   ];
 
@@ -83,14 +84,14 @@ const AnimationBody = () => {
           ))}
         </div>
         <div className="text-content">
-          <h2 className='p-2'>Magnetröntgen</h2>
+          <h2 className='p-2 header'>Magnetröntgen</h2>
           <p className='p-2'>Magnetkameraundersökning, även kallad MR, är en högspecialiserad undersökningsmetod som används för att upptäcka och diagnostisera sjukdomar och se skador i kroppen. </p>
           <p className='p-2'>Magnetkameran skapar den mest kompletta undersökningen på marknaden genom att kombinera magnetfält och radiovågor till bilder som kan avbilda näst intill alla organ i kroppen. En undersökning med MR tar mellan 20–60 minuter och genererar upp emot 900-1200 unika bilder. Till skillnad från en konventionell röntgen används inte strålning och undersökningen är därför riskfri att utföra många gånger.</p>
         </div>
       </div>
      
 
-      <h2 className='center-text fw-3 p-3 mb-4'>Prislista</h2>
+      <h2 className='center-text fw-3 p-3 mb-4 header' >Prislista</h2>
       <div className="card-grid">
         {services.map((service, index) => (
           <div className="card" key={index}>

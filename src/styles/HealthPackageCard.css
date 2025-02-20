@@ -1,0 +1,102 @@
+/* Unique class names for better isolation */
+.health-card {
+    background: #0f1e33;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .health-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .health-card-badge {
+    background: #d41b5d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .health-card-recommended {
+    background: #2f80ed;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .health-card-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .health-card-description {
+    font-size: 1rem;
+    color: #cfd8e3;
+  }
+  
+  .health-card-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .health-card-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .health-card-btn-primary {
+    background: #e91e63;
+    color: white;
+  }
+  
+  .health-card-btn-secondary {
+    background: #2f80ed;
+    color: white;
+  }
+  
+  .health-card-organ-list {
+    margin-top: 15px;
+  }
+  
+  .health-card-organ-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .health-card-organ-list li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+/* Navigation Bar */
+.package-nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+  }
+  
+  .package-nav-btn {
+    background: #2f80ed;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .package-nav-btn.active {
+    background: #e91e63;
+  }
+    

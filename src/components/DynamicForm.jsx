@@ -40,6 +40,7 @@ const services = [
   {id: 34, name: 'Vänster Handled', price: '3 900kr', stripeProductId: 'price_1QhU7eLGp7g0cFk2Clh9fAht'  },
  // {id: 35, name: 'test', price: '3 kr', stripeProductId: 'price_1QhqwALGp7g0cFk2lPdHCyPs'  },
 
+
 ];
 
 const DynamicForm = () => {

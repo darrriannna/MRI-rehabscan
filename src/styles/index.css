@@ -3,21 +3,22 @@ body{
   margin: 0;
   padding: 0;
   height: 100%;
-}
-.body{
-  background: linear-gradient(#fefeff 0%,  #9dd6fa 60%, #9cc6f0 70%, #4b81f6 100%);
-  
+  overflow-x: hidden;
 }
 
+.body{
+background: whitesmoke;  
+}
+.body-form{
+background: #c0cfff66;
+}
 .title-service{
   font-weight: 600;
   color: #043737;
   
 }
-.image-back{
-  background-image: url("../../public/assets/Mr-machine.png") ;
-  background-size: cover;
-  flex: 1;
+.form-wrapper{
+  margin: 20px;
 }
 .banner {
     background-color: #ffffff; /* Light grey background */
@@ -31,10 +32,17 @@ body{
     z-index: 1050; /* Ensure it's above other elements */
 }
 .main{
+  width: 100%;
   margin: auto;
+  padding: 0;
+}
+
+.steps-box{
+ padding: 30px;
+
 }
 .main-pricelist{
-  background: linear-gradient(#fefeff 0%,  #7bc9fa 50%, #419ee6 70%, #6892ee 100%);
+  background: whitesmoke;
 }
 .banner-text {
     font-size: 1.2rem;
@@ -79,11 +87,11 @@ body{
   margin-top: 5px;
     touch-action: manipulation;
     align-self: auto;
-    background-color: #b0f4f4;
-    background-image: linear-gradient(#3aadf9, #5a9cf8, #3b75d2);
+    background-color: transparent;
+    border: 3px solid #db2777;
     border-radius: 35px;
     box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
-    color: #f5fbfb;
+    color: #db2777;
     font-size: 1.3rem;
     font-weight: 600;
     left: auto;
@@ -97,15 +105,14 @@ body{
   }
   .btn-navbar {
     touch-action: manipulation;
-    border-style: initial;
-    border-width: 0;
+    
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
   }
   .btn-navbar:active,
   .btn-navbar:hover {
-    background-image: linear-gradient(#1bbcc4, #3b97ad);
+    background: #ddd;
   }
   
   .btn-navbar:active {
@@ -340,7 +347,8 @@ height: 35px;
     margin: 0 10px;
   }
   .logo-navbar{
-    height: 50px;
+
+    height: 45px;
   }
 .flag-navbar{
   height: 25px;
@@ -431,7 +439,8 @@ height: 35px;
 
 
 .footer {
-  background-color: transparent !important;
+/* Change to your preferred hover color */
+  background-color: #1e40af;
   box-shadow: 10px 0px 0px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
   width: 100%;
@@ -447,7 +456,7 @@ height: 35px;
 .footer-header {
   font-size: 22px;
   color: white;
-  text-shadow: 0px 2px 3px #1873f1;
+  text-shadow: 0px 1px 3px #1873f1;
 }
 .footer ul {
   padding: 0;
@@ -511,8 +520,8 @@ height: 35px;
 
 .right-column h2 {
   font-size: 2.4em;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px  #032b55;
+  color: #2766aa;
+  text-shadow: 2px 0px 4px  #858687;
   font-weight: 600;
   margin-bottom: 10px;
   padding-bottom: 20px;
@@ -568,9 +577,9 @@ height: 35px;
   padding: 20px;
 }
 .containers-deceases{
-  background-color: rgb(246, 251, 231);
+  background-color: #c0cfff66;
   border-radius: 0.5cm;
-  box-shadow: 2px #31bbc7;
+  box-shadow: 1px 2px 3px #007bff;
   padding: 20px;
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   min-width: 100px; 
@@ -631,7 +640,7 @@ height: 35px;
 }
 
 .card {
-  background: #f5f5f5;
+  background: #e6f1ff;
   border-radius: 8px;
   border: none;
   padding: 16px;
@@ -797,7 +806,7 @@ border-radius: 30px;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   
   .main-pricelist {
     display: flex;
@@ -872,16 +881,24 @@ button {
 
 /* Dropdown Styles */
 .dropdown-toggle {
-  background: linear-gradient(#75befa, #528ef6 );
-  border: none;
-  box-shadow: 2px 1px 0px rgb(9, 108, 125);
-  padding: 10px 15px;
-  margin-top: 10px;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 500;
-  color:white;
+  margin-top: 5px;
+  touch-action: manipulation;
+  align-self: auto;
+  background-color: transparent;
+  border: 3px solid #1e40af;
+  border-radius: 20px;
+  box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
+  color: #1e40af;
+  font-size: 1.3rem;
+  font-weight: 600;
+  left: auto;
+  line-height: 1;
+  padding: 20px;
+
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  transition: all .3s ease-in-out;
+  z-index: 2;
 }
 
 .dropdown-content {
@@ -915,7 +932,8 @@ button {
   font-weight: 600;
 }
 .main-title-form{
-  color: #054848;
+  color: #082e58;
+  font-weight: 600;
 }
 .dropdown-button:hover {
   background-color: #f1f1f1;
@@ -945,9 +963,12 @@ button {
 }
 
 /* Loader.css */
-
+.header{
+  font-weight: 600;
+  color: #0c47a6;
+}
 .main-book{
-  background: linear-gradient(#fefeff 0%,  #7bc9fa 60%, #7bc2f8 70%, #4b81f6 100%);
+  background: whitesmoke;
   display: flex;
   flex-direction: column; /* Stacks children vertically */
   min-height: 100vh;
@@ -1055,24 +1076,26 @@ button {
 .map-section-container{
   width: 75%;
   margin: auto;
-  background-color: #f1f1f16b;
+  background-color: #1e40af;
   border-radius: 30px;
   padding: 20px;
+  box-shadow: 0 4px 6px rgb(83, 109, 238);
 }
 .map-section-container h2 {
-  font-size: 2.4em;
-  font-weight: 500;
+  font-size: 2.2em;
+  font-weight: 600;
+  padding: 10px;
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
 .map-section-text-h{
   text-align: center;
-  color: #000;
+  color: white;
 }
 .map-section-text-p{
   font-size: 20px;
   padding: 20px;
-  color: #000;
+  color: white;
 }
 
 .text-content p {
@@ -1173,7 +1196,7 @@ button {
  text-align: left;
  font-size: 36px;
  font-weight: 600;
- color: #fbfbfb;
+ color: #ec4899;
  
 
  text-shadow: 0px 3px 4px  #082e58;
@@ -1449,4 +1472,299 @@ padding-left: 20px;
 .restrictions{
   
   color: #000;
+}
+/* MRLayout.css */
+.mr-layout-container {
+
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: transparent;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .mr-layout-container {
+    flex-direction: row;
+  }
+}
+
+ .mr-layout-right {
+  padding: 20px;
+}
+
+.mr-layout-left {
+  flex: 1;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-layout-image {
+object-fit: cover;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.mr-layout-right {
+  flex: 1;
+  background-color: #1e40af;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mr-layout-title {
+  color: #ec4899;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.mr-layout-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mr-layout-subheading {
+  margin-bottom: 20px;
+}
+
+.mr-layout-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.mr-layout-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mr-layout-button-primary, .mr-layout-button-secondary {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mr-layout-button-primary {
+  background-color: #ec4899;
+  color: white;
+}
+
+.mr-layout-button-primary:hover {
+  background-color: #db2777;
+}
+
+.mr-layout-button-secondary {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.mr-layout-discount {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2563eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.mr-layout-discount-time {
+  color: #f9a8d4;
+  font-size: 0.875rem;
+}
+/* UniqueMRIStyles.css */
+.main-info-box{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 0;
+}
+.unique-mri-container {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #1e40af;
+
+}
+
+.unique-mri-content {
+  max-width: 800px;
+  text-align: left;
+  color: #fff;
+  margin: 40px;
+
+}
+
+.unique-mri-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.unique-highlight {
+  color: #db2777;
+}
+
+.unique-mri-list {
+ font-size: 18px;
+  text-align: left;
+  list-style-type: none;
+  margin-left: 20px;
+  padding: 30px;
+}
+
+.unique-mri-list li {
+  margin: 5px 0;
+  list-style-type: '→';
+  padding: 3px 0 2px 25px;
+}
+
+.unique-mri-pricing {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.unique-mri-price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.unique-mri-button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.unique-mri-button:hover {
+  background-color: #e91e63;
+}
+
+.unique-mri-image-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.unique-mri-image {
+  width: 100%;
+  max-width: 350px;
+}
+
+.unique-mri-discount-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #003f88;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.unique-mri-discount-time {
+  background-color: red;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .unique-mri-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .unique-mri-content {
+    flex: 1;
+  }
+
+  .unique-mri-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+.home-parent{
+  padding: 0;
+  margin: 0;
+}
+
+.custom-steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.custom-step {
+  max-width: 300px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.custom-step-icon {
+  width: 90px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.custom-step-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0c47a6; /* Dark blue for contrast */
+}
+
+.custom-step-text {
+  font-size: 16px;
+  color: #475569; /* Slightly softer text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-steps-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .custom-step {
+    max-width: 80%;
+  }
+  .custom-step-text{
+    text-align: center;
+  }
+}
+.custom-steps-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.custom-steps-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.custom-steps-highlight {
+  font-weight: 700;
+  color: #0c47a6; /* Light blue to highlight text */
 }

@@ -41,7 +41,8 @@
   }
   
   .list-item-varfor {
-    background: #f0f8ff;
+    background: #c0cfff66;
+    box-shadow: 1px 2px 3px #007bff;
     padding: 12px;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -109,7 +110,9 @@
     max-width: 800px;
     margin: 0;
   }
-
+.steps-container{
+  margin: 0;
+}
   .overlay-content h2 span {
     color: #1d9bf0;
     font-size: 50px;
@@ -189,4 +192,105 @@
 .step-number{
     font-size: 20px;
     color: #1d9bf0;
+}
+
+/* Container Styling */
+.mr-scan-container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  padding: 20px;
+  padding-bottom: 20px;
+  background-color: #1e40af;
+  color: white;
+
+  font-family: Arial, sans-serif;
+}
+
+/* Title and Subtitle */
+.mr-scan-title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.mr-scan-subtitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+ color: white;
+}
+
+/* Grid Layout */
+.mr-scan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Category Box */
+.mr-scan-category {
+  background-color: #1b3a5c;
+  padding: 25px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mr-scan-category:hover {
+  transform: scale(1.02);
+}
+
+.mr-scan-category-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ec4899;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.mr-scan-list {
+ 
+  padding: 10px;
+  margin: 0;
+}
+
+.mr-scan-list li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* Discount Box */
+.mr-scan-discount {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.mr-scan-discount-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mr-scan-discount-days {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mr-scan-grid {
+    grid-template-columns: 1fr;
+  }
+  .mr-scan-title {
+    font-size: 22px;
+  }
+  .mr-scan-subtitle {
+    font-size: 16px;
+  }
 }

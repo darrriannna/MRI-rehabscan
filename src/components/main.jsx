@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Import motion for animations
 import '../styles/index.css';
-import { Link } from 'react-router-dom';
 import Pricelist from './Pricelist';
-import Steps from './Steps';
 import MapSection from './MapSection';
+
 
 const Home = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -25,43 +24,7 @@ const Home = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <div className="main">
         <div className="container"> 
-          <motion.section className="main-content" {...fadeIn}>
-            <div className="container-home">
-              <motion.div className="right-column" {...fadeIn} transition={{ delay: 0.4 }}>
-                <h2>Undvik köer och väntetider med privat magnetröntgen</h2>
-                <ul>
-                  <li className='list-home-main'>Få tid för magnetkameraundersökning inom 7-14 arbetsdagar.</li>
-                  <li className='list-home-main'>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
-                  <li className='list-home-main'>Vi skickar din remiss, därefter får du kallelse till undersökning</li>
-                  <li className='list-home-main'>Möjlighet att diskutera dina röntgen svar med legitimerad personal.</li>
-                  <li className='list-home-main'>Billigast i Sverige.</li>
-                </ul>
-              </motion.div>
-            </div>
-          </motion.section>
-
-        
-
-          <motion.div {...fadeIn} transition={{ delay: 0.8 }}>
-            <Steps />
-          </motion.div>
-
-          <motion.div className="btn-center" {...fadeIn} transition={{ delay: 1 }}>
-            <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">
-              Boka undersökning
-            </Link>
-          </motion.div>
-
-          <motion.div {...fadeIn} transition={{ delay: 1.2 }}>
-            <p className="center-text">
-              En erfaren röntgenläkare undersöker alltid röntgen bilderna
-            </p>
-          </motion.div>
-
-          <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
-            <MapSection />
-          </motion.div>
-
+         
           <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
             <div className="left-column">
               <div className="text-center">
@@ -108,7 +71,10 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
-
+   
+     <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
+            <MapSection />
+          </motion.div>
           <motion.div {...fadeIn} transition={{ delay: 2.2 }}>
             <h2 className="center-text fw-3 p-3 mb-4">Prislista</h2>
             <Pricelist />

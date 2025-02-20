@@ -37,6 +37,7 @@ root.render(
           <Route path="/" element={<Failed />} />
           <Route path="/villkor" element={<Restrictions />} />
           <Route path="/product/*" element={<PageNotFound />} />
+
         </Routes>
       </LoaderProvider>
     </Provider>
