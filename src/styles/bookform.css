@@ -52,11 +52,7 @@ form {
         background-color: #515cf9;
     }
 
-    .image-back{
-      background-image: url("../../public/assets/Mr-machine.png") ;
-      background-size: cover;
-      
-    }
+ 
   .book-time-container {
     display: flex;
     justify-content: center;
