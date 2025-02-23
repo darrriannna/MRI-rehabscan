@@ -105,8 +105,7 @@ const IntegrityPolicy = () => {
               Få tillgång till dina personuppgifter och information om hur de
               behandlas.
             </li>
-            <li>Invända mot behandling för berättigade intressen.</li>
-            <li>Lämna klagomål till Datainspektionen.</li>
+            
           </ul>
         </section>
         <p className="conclusion">
