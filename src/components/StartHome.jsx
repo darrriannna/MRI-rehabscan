@@ -40,7 +40,7 @@ const MainInfo = ({ scanRef }) => {
             MR-Helkroppsröntgen som upptäcker tecken på cancer, stroke,
             inflammation och annan sjukdom.
           </li>
-          <li>Få resultat inom 7-14 arbetsdagar och genomgång med specialistläkare.</li>
+          <li>Få tid och svar inom 7 arbetsdagar.</li>
           <li>Innefattar MR scanning av 21 organ.</li>
         </ul>
         <p className="mr-layout-price">16 200 KR</p>
