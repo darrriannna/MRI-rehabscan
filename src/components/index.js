@@ -16,3 +16,4 @@ export { default as Statistics } from './Statistics';
 export { default as MainInfo } from './MainInfo';
 export { default as StepsIcons } from './StepsIcons';
 export { default as MRFullBodyScan } from './MRHelkropp';
+export { default as Message } from './MessageBox';

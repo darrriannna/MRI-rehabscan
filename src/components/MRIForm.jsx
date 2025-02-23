@@ -226,6 +226,7 @@ const MRIForm = () => {
       .send('service_xpfsnsz', 'template_nhom3d2', emailJsData, 'NiSS0VC0DjOLtm-iN')
       .then((result) => {
         console.log('Email sent successfully:', result.text);
+        localStorage.removeItem('formData');
         // Redirect to payment link after email is sent
         window.location.href = paymentLink;
       })

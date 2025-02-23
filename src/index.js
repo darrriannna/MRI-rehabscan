@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions } from "./pages";
 import MRI from './pages/MRI';
-import { DynamicForm, Success, Failed } from './components';
+import { DynamicForm, Success, Failed, Message } from './components';
 import ScrollToTop from './components/ScrollToTop';
 import Loader from './components/Loader';
 import IntegrityPolicy from "./pages/Policy";
@@ -21,6 +21,7 @@ root.render(
     <Provider store={store}>
       <LoaderProvider>  {/* Wrap the app with LoaderProvider */}
       <Loader/>
+      <Message/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/prislista" element={<MRI />} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/index.css"; // Import CSS
 
 const MainInfo = ({ scanRef }) => {
@@ -32,7 +33,19 @@ const MainInfo = ({ scanRef }) => {
 
       {/* Right Container */}
       <div className="mr-layout-right">
-        <h2 className="mr-layout-title">Baspaket</h2>
+        <h2 className="mr-layout-heading">Privat MR (från 3 900 kr)</h2>
+        <ul className="mr-layout-list">
+          <li>
+           MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg - 3 900kr
+          </li>
+          <li>MR Hjärna - 4 200kr </li>
+          <li>MR Helrygg - 9 000kr </li>
+        </ul>
+        <p className="mr-layout-subheading">För andra undersökningar gå till prislista.</p>
+        <Link to="/prislista" className="mr-layout-button-secondary text-center">
+               Gå till Prislista
+              </Link>
+     
         <h1 className="mr-layout-heading">MR-Helkropp</h1>
         <p className="mr-layout-subheading">Avancerad hälsoundersökning</p>
         <ul className="mr-layout-list">
@@ -47,14 +60,14 @@ const MainInfo = ({ scanRef }) => {
 
         {/* Buttons now trigger navigation just like in AnimationBody */}
         <button className="mr-layout-button-primary" onClick={handleBook}>
-          Beställ Baspaket
+         Boka nu
         </button>
         <button className="mr-layout-button-secondary" onClick={handleLearnMore}>
           Vad kan man upptäcka?
         </button>
 
         <div className="mr-layout-discount">
-          <p>Finns i flera städer som Stockholm, Göteborg, Malmö med mera.</p>
+          <p>Finns i flera städer som Stockholm, Göteborg, Malmö, Strömstad, Nynäshamn, Bäckefors, Umeå, Borås, Karlstad, Sundsvall, Jönköping</p>
           <p className="mr-layout-discount-time">INGEN REMISS KRÄVS</p>
         </div>
       </div>

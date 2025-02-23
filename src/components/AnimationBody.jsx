@@ -105,7 +105,13 @@ const AnimationBody = () => {
         ))}
       </div>
        <div>
-        <h2 className='p-3 '>MR kan bland annat användas för att upptäcka följande åkommor</h2>
+        <div className='grid-deceases'>
+          <div className='containers-deceases-info' >
+          <h4 className='text-center-info'>För kontrastmedel i samband med MR maila oss innan bokning.  
+       Vi har även Datortomografi (DT/CT), konventionell röntgen (tex skelett- och lungröntgen) samt ultraljud. 
+       Vid intresse maila oss på info@rehabscan.se eller ring 010-210 22 31 </h4>
+        </div></div>
+        <h2 className='p-4 '>MR kan bland annat användas för att upptäcka följande åkommor</h2>
         <div className='grid-deceaces'>
           <div className='containers-deceases'>
             <h4>MR Hjärna</h4>
