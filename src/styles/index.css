@@ -1772,6 +1772,7 @@ object-fit: cover;
 }
 .text-center-info{
   text-align: center;
+  font-size: 20px;
   font-weight: 450;
   line-height: 1cm;
   color: #1e293b;
