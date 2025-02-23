@@ -12,7 +12,7 @@ const Failed = () => {
   const handleRetry = async () => {
     const bookingData = JSON.parse(localStorage.getItem('bookingData'));
   
-    if (!bookingData || !bookingData.stripeProductId) {
+    if (!bookingData || !bookingData.paymentLink) {
       console.error('No booking data or Stripe product ID found. Redirecting to form.');
       navigate('/mri-boka'); // Redirect to form if data is missing
       return;
@@ -22,7 +22,7 @@ const Failed = () => {
   
     try {
       const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: bookingData.stripeProductId, quantity: 1 }],
+        lineItems: [{ price: bookingData.paymentLink, quantity: 1 }],
         mode: 'payment',
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/failed`,

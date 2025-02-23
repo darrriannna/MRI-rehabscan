@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { loadStripe } from '@stripe/stripe-js';
+import emailjs from 'emailjs-com';
+
 import '../styles/bookform.css';
 
 // Stripe initialization
-const stripePromise = loadStripe('pk_live_51QAvFDLGp7g0cFk2pdHbOh0iIz1ThLFf6qVHlIQq6ZTLgfN42QVnjkKkDxe3FQdy1Oxg9D4k6Qw0OqN4hqJBeESQ00U76MFWeK');
 
 const MRIForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { serviceName, city, price, stripeProductId } = location.state || {};
+  const { serviceName, city, price, paymentLink } = location.state || {};
 
   const [formData, setFormData] = useState({
     name: '',
@@ -37,7 +37,11 @@ const MRIForm = () => {
     if (savedData) {
       setFormData(JSON.parse(savedData));
     }
-  }, []);
+    else if (!paymentLink) {
+      // If paymentLink isn't passed, redirect the user to a fallback or error page
+      navigate('/failed');
+    }
+  }, [paymentLink, navigate]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -119,7 +123,7 @@ const MRIForm = () => {
     if (!isValidDate(fullYear, month, day)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: 'Invalid d in Personnummer.',
+        personnummer: 'Invalid date in Personnummer.',
       }));
       return false;
     }
@@ -165,7 +169,7 @@ const MRIForm = () => {
   
     let hasError = false;
   
-    // Validate all fields here
+    // Validate required fields before proceeding
     if (!formData.policyConfirmed) {
       setErrors((prevErrors) => ({
         ...prevErrors,
@@ -186,48 +190,52 @@ const MRIForm = () => {
       setErrors((prevErrors) => ({ ...prevErrors, pacemaker: null }));
     }
   
-    // Run personnummer validation
     if (!validatePersonnummer()) {
       hasError = true;
     }
     if (!validateTelefonnummer()) {
       hasError = true;
     }
+    if (!validateSwedishAddress()) {
+      hasError = true;
+    }
   
     if (hasError) return;
-  
-    // Validate stripeProductId
-    if (!stripeProductId || typeof stripeProductId !== 'string') {
-      console.error('Stripe Product ID is missing or invalid:', stripeProductId);
-      return;
-    }
   
     // Store form data in localStorage
     localStorage.setItem('formData', JSON.stringify(formData));
   
-    // Stripe payment process
-    try {
-      const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: stripeProductId, quantity: 1 }],
-        mode: 'payment',
-        successUrl: `${window.location.origin}/success`,
-        cancelUrl: `${window.location.origin}/failed`,
-        customerEmail: formData.email,
-      });
+    // Prepare data for EmailJS
+    const emailJsData = {
+      name: formData.name,
+      lastname: formData.lastname,
+      email: formData.email,
+      telefonnummer: formData.telefonnummer,
+      personnummer: formData.personnummer,
+      city: formData.city,
+      price: formData.price,
+      adress: formData.adress,
+      postcity: formData.postcity,
+      postnum: formData.postnum,
+      message: formData.message,
+      serviceTitle: formData.serviceTitle,
+    };
   
-      if (error) {
-        console.error('Stripe checkout error:', error);
-        navigate('/failed');
-      } else {
-        // Clear localStorage upon success
-        localStorage.removeItem('formData');
-      }
-    } catch (error) {
-      console.error('Error initializing Stripe checkout:', error);
-      navigate('/failed');
-    }
+    // Send email via EmailJS
+    emailjs
+      .send('service_xpfsnsz', 'template_nhom3d2', emailJsData, 'NiSS0VC0DjOLtm-iN')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        // Redirect to payment link after email is sent
+        window.location.href = paymentLink;
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        alert('Något gick fel vid e-postskickning. Försök igen.');
+      });
   };
+  
+
   
 
   return (
@@ -275,21 +283,23 @@ const MRIForm = () => {
         </div>
         <div>
           <label>Telefonnummer:</label>
-          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required placeholder="+46" maxLength="13" // +46 + 9 digits
- />
+          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required placeholder="+46" maxLength="13" />
           {errors.telefonnummer && <p className="error-text">{errors.telefonnummer}</p>}
         </div>
         <div>
           <label>Adress:</label>
-          <input className='input-field' type="text" name="adress" value={formData.adress}  onBlur={validateSwedishAddress} onChange={handleChange} required />
+          <input className='input-field' type="text" name="adress" value={formData.adress} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          {errors.adress && <p className="error-text">{errors.adress}</p>}
         </div>
         <div>
           <label>Postort:</label>
           <input className='input-field' type="text" name="postcity" value={formData.postcity} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          {errors.postcity && <p className="error-text">{errors.postcity}</p>}
         </div>
         <div>
           <label>Postnummer:</label>
           <input className='input-field' type="text" name="postnum" value={formData.postnum} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          {errors.postnum && <p className="error-text">{errors.postnum}</p>}
         </div>
         <div>
           <label>Meddelande:</label>
@@ -330,6 +340,7 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
 
 
 

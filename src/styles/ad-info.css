@@ -198,13 +198,11 @@
 .mr-scan-container {
   max-width: 100%;
   margin: 0 auto;
-
   padding: 20px;
   padding-bottom: 20px;
   background-color: #1e40af;
   color: white;
 
-  font-family: Arial, sans-serif;
 }
 
 /* Title and Subtitle */
