@@ -1784,3 +1784,13 @@ object-fit: cover;
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   min-width: 100px; 
 }
+
+@media (max-width: 768px) {
+  .text-center-info{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 450;
+    line-height: 0.7cm;
+    color: #1e293b;
+  }
+}
