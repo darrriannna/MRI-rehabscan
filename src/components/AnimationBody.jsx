@@ -56,15 +56,15 @@ const AnimationBody = () => {
   ];
 
   const popup = [
-    {id: 1, name: 'Axel', price: '3 900kr' },
-    {id: 2, name: 'Axel', price: '3 900kr' },
+    {id: 1, name: 'Axel', price: '4 100kr' },
+    {id: 2, name: 'Axel', price: '4 100kr' },
     {id: 3, name: 'Armbåge', price: '3 900kr' },
     {id: 4, name: 'Armbåge', price: '3 900kr' },
     {id: 5, name: 'Hand', price: '3 900kr' },
     {id: 6, name: 'Hand', price: '3 900kr' },
     {id: 7, name: 'Bäcken/höftleder', price: '3 900kr' },
     {id: 8, name: 'Bäcken/höftleder', price: '3 900kr' },
-    {id: 9, name: 'Prostata', price: '11 700kr' },
+    {id: 9, name: 'Prostata', price: '5 800kr' },
   ]
 
   return (
