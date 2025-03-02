@@ -51,7 +51,7 @@ const DynamicForm = () => {
   const navigate = useNavigate();
   const location = useLocation(); // Use location to access passed state
 
-  const cities = ['Stockholm', 'Göteborg','Malmö', 'Jönköping', 'Karlstad', 'Umeå',  'Sundsvall','Borås', 'Nynäshamn', 'Bäckefors', 'Strömstad' ];
+  const cities = ['Stockholm', 'Göteborg','Malmö Hyllie', 'Jönköping', 'Karlstad', 'Umeå',  'Sundsvall','Borås', 'Nynäshamn', 'Bäckefors', 'Strömstad' ];
 
   // Extract serviceName from the passed state
   useEffect(() => {
