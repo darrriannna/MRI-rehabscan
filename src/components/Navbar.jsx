@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/index.css';
+import TranslateWidget from './TranslateWidget';
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -23,7 +24,6 @@ const Navbar = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -45,7 +45,7 @@ const Navbar = () => {
                 </NavLink>
                 <img
                     className="flag-navbar"
-                    src="../assets/swedish.png"
+                    src={`${process.env.PUBLIC_URL}/assets/swedish.png`}
                     alt="Sverige magnetröntgen utan remiss"
                 />
                 <button
@@ -75,7 +75,9 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/varfor-mr">Varför MR</NavLink>
                         </li>
                     </ul>
-                    <div className="buttons text-center">
+                    <div className="buttons text-center navbar-extra">
+                        {/* Google Translate Widget */}
+                        <TranslateWidget />
                         <NavLink to="/bokanu" className="btn-navbar text-decoration-none">
                             Boka nu
                         </NavLink>
@@ -87,3 +89,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

@@ -1795,3 +1795,30 @@ object-fit: cover;
     color: #1e293b;
   }
 }
+.navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Basic styling for the translate container */
+.translate-container {
+  display: inline-block;
+  position: relative;
+  margin: 10px 0; /* Add some margin to avoid clipping */
+  z-index: 10000; /* Make sure the translate element is visible */
+}
+
+/* Optional: Google Translate dropdown is hidden by default */
+#google_translate_element {
+  display: block !important; /* Ensure it's not hidden */
+}
+
+/* If you want to adjust visibility of the Google Translate iframe */
+.goog-te-banner-frame {
+  display: none !important; /* Hides the banner */
+}
+
+.goog-te-banner-frame iframe {
+  display: none !important; /* Hides the iframe */
+}

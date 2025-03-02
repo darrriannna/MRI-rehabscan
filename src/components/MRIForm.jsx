@@ -45,41 +45,48 @@ const MRIForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-  
+    
     let updatedFormData = { ...formData };
   
-    if (name === 'personnummer') {
-      let formattedValue = value.replace(/\D/g, ''); // Remove all non-numeric characters
+    if (name === "telefonnummer") {
+      let formattedValue = value.replace(/\D/g, ""); // Remove all non-numeric characters
+  
+      if (formattedValue.startsWith("46")) {
+        formattedValue = "+46" + formattedValue.slice(2); // Ensure +46 is prefixed
+      } else if (formattedValue.startsWith("45")) {
+        formattedValue = "+45" + formattedValue.slice(2); // Ensure +45 is prefixed
+      }
+  
+      updatedFormData[name] = formattedValue;
+    } else if (name === "personnummer") {
+      let formattedValue = value.replace(/\D/g, "");
       if (formattedValue.length > 6) {
-        formattedValue = formattedValue.slice(0, 6) + '-' + formattedValue.slice(6, 10);
+        formattedValue = formattedValue.slice(0, 6) + "-" + formattedValue.slice(6, 10);
       }
       updatedFormData[name] = formattedValue;
-    } else if (name === 'telefonnummer') {
-      // Ensure `+46` is fixed and only digits can be appended after it
-      const rest = value.replace(/^\+46/, ''); // Remove any existing `+46` from the input
-      updatedFormData[name] = `+46${rest.replace(/\D/g, '')}`; // Keep only digits after `+46`
     } else {
-      updatedFormData[name] = type === 'checkbox' ? checked : value;
+      updatedFormData[name] = type === "checkbox" ? checked : value;
     }
   
     setFormData(updatedFormData);
-    localStorage.setItem('formData', JSON.stringify(updatedFormData)); // Update localStorage
+    localStorage.setItem("formData", JSON.stringify(updatedFormData));
   };
-  
   
   const validateTelefonnummer = () => {
     const { telefonnummer } = formData;
-    console.log('Validating:', telefonnummer);
+    console.log("Validating:", telefonnummer);
   
-    const regex = /^\+46(7\d{8})$/;
-    const isValid = regex.test(telefonnummer);
+    const swedishRegex = /^\+46(7\d{8})$/; // +46 followed by 9 digits (starting with 7)
+    const danishRegex = /^\+45(\d{8})$/; // +45 followed by 8 digits
   
-    console.log('Is valid:', isValid);
+    const isValid = swedishRegex.test(telefonnummer) || danishRegex.test(telefonnummer);
+    
+    console.log("Is valid:", isValid);
   
     if (!isValid) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        telefonnummer: 'Telefonnumret måste börja med +46 och följa formatet +4670XXXXXXX.',
+        telefonnummer: "Telefonnumret måste börja med +46 (9 siffror) eller +45 (8 siffror).",
       }));
       return false;
     }
@@ -94,41 +101,49 @@ const MRIForm = () => {
   
   const validatePersonnummer = () => {
     const { personnummer } = formData;
+    const swedishRegex = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])-\d{4}$/; // ÅÅMMDD-XXXX
+    const danishRegex = /^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[0-2])\d{2}-\d{4}$/; // DDMMYY-XXXX
   
-    // Simple regex to check if it follows the ÅÅMMDD-XXXX pattern
-    const regex = /^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])-\d{4}$/;
-    if (!regex.test(personnummer)) {
+    let isValidFormat = swedishRegex.test(personnummer) || danishRegex.test(personnummer);
+    if (!isValidFormat) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: 'Personnummer måste följa formatet ÅÅMMDD-XXXX.',
+        personnummer: "Personnummer måste följa formatet ÅÅMMDD-XXXX (SE) eller DDMMÅÅ-XXXX (DK).",
       }));
       return false;
     }
   
-    // Extract year, month, and day from personnummer
-    const year = parseInt(personnummer.slice(0, 2), 10);
-    const month = parseInt(personnummer.slice(2, 4), 10);
-    const day = parseInt(personnummer.slice(4, 6), 10);
+    // Extract components based on format
+    let day, month, year;
+    if (swedishRegex.test(personnummer)) {
+      year = parseInt(personnummer.slice(0, 2), 10);
+      month = parseInt(personnummer.slice(2, 4), 10);
+      day = parseInt(personnummer.slice(4, 6), 10);
+    } else if (danishRegex.test(personnummer)) {
+      day = parseInt(personnummer.slice(0, 2), 10);
+      month = parseInt(personnummer.slice(2, 4), 10);
+      year = parseInt(personnummer.slice(4, 6), 10);
+    }
   
-    // Determine the century dynamically
-    const currentYear = new Date().getFullYear() % 100; // Last two digits of the current year
+    // Determine the full year (handling centuries)
+    const currentYear = new Date().getFullYear() % 100;
     const fullYear = year <= currentYear ? 2000 + year : 1900 + year;
   
-    // Validate the date
+    // Validate Date
     const isValidDate = (y, m, d) => {
-      const date = new Date(`${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`);
+      const date = new Date(`${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`);
       return date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d;
     };
   
     if (!isValidDate(fullYear, month, day)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        personnummer: 'Invalid date in Personnummer.',
+        personnummer: "Invalid date in Personnummer.",
       }));
       return false;
     }
   
-    // Clear the error if validation passes
+    // Clear error if validation passes
     setErrors((prevErrors) => ({ ...prevErrors, personnummer: null }));
     return true;
   };
@@ -268,7 +283,7 @@ const MRIForm = () => {
           <input className='input-field' type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div>
-          <label>Personnummer:</label>
+          <label>Personnummer: (SE/DK)</label>
           <input
             className="input-field"
             type="text"
@@ -276,15 +291,14 @@ const MRIForm = () => {
             value={formData.personnummer}
             onChange={handleChange}
             required
-            placeholder="ÅÅMMDD-XXXX"
             maxLength="11"
             onBlur={validatePersonnummer}
           />
           {errors.personnummer && <p className="error-text">{errors.personnummer}</p>}
         </div>
         <div>
-          <label>Telefonnummer:</label>
-          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required placeholder="+46" maxLength="13" />
+          <label>Telefonnummer: (+46/+45)</label>
+          <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required  maxLength="13" />
           {errors.telefonnummer && <p className="error-text">{errors.telefonnummer}</p>}
         </div>
         <div>
