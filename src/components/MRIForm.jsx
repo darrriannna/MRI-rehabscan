@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
-
 import '../styles/bookform.css';
 
 // Stripe initialization
@@ -154,19 +153,19 @@ const MRIForm = () => {
     let isValid = true;
     const newErrors = {};
   
-    // Validate Adress
+    // Validate Adress (allows letters, numbers, commas, periods, and hyphens)
     if (!adress || !/^[a-zA-Z0-9 ,.-]+$/.test(adress)) {
       newErrors.adress = 'Adress får endast innehålla bokstäver, siffror, mellanslag och tillåtna tecken (, . -).';
       isValid = false;
     }
   
-    // Validate Postort (City)
+    // Validate Postort (City) (allows letters and spaces, including Swedish letters)
     if (!postcity || !/^[a-zA-ZåäöÅÄÖ ]+$/.test(postcity)) {
       newErrors.postcity = 'Postort får endast innehålla bokstäver och mellanslag.';
       isValid = false;
     }
   
-    // Validate Postnummer (Postal Code)
+    // Validate Postnummer (Postal Code) (matches both "12345" or "123 45" format)
     if (!postnum || !/^\d{3}\s?\d{2}$/.test(postnum)) {
       newErrors.postnum = 'Postnummer måste följa formatet "12345" eller "123 45".';
       isValid = false;
@@ -177,8 +176,8 @@ const MRIForm = () => {
   
     return isValid;
   };
-  
 
+  // Handle submit (trigger all validations here)
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -250,9 +249,6 @@ const MRIForm = () => {
         alert('Något gick fel vid e-postskickning. Försök igen.');
       });
   };
-  
-
-  
 
   return (
     <div className='mri-kundinfo'>
@@ -292,7 +288,6 @@ const MRIForm = () => {
             onChange={handleChange}
             required
             maxLength="11"
-            onBlur={validatePersonnummer}
           />
           {errors.personnummer && <p className="error-text">{errors.personnummer}</p>}
         </div>
@@ -303,17 +298,17 @@ const MRIForm = () => {
         </div>
         <div>
           <label>Adress:</label>
-          <input className='input-field' type="text" name="adress" value={formData.adress} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          <input className='input-field' type="text" name="adress" value={formData.adress} onChange={handleChange} required />
           {errors.adress && <p className="error-text">{errors.adress}</p>}
         </div>
         <div>
           <label>Postort:</label>
-          <input className='input-field' type="text" name="postcity" value={formData.postcity} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          <input className='input-field' type="text" name="postcity" value={formData.postcity} onChange={handleChange} required />
           {errors.postcity && <p className="error-text">{errors.postcity}</p>}
         </div>
         <div>
           <label>Postnummer:</label>
-          <input className='input-field' type="text" name="postnum" value={formData.postnum} onBlur={validateSwedishAddress} onChange={handleChange} required />
+          <input className='input-field' type="text" name="postnum" value={formData.postnum} onChange={handleChange} required />
           {errors.postnum && <p className="error-text">{errors.postnum}</p>}
         </div>
         <div>
@@ -355,6 +350,7 @@ const MRIForm = () => {
 };
 
 export default MRIForm;
+
 
 
 
