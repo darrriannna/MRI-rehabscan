@@ -3,7 +3,7 @@ import "../styles/index.css"; // Make sure to add your styles here!
 
 const TranslateWidget = () => {
   useEffect(() => {
-    // Check if script already exists
+    // Check if the Google Translate script is already loaded
     if (!document.querySelector("script[src*='translate.google.com']")) {
       const script = document.createElement("script");
       script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
@@ -48,6 +48,11 @@ const TranslateWidget = () => {
 };
 
 export default TranslateWidget;
+
+
+
+
+
 
 
 

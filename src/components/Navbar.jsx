@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/index.css';
-import TranslateWidget from './TranslateWidget';
+
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false); // Track navbar collapse state
 
     // Memoized scroll handler to avoid unnecessary re-renders
     const handleScroll = useCallback(() => {
@@ -29,6 +30,10 @@ const Navbar = () => {
         };
     }, [handleScroll]);
 
+    const handleToggle = () => {
+        setIsNavbarOpen(!isNavbarOpen); // Toggle the navbar state
+    };
+
     return (
         <nav
             className={`navbar navbar-expand-lg p-2 sticky-top ${
@@ -51,16 +56,15 @@ const Navbar = () => {
                 <button
                     className="navbar-toggler mx-2"
                     type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
+                    onClick={handleToggle} // Handle the toggle state change
                     aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
+                    aria-expanded={isNavbarOpen ? "true" : "false"} // Reflect the current state
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto my-2 text-center">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">Hem</NavLink>
@@ -76,8 +80,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="buttons text-center navbar-extra">
-                        {/* Google Translate Widget */}
-                        <TranslateWidget />
+                       
                         <NavLink to="/bokanu" className="btn-navbar text-decoration-none">
                             Boka nu
                         </NavLink>
@@ -89,4 +92,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
 

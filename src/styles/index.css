@@ -1798,28 +1798,8 @@ object-fit: cover;
   align-items: center;
   gap: 1rem;
 }
+/* Make sure the Google Translate widget is visible */
 
-/* Basic styling for the translate container */
-.translate-container {
-  display: inline-block;
-  position: relative;
-  margin: 10px 0; /* Add some margin to avoid clipping */
-  z-index: 10000; /* Make sure the translate element is visible */
-}
-
-/* Optional: Google Translate dropdown is hidden by default */
-#google_translate_element {
-  display: block !important; /* Ensure it's not hidden */
-}
-
-/* If you want to adjust visibility of the Google Translate iframe */
-.goog-te-banner-frame {
-  display: none !important; /* Hides the banner */
-}
-
-.goog-te-banner-frame iframe {
-  display: none !important; /* Hides the iframe */
-}
 /* Full-width background image styling */
 .custom-row {
   background-image: url("../../public/assets/helsingborg.jpeg"); /* Ensure the path is correct */
@@ -1887,4 +1867,85 @@ object-fit: cover;
   .bottom-text-about{
     font-size: 1.3rem;
   }
+}
+
+.footer-translate-widget {
+  margin-top: 20px;
+  text-align: center;
+  visibility: visible !important; /* Ensure it's not hidden */
+}
+
+.goog-te-gadget {
+  display: inline-block !important; /* Ensure it's not hidden */
+}
+/* Ensure the translate container is visible and properly positioned */
+.translate-container {
+  display: inline-block;
+  position: relative;
+  z-index: 1000;
+  visibility: visible !important; /* Make sure it's visible */
+  width: auto;
+  height: auto;
+
+
+}
+
+/* Google Translate gadget styles */
+#google_translate_element .goog-te-gadget {
+  background-color: transparent;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 10px 20px;
+  line-height: 1;
+  transition: all .3s ease-in-out;
+  z-index: 2;
+  cursor: pointer;
+  display: block !important; /* Ensure it's displayed */
+}
+
+/* Dropdown button inside the Google Translate widget */
+#google_translate_element .goog-te-combo {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 35px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 10px 20px;
+  line-height: 1.5;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Hover and active states for the dropdown */
+#google_translate_element .goog-te-combo:active,
+#google_translate_element .goog-te-combo:hover {
+  background-color: transparent;
+}
+
+#google_translate_element .goog-te-combo:active {
+  box-shadow: rgba(131, 50, 234, .1) 0 3px 6px;
+}
+
+/* Optional: Style the dropdown text */
+#google_translate_element .goog-te-menu-value {
+  font-size: 16px;
+}
+
+/* Hide the "Powered by Google Translate" text */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-banner-frame iframe {
+  display: none !important;
+}
+
+/* Make sure the gadget is displayed */
+.goog-te-gadget {
+  display: block !important; /* Ensure it's displayed */
 }
