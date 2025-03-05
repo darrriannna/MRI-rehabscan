@@ -1,37 +1,40 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Footer, Navbar, Steps } from "../components";
-
-import "../styles/index.css";
+import { Footer, Navbar, Partners, Steps } from "../components";
+import "../styles/index.css"; // Updated CSS file
 
 const AboutPage = () => {
   return (
     <>
-    <div className='body '>
-      <Navbar />
-      <div className="container-about-us">
-
-        <div className="row">
-
-        <div className="container-home">
-    <div className="left-column">
-      <img src="./assets/About-img.png" alt="RehabScan Sverige - Magnetröntgen utan remiss" />
-    </div>
-    <div className="right-column">
-    <p className='text-about p-4'>RehabScan erbjuder MR-röntgenundersökningar i hela landet utan krav på remiss för att ge dig en bättre inblick i din hälsa.</p>
-    <p className='p-4'>Med RehabScan kan du känna dig trygg i att få den vård och uppmärksamhet du behöver – Din hälsa prioriteras hos oss och vi strävar efter att ge dig den bästa möjliga upplevelsen, oavsett ditt behov.
-    Välkommen till RehabScan, en hälsoklinik i framkant som sätter dig och din hälsa i fokus!</p>
-    </div>
-  </div>
-        </div>
-       <Steps/>
-       <div className='btn-center'>
-            <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
+      <div className="body">
+        <Navbar />
+        <div className="container-about-us">
+          <div className="custom-row">
+            {/* Top-left text */}
+          
+            {/* Bottom full-width description */}
+            <div className="custom-description">
+            <p className='main-title-about'>RehabScan erbjuder trygg och professionell bilddiagnostik med snabba svar och utan remiss. </p>
+            <p className='subtext-about'>Vi samarbetar med ledande kliniker i Sverige för att ge dig en smidig och säker vårdupplevelse.  
+            All vår personal är legitimerad av Socialstyrelsen, vilket garanterar hög medicinsk kvalitet. När vi skickar din remiss blir du kontaktad av den närmaste kliniken för att boka en tid som passar dig.  
+            Vi finns över hela Sverige, och vårt huvudkontor ligger på Margaretaplatsen i Helsingborg.  
+            </p>
+            <p className='bottom-text-about'>Välkommen till RehabScan – din hälsa i fokus!</p>
+            </div>
           </div>
+        </div>
+        
+        <Partners />
+        <div className='p-3'>
+        <Steps /></div>
+        <div className="btn-center">
+          <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
+        </div>
+        
+        <Footer />
       </div>
-      <Footer /></div>
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

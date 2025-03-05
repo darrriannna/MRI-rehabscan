@@ -1202,9 +1202,7 @@ button {
  text-shadow: 0px 3px 4px  #082e58;
 }
 
-.container-about-us{
-  padding: 20px;
-}
+
 .payment-success{
   justify-content: center;
   margin: auto;
@@ -1821,4 +1819,72 @@ object-fit: cover;
 
 .goog-te-banner-frame iframe {
   display: none !important; /* Hides the iframe */
+}
+/* Full-width background image styling */
+.custom-row {
+  background-image: url("../../public/assets/helsingborg.jpeg"); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align to the left */
+  padding: 2rem;
+  position: relative;
+}
+
+/* Reduce height for larger screens */
+@media (min-width: 954px) { 
+  .custom-row {
+    min-height: 60vh; /* 60% of the viewport height */
+  }
+}
+
+/* Container to hold text and image */
+.custom-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: black;
+ /* Optional: Background overlay */
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 50%;
+}
+.main-title-about{
+  font-size: 1.6rem;
+}
+.bottom-text-about{
+  font-size: 1.6rem;
+}
+
+/* Description positioned at bottom */
+.custom-description {
+  width: 100%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.542); /* Background overlay for readability */
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .custom-description {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .main-title-about{
+    font-size: 1.3rem;
+  }
+  .subtext-about{
+    font-size: 1.1rem;
+  }
+  .bottom-text-about{
+    font-size: 1.3rem;
+  }
 }
