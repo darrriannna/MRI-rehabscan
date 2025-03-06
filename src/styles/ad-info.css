@@ -343,7 +343,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 600px; /* Full viewport height */
+  max-height: 800px; /* Full viewport height */
   text-align: center;
 }
 
@@ -367,7 +367,12 @@
   height: 120px; /* Set a uniform height */
   transition: transform 0.3s ease-in-out;
 }
-
+@media (max-width: 768px){
+  .partner-card{
+    width: 130px;
+    height: 90px;
+  }
+}
 /* Ensure images fit properly */
 .partner-image {
   max-width: 100%;
