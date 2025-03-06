@@ -23,7 +23,7 @@ const Message = () => {
       <div className="klarna-notice">
         {/* Klarna logo */}
         <img 
-          src="./assets/klarna-logo.svg" 
+          src="./assets/klarna.png" 
           alt="Klarna Logo" 
           className="klarna-logo" 
         />
