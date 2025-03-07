@@ -6,7 +6,7 @@ import "../styles/index.css";
 const services = [
   { id: 1, name: 'Ländrygg', price: '3 900kr', paymentLink: 'https://buy.stripe.com/6oE5mBf5HcTB43maF6' },
   { id: 2, name: 'Höger Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/aEU9CRbTv4n56bufZi' },
-  { id: 3, name: 'Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/aEU02h8HjbPx0Ra28h' },
+  { id: 3, name: 'Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/dR68yN0aNf1J1VefZz' },
   { id: 4, name: 'Bäcken/höftleder', price: '3 900kr', paymentLink: 'https://buy.stripe.com/8wM9CR6zbbPxarK8wZ' },
   { id: 5, name: 'Vänster Knä', price: '3 900kr', paymentLink: 'https://buy.stripe.com/3csaGV3mZg5N6bu9AK' },
   { id: 6, name: 'Helkropp', price: '16 200kr', paymentLink: 'https://buy.stripe.com/4gw9CRcXz1aT2Zi5kB' },
@@ -38,8 +38,8 @@ const services = [
   {id: 32, name: 'Vänster Underarm', price: '3 900kr', paymentLink: 'https://buy.stripe.com/dR616l6zb6vd6bu3ce' },
   {id: 33, name: 'Höger Handled', price: '3 900kr', paymentLink: 'https://buy.stripe.com/7sI6qFcXzf1JczSeVi'  },
   {id: 34, name: 'Vänster Handled', price: '3 900kr', paymentLink: 'https://buy.stripe.com/fZe8yN0aNaLtgQ85kl'  },
-  {id: 35, name: 'test', price: '3 kr', paymentLink: 'https://buy.stripe.com/28o16lbTv8DleI03cM'  },
-
+   // { id: 35, name: 'Ländrygg (K)', price: '4 900kr', paymentLink: '' },
+    
 
 ];
 
