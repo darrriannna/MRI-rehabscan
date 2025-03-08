@@ -51,7 +51,30 @@ const DynamicForm = () => {
   const navigate = useNavigate();
   const location = useLocation(); // Use location to access passed state
 
-  const cities = ['Stockholm', 'Göteborg','Malmö Hyllie', 'Jönköping', 'Karlstad', 'Umeå',  'Sundsvall','Borås', 'Nynäshamn', 'Bäckefors', 'Strömstad' ];
+  const cities = [
+    'Borås',
+  'Bäckefors',
+  'Göteborg Backa',
+  'Göteborg Haga',
+  'Göteborg Mölndal',
+  'Jönköping',
+  'Karlstad',
+  'Malmö Hyllie',
+  'Nynäshamn',
+  'Stockholm Farsta',
+  'Stockholm Järva',
+  'Stockholm Klara Strand',
+  'Stockholm Nacka',
+  'Stockholm Sabbatsberg',
+  'Stockholm Skärholmen',
+  'Stockholm Sollentuna',
+  'Stockholm Vällingby',
+  'Strömstad',
+  'Sundsvall',
+  'Umeå',
+  'Uppsala',
+  'Västerås'
+     ];
 
   // Extract serviceName from the passed state
   useEffect(() => {
@@ -124,7 +147,7 @@ const DynamicForm = () => {
 
         {selectedExamination && (
           <div className="form-group">
-            <p className='form-field-title'>Välj stad</p>
+            <p className='form-field-title'>Välj stad (A-Ö)</p>
             <button type="button" className="dropdown-toggle" onClick={toggleCityDropdown}>
               {selectedCity || 'Välj stad'}
             </button>
