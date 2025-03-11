@@ -24,7 +24,7 @@ const MapSection = () => {
               <ul>
                 <li className='list-of-clinics'>
               <button className='button-clinic' onClick={() => toggleDropdown('Stockholm')}>
-                {openDropdown === 'Stockholm' ? '▲ 8 platser' : '▼ 8 platser'}
+                {openDropdown === 'Stockholm' ? '▲ 8 alternativ' : '▼ 8 alternativ'}
               </button>
               {openDropdown === 'Stockholm' && (
               <ul className='list-of-clinics'> 
@@ -69,7 +69,7 @@ const MapSection = () => {
             <ul>
               <li className='list-of-clinics'>
             <button className='button-clinic' onClick={() => toggleDropdown('Göteborg')}>
-                {openDropdown === 'Göteborg' ? '▲ 3 platser' : '▼ 3 platser'}
+                {openDropdown === 'Göteborg' ? '▲ 3 alternativ' : '▼ 3 alternativ'}
               </button>
               {openDropdown === 'Göteborg' && (
             <ul className='list-of-clinics'> 
