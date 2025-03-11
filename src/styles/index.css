@@ -60,8 +60,9 @@ background: #c0cfff66;
   background-color: transparent;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(25, 102, 255, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
-        
+  
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .navbar-visible {
@@ -1074,15 +1075,15 @@ button {
   margin-left: 10px;
 }
 .map-section-container{
-  width: 75%;
+  width: 95%;
   margin: auto;
-  background-color: #1e40af;
+  border: 3px solid #055ab5;
   border-radius: 30px;
   padding: 20px;
   box-shadow: 0 4px 6px rgb(83, 109, 238);
 }
 .map-section-container h2 {
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 600;
   padding: 10px;
   margin-bottom: 10px;
@@ -1090,12 +1091,13 @@ button {
 }
 .map-section-text-h{
   text-align: center;
-  color: white;
+  color: #082e58;
+  
 }
 .map-section-text-p{
   font-size: 20px;
-  padding: 20px;
-  color: white;
+  padding: 30px;
+
 }
 
 .text-content p {
@@ -1134,14 +1136,14 @@ button {
 
 /* Marker styling with bounce */
 
-@media (max-width: 850px){
+@media (max-width: 950px){
   .map-image{
-    min-width: 100px;
+    display: none;
   }
 }
-@media (min-width: 850px){
+@media (min-width: 950px){
   .map-image{
-    max-width: 350px;
+    max-width: 550px;
   }
  
 }
@@ -1160,7 +1162,7 @@ button {
   }
 
   .list-map-container li{
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
@@ -1192,14 +1194,11 @@ button {
 }
 .list-map-container{
   list-style: none;
-  padding-top: 26px;
  text-align: left;
- font-size: 36px;
+ font-size: 26px;
  font-weight: 600;
  color: #ec4899;
- 
-
- text-shadow: 0px 3px 4px  #082e58;
+padding-top: 10px;
 }
 
 
@@ -1813,10 +1812,55 @@ object-fit: cover;
   padding: 2rem;
   position: relative;
 }
+.custom-row-ct{
+  background-image: url("../../public/assets/Scan-CT.jpg"); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align to the left */
+  padding: 2rem;
+  position: relative;
+}
+.custom-row-k{
+  background-image: url("../../public/assets/ScanMR-k.jpg"); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align to the left */
+  padding: 2rem;
+  position: relative;
+}
+.custom-row-mr{
+  background-image: url("../../public/assets/ScanMR.jpg"); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align to the left */
+  padding: 2rem;
+  position: relative;
+}
 
 /* Reduce height for larger screens */
 @media (min-width: 954px) { 
   .custom-row {
+    min-height: 60vh; /* 60% of the viewport height */
+  }
+  .custom-row-mr {
+    min-height: 60vh; /* 60% of the viewport height */
+  }
+  .custom-row-k {
+    min-height: 60vh; /* 60% of the viewport height */
+  }
+  .custom-row-ct {
     min-height: 60vh; /* 60% of the viewport height */
   }
 }
@@ -1948,4 +1992,76 @@ object-fit: cover;
 /* Make sure the gadget is displayed */
 .goog-te-gadget {
   display: block !important; /* Ensure it's displayed */
+}
+.container-prices {
+  padding: 30px;
+  margin: 20px;
+}
+
+.toggle-btn-sub {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtext-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.subtext-container.open {
+  max-height: 500px; /* Adjust based on content length */
+  opacity: 1;
+}
+.arrow-sub {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow-sub.rotated {
+  transform: rotate(180deg);
+}
+
+.container-about-services{
+  text-align: center; /* Centers inline elements like text */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures everything inside is centered */
+  width: 100%;  
+}
+.button-clinic{
+margin-top: 5px;
+padding: 3px;
+background-color: transparent;
+border: none;
+font-size: 18px ;
+font-weight: 600;
+color: #082e58;
+}
+
+.list-of-clinics{
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.clinic-name {
+  font-weight: bold !important;
+  color: #082e58 !important;
+  padding: 0 !important;
+}
+.clinic-adress {
+
+  color: #082e58 !important;
+  padding: 0 !important;
+}
+.clinic-details{
+  border: 1px solid #082e58;
+  padding: 10px;
+ border-radius: 20px;
 }
