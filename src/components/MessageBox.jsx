@@ -28,7 +28,7 @@ const Message = () => {
           className="klarna-logo" 
         />
         {/* Message */}
-        <p className="klarna-message">För att betala med Klarna, vänligen boka via en dator.</p>
+        <p className="klarna-message">Om du inte kan betala med Klarna via mobilen, vänligen boka via en dator.</p>
         {/* Exit Button */}
         <button onClick={handleClose} className="close-btn">×</button> {/* New exit sign */}
       </div>

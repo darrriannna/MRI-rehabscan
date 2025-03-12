@@ -1829,7 +1829,7 @@ object-fit: cover;
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 40vh;
+  min-height: 55vh;
   display: flex;
   align-items: flex-start; /* Align content to the top */
   justify-content: flex-start; /* Align to the left */
@@ -1841,7 +1841,7 @@ object-fit: cover;
   background-size: cover;
   background-position: center;
   width: 100%;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   align-items: flex-start; /* Align content to the top */
   justify-content: flex-start; /* Align to the left */
@@ -1855,13 +1855,13 @@ object-fit: cover;
     min-height: 60vh; /* 60% of the viewport height */
   }
   .custom-row-mr {
-    min-height: 40vh; /* 60% of the viewport height */
+    min-height: 50vh; /* 60% of the viewport height */
   }
   .custom-row-k {
-    max-height: 40vh; /* 60% of the viewport height */
+    min-height: 40vh; /* 60% of the viewport height */
   }
   .custom-row-ct {
-    min-height: 40vh; /* 60% of the viewport height */
+    min-height: 50vh; /* 60% of the viewport height */
   }
 }
 
@@ -1906,7 +1906,7 @@ object-fit: cover;
     font-size: 1.3rem;
   }
   .subtext-about{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .bottom-text-about{
     font-size: 1.3rem;

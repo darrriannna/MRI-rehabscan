@@ -305,7 +305,7 @@
   align-items: center;
   z-index: 9999; /* This ensures the notice is on top of other content */
   width: auto;
-  max-width: 350px; /* You can adjust the width */
+  max-width: 360px; /* You can adjust the width */
 }
 
 .klarna-logo {
@@ -318,7 +318,7 @@
   flex: 1; /* This makes the message text take up the remaining space */
   text-align: center; /* This will center the text horizontally */
   margin: 0;
-  font-size: 16px; /* Adjust font size if needed */
+  font-size: 13px; /* Adjust font size if needed */
 }
 
 .close-btn {
