@@ -1,6 +1,8 @@
 import React from 'react';
+import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles/index.css'; // Import your CSS styles
+
 
 const AnimationBody = () => {
   const navigate = useNavigate();
@@ -54,44 +56,33 @@ const AnimationBody = () => {
   
 
   ];
-
-  const popup = [
-    {id: 1, name: 'Axel', price: '4 100kr' },
-    {id: 2, name: 'Axel', price: '4 100kr' },
-    {id: 3, name: 'Armbåge', price: '3 900kr' },
-    {id: 4, name: 'Armbåge', price: '3 900kr' },
-    {id: 5, name: 'Hand', price: '3 900kr' },
-    {id: 6, name: 'Hand', price: '3 900kr' },
-    {id: 7, name: 'Bäcken/höftleder', price: '3 900kr' },
-    {id: 8, name: 'Bäcken/höftleder', price: '3 900kr' },
-    {id: 9, name: 'Prostata', price: '5 800kr' },
-  ]
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='main-pricelist'>
-    <div className="container-pricelist">
+    <div className="container-banner">
       
-      <div className="main-content">
-        <div className="banner-image">
-          <img src="./assets/Humanbody-mri.png" alt="Human body" className="image-front" />
-          {popup.map((service, index) => (
-            <div className={`circle-animation circle-animation${index + 1}`} key={service.id}>
-              <div className="pop-up">
-                <p className="animation-text">{service.name}</p>
-                <p className="animation-text">{service.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="text-content">
-          <h2 className='p-2 header'>Magnetröntgen</h2>
-          <p className='p-2'>Magnetkameraundersökning, även kallad MR, är en högspecialiserad undersökningsmetod som används för att upptäcka och diagnostisera sjukdomar och se skador i kroppen. </p>
-          <p className='p-2'>Magnetkameran skapar den mest kompletta undersökningen på marknaden genom att kombinera magnetfält och radiovågor till bilder som kan avbilda näst intill alla organ i kroppen. En undersökning med MR tar mellan 20–60 minuter och genererar upp emot 900-1200 unika bilder. Till skillnad från en konventionell röntgen används inte strålning och undersökningen är därför riskfri att utföra många gånger.</p>
-        </div>
-      </div>
-     
+    <div className="container-about-services">
+  <div className="custom-row-k">
+   
+    <div className="custom-description">
+    <h1 className="text-center toggle-btn-sub" onClick={() => setIsOpen(!isOpen)}>
+             MR(MRI)  <span className={`arrow-sub ${isOpen ? "rotated" : ""}`}>▾</span>
+            </h1>
+            <div className={`subtext-container ${isOpen ? "open" : ""}`}>
+    <p className='subtext-about'>En magnetkamera kan skapa detaljerade bilder av nästan alla organ i kroppen och används för att upptäcka sjukdomar, kartlägga skador och följa upp behandlingar.  
 
-      <h2 className='center-text fw-3 p-3 mb-4 header' >Prislista</h2>
+Vid en magnetkameraundersökning (MR) ligger du på en brits inne i en så kallad magnettunnel. Under hela undersökningen har du möjlighet att kommunicera med en sjuksköterska. Undersökningen tar mellan 20 och 45 minuter, och det är viktigt att ligga helt stilla för att bilderna ska bli skarpa. Om du tycker att undersökningen känns obehaglig kan du ta med en vän, och i vissa fall kan lugnande läkemedel erbjudas.  
+
+Till skillnad från röntgen använder magnetkameran magnetfält och radiovågor för att skapa bilder. Eftersom magnetfältet påverkar elektronisk utrustning och magnetiska föremål bör personer med exempelvis pacemaker eller annan elektronisk utrustning i kroppen inte genomgå undersökningen.
+    </p>
+</div>
+    </div>
+  </div>
+</div>
+
+<div className="container-pricelist">
+      <h2 className='center-text fw-3 p-3 mb-4 header' >Prislista Magnetröntgen</h2>
       <div className="card-grid">
         {services.map((service, index) => (
           <div className="card" key={index}>
@@ -131,6 +122,7 @@ const AnimationBody = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
