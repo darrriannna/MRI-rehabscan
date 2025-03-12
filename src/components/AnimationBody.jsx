@@ -66,9 +66,9 @@ const AnimationBody = () => {
   <div className="custom-row-k">
    
     <div className="custom-description">
-    <h1 className="text-center toggle-btn-sub" onClick={() => setIsOpen(!isOpen)}>
+    <h3 className="text-center toggle-btn-sub" onClick={() => setIsOpen(!isOpen)}>
              MR(MRI)  <span className={`arrow-sub ${isOpen ? "rotated" : ""}`}>▾</span>
-            </h1>
+            </h3>
             <div className={`subtext-container ${isOpen ? "open" : ""}`}>
     <p className='subtext-about'>En magnetkamera kan skapa detaljerade bilder av nästan alla organ i kroppen och används för att upptäcka sjukdomar, kartlägga skador och följa upp behandlingar.  
 
