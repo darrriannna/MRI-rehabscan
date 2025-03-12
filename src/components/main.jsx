@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Import motion for animations
 import '../styles/index.css';
-import Pricelist from './Pricelist';
 import MapSection from './MapSection';
 
 
@@ -75,10 +74,7 @@ const Home = () => {
      <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
             <MapSection />
           </motion.div>
-          <motion.div {...fadeIn} transition={{ delay: 2.2 }}>
-            <h2 className="center-text fw-3 p-3 mb-4">Prislista</h2>
-            <Pricelist />
-          </motion.div>
+          
         </div>
       </div>
     </motion.div>

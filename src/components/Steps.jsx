@@ -14,7 +14,7 @@ const GifToggle = () => {
         <div className="overlay-content">
           {/* Overlay Text */}
           <h2>
-            Få din magnetröntgen undersökning bara i <span>3 steg</span>
+            Få din röntgen undersökning bara i <span>3 steg</span>
           </h2>
 
           {/* Toggle Arrow */}
@@ -37,7 +37,7 @@ const GifToggle = () => {
         transition={{ type: "spring", stiffness: 100 }}
       >
         <div className="step-box"><span className="step-number">1.</span> Fyll i en bokningsförfrågan  </div>
-        <div className="step-box"><span className="step-number">2.</span> Vi garanterar undersökning inom 14 arbetsdagar </div>
+        <div className="step-box"><span className="step-number">2.</span> Vi garanterar undersökning inom 7 arbetsdagar </div>
         <div className="step-box"><span className="step-number">3.</span> Få dina resultat</div>
       </motion.div>
     </div>

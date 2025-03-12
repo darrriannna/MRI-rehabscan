@@ -25,7 +25,7 @@ const MainInfo = ({ scanRef }) => {
       {/* Left Container */}
       <div className="mr-layout-left">
         <img
-          src="./assets/startHome.jpg"
+          src="./assets/video-steps.gif"
           alt="MRI Scan"
           className="mr-layout-image"
         />
@@ -42,7 +42,7 @@ const MainInfo = ({ scanRef }) => {
           <li>MR Helrygg - 9 000kr </li>
         </ul>
         <p className="mr-layout-subheading">För andra undersökningar gå till prislista.</p>
-        <Link to="/prislista" className="mr-layout-button-secondary text-center">
+        <Link to="/prislistaMR" className="mr-layout-button-secondary text-center">
                Gå till Prislista
               </Link>
      

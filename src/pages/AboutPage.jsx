@@ -8,7 +8,7 @@ const AboutPage = () => {
     <>
       <div className="body">
         <Navbar />
-        <div className="container-about-us">
+        <div className="container-about-services">
           <div className="custom-row">
             {/* Top-left text */}
           

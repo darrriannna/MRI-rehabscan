@@ -6,7 +6,7 @@ import '../src/styles/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions } from "./pages";
+import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions, Kontrast, CT, CTwithK } from "./pages";
 import MRI from './pages/MRI';
 import { DynamicForm, Success, Failed, Message } from './components';
 import ScrollToTop from './components/ScrollToTop';
@@ -24,9 +24,13 @@ root.render(
       <Message/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/prislista" element={<MRI />} />
+          <Route path="/prislistaMR" element={<MRI />} />
+          <Route path="/prislistaCT" element={<CT />} />
+          <Route path="/prislistaCT-kontrast" element={<CTwithK />} />
+          <Route path="/prislista-kontrast" element={<Kontrast />} />
           <Route path="/om-oss" element={<AboutPage />} />
           <Route path="/bokanu" element={<BookTime />} />
+
           <Route path="/dynamic-form" element={<DynamicForm />} />
           <Route path="/mri-boka" element={<MRIbookTime />} />
           <Route path="/lasmer" element={<ServicesPage />} />

@@ -85,7 +85,7 @@
   .gif-background {
     width: 100%;
     height: 600px;
-    background: url("../../public/assets/video-steps.gif") center center / cover no-repeat;
+    background: url("../../public/assets/Steps-new.jpg") center center / cover no-repeat;
     position: relative;
   }
   
@@ -114,7 +114,7 @@
   margin: 0;
 }
   .overlay-content h2 span {
-    color: #1d9bf0;
+    color: #007bff;
     font-size: 50px;
     font-weight: 600;
   } 
