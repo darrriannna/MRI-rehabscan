@@ -11,10 +11,10 @@ const AnimationBody = () => {
     // Navigate to the DynamicForm page and pass the service information via state
     navigate('/bokanu', { state: { serviceName: service.name, servicePrice: service.price } });
   };
-  const handleLearnMore = (service) => {
+ /* const handleLearnMore = (service) => {
     // Navigate to the ServiceInfo page and pass the service information
     navigate('/lasmer', { state: { serviceName: service.name, serviceTitle: service.title, serviceDetail: service.detail } });
-  };
+  }; */
 
 
   const services = [
@@ -90,7 +90,7 @@ Till skillnad från röntgen använder magnetkameran magnetfält och radiovågor
               <h4>{service.name}</h4>
               <p>Pris: {service.price}</p>
             </div>
-            <button className="read-more-btn" onClick={() => handleLearnMore(service)}>Läs mer</button>
+         {/* <button className="read-more-btn" onClick={() => handleLearnMore(service)}>Läs mer</button> */}
             <button className="btn-book-now" onClick={() => handleBook(service)}>Boka nu</button>
           </div>
         ))}
