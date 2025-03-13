@@ -41,7 +41,25 @@ const MRIForm = () => {
       navigate('/failed');
     }
   }, [paymentLink, navigate]);
-
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem("formData");
+    };
+  
+    // Clear localStorage if the user navigates back
+    const handlePopstate = () => {
+      localStorage.removeItem("formData");
+    };
+  
+    window.addEventListener("popstate", handlePopstate);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+  
+    return () => {
+      window.removeEventListener("popstate", handlePopstate);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     
@@ -154,7 +172,7 @@ const MRIForm = () => {
     const newErrors = {};
   
     // Validate Adress (allows letters, numbers, commas, periods, and hyphens)
-    if (!adress || !/^[a-zA-Z0-9 ,.-]+$/.test(adress)) {
+    if (!adress || !/^[a-zA-ZåäöÅÄÖ0-9 ,.-]+$/.test(adress)) {
       newErrors.adress = 'Adress får endast innehålla bokstäver, siffror, mellanslag och tillåtna tecken (, . -).';
       isValid = false;
     }
