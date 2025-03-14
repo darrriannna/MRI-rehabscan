@@ -1812,6 +1812,7 @@ object-fit: cover;
   padding: 2rem;
   position: relative;
 }
+
 .custom-row-ct{
   background-image: url("../../public/assets/Scan-CT.jpg"); /* Ensure the path is correct */
   background-size: cover;

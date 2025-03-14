@@ -62,7 +62,7 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/om-oss">Om oss</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/varfor-mr">Varför MR</NavLink>
+                            <NavLink className="nav-link" to="/vara-tjanster">Våra tjänster</NavLink>
                         </li>
                     </ul>
                     

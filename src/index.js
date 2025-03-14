@@ -36,7 +36,7 @@ root.render(
           <Route path="/lasmer" element={<ServicesPage />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/varfor-mr" element={<VarforMR />} />
+          <Route path="/vara-tjanster" element={<VarforMR />} />
           <Route path="/failed" element={<Failed />} />
           <Route path="/integrity-policy" element={<IntegrityPolicy />} />
           <Route path="/" element={<Failed />} />

@@ -40,7 +40,7 @@ function Home() {
             <div className='grid-deceases'>
           <div className='containers-deceases-info' >
           <h4 className='text-center-info'>För kontrastmedel i samband med MR maila oss innan bokning.  
-       Vi har även Datortomografi (DT/CT), konventionell röntgen (tex skelett- och lungröntgen) samt ultraljud. 
+       Vi har även konventionell röntgen (tex skelett- och lungröntgen) samt ultraljud. 
        Vid intresse maila oss på info@rehabscan.se eller ring 010-210 22 31 </h4>
         </div></div>
             </div>

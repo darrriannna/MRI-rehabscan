@@ -386,3 +386,187 @@
   transform: scale(1.1);
 }
 
+/* Main container */
+.container-about-services {
+  width: 100%;
+  margin: auto;
+}
+
+/* Custom row layout with background image */
+.custom-row-all {
+  background-image: url("../../public/assets/vara-tjanster.jpg"); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: center; /* Align to the left */
+  padding: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+  
+}
+
+/* Package navigation buttons */
+.package-nav {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column; /* Stack buttons vertically on small screens by default */
+  gap: 10px;
+  width: 100%;
+  max-width: 250px; /* Adjust the max width for larger screens */
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.package-nav-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 270px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Active button styles */
+.package-nav-btn.active {
+  background-color: #0056b3;
+}
+
+/* Hover effect for buttons */
+.package-nav-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Package info (description) styling */
+.package-info {
+  max-width: 900px;
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+  background: #333333d8;
+  color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Responsive Design: Small screens */
+@media (max-width: 768px) {
+  .custom-row-all {
+    flex-direction: column; /* Stack the buttons and info vertically */
+    align-items: center; /* Center align the content */
+  }
+
+  .package-nav {
+    flex-direction: column; /* Ensure buttons are in a column */
+    align-items: center;
+    width: 100%; /* Make sure buttons take full width */
+  }
+
+  .package-info {
+    width: 100%; /* Ensure description takes full width */
+    margin-top: 20px;
+    text-align: center; /* Ensure the text is centered */
+  }
+}
+
+/* Responsive Design: Large screens (min-width 700px) */
+@media (min-width: 700px) {
+  .custom-row-all {
+    flex-direction: row; /* Arrange buttons and info side by side */
+    gap: 20px; /* Add gap between the buttons and description */
+  }
+
+  .package-nav {
+    flex-direction: column; /* Keep buttons stacked vertically on the left */
+    align-items: flex-start; /* Align buttons to the left */
+    margin-right: 20px; /* Add spacing between buttons and info */
+  }
+
+  .package-info {
+    text-align: left; /* Align text to the left */
+  }
+}
+
+.package-features li{
+  font-size: 20px;
+  padding: 5px ;
+  text-align: left;
+}
+/* General styling for container */
+.statistics-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Flex wrapper for content */
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Left Section - Dynamic Form and Text */
+.left-section {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Right Section - Statistics Cards */
+.right-section {
+  flex: 1;
+}
+
+/* Card Styling */
+.statistics-section {
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.stat-content {
+  text-align: center;
+}
+
+.statistics-text {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+  }
+  
+  .stat-image {
+    max-width: 100%;
+    max-width: 150px;
+  }
+}

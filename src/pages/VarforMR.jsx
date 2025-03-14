@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar } from "../components"
+import { Footer, MRFullBodyScan, Navbar } from "../components"
 import WhyMR from '../components/WhyMR.jsx'
 
 const VarforMR = () => {
@@ -8,6 +8,7 @@ const VarforMR = () => {
     <div className='body'>
       <Navbar />
       <WhyMR/>
+      <MRFullBodyScan/>
       <Footer />
       </div>
     </>
