@@ -80,6 +80,7 @@ MR använder magnetfält och radiovågor istället för röntgenstrålar. Person
 <div className="card" key={index}>
   <div className="card-content">
     <h4>{service.name}</h4>
+    <p>med kontrast</p>
     <p>Pris: {service.price}</p>
   </div>
   <button className="btn-book-now" onClick={() => handleBook(service)}>Boka nu</button>

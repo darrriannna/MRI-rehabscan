@@ -117,3 +117,13 @@ form {
     background-color: #007bff;
     color: white;
   }
+.message-after {
+  margin: auto;
+  max-width: 800px;
+  
+}
+@media (max-width: 768px){
+  .message-after{
+    font-size: 18px;
+  }
+}

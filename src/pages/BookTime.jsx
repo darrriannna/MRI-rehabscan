@@ -9,6 +9,11 @@ const BookTime = () => {
       <Navbar />
       <div className='form-wrapper'>
       <DynamicForm/></div>
+      <div className='message-after'>
+      <div className='grid-deceases'>
+          <div className='containers-deceases-info' >
+          <h4 className='text-center-info'>Efter att du har bokat skickar vi din remiss till den närmaste kliniken eller den klinik du har valt. Kliniken kontaktar dig inom ett par dagar för att hitta en tid som passar dig bäst. </h4>
+        </div></div></div>
       <StepsIcons/>
       <Footer/>
     </div>
