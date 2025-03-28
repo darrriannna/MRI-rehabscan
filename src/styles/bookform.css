@@ -1,129 +1,129 @@
 /* src/BookingForm.css */
 form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    margin: auto;
-    
-  }
-  
-  div {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: 500;
-  }
-  
-  input, select, button {
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  .submit-button {
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1;
-    border-radius: 500px;
-    transition-property: background-color,border-color,color,box-shadow,filter;
-    transition-duration: .3s;
-    border: 1px solid transparent;
-    letter-spacing: 2px;
-    min-width: 160px;
-    text-transform: uppercase;
-    white-space: normal;
-    font-weight: 700;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: #fefcfc;
-    
-    background-color: #3181f0;
-    height: 48px;
-   
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  margin: auto;
+}
 
-  }
+div {
+  margin-bottom: 15px;
+}
 
-  .submit-button:hover{
-        color: #fff;
-        background-color: #515cf9;
-    }
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
 
- 
-  .book-time-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .book-time-text {
-    text-align: center;
-    font-size: 30px; /* Adjust as needed */
-  }
-  
+input,
+select,
+button {
+  padding: 8px;
+  font-size: 16px;
+}
 
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.submit-button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: #fefcfc;
 
-  .header-mri{
-    color: #0f6a74;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    font-weight: 700;
-  }
-  .text-form-mri-container{
-    background-color: #63656327;
-    padding: 3px;
-  }
-  .text-form-mri{
-    font-style: italic;
-    font-size: 13px;
-    padding: 2px;
-  }
-  .error {
-    color: red;
-    margin-top: 5px;
-  }
-  .input-field{
-    border-radius: 15px;
-    border: none;
-    min-height: 50px;
-  }
-  .service-buttons {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .service-button {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .service-button.selected {
-    background-color: #007bff;
-    color: white;
-  }
+  background-color: #3181f0;
+  height: 48px;
+}
+
+.submit-button:hover {
+  color: #fff;
+  background-color: #515cf9;
+}
+
+.book-time-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-time-text {
+  text-align: center;
+  font-size: 30px; /* Adjust as needed */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header-mri {
+  color: #0f6a74;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.text-form-mri-container {
+  background-color: #63656327;
+  padding: 3px;
+}
+.text-form-mri {
+  font-style: italic;
+  font-size: 13px;
+  padding: 2px;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+}
+.input-field {
+  border-radius: 15px;
+  border: none;
+  min-height: 50px;
+}
+.service-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-button {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.service-button.selected {
+  background-color: #007bff;
+  color: white;
+}
 .message-after {
   margin: auto;
   max-width: 800px;
-  
 }
-@media (max-width: 768px){
-  .message-after{
+@media (max-width: 768px) {
+  .message-after {
     font-size: 18px;
   }
+}
+label {
+  display: block; /* Ensures the label is on its own line */
+   /* Makes the label stand out */
+  margin-bottom: 5px; /* Adds spacing between the label and input field */
 }
