@@ -1140,6 +1140,9 @@ button {
   .map-image{
     display: none;
   }
+  .dropdown-toggle{
+    font-size: 1rem;
+  }
 }
 @media (min-width: 950px){
   .map-image{

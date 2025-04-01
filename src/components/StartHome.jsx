@@ -1,18 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import "../styles/index.css"; // Import CSS
 
 const MainInfo = ({ scanRef }) => {
-  const navigate = useNavigate();
 
-  const handleBook = () => {
-    const service = {
-      name: "Helkropp",
-      price: "16 200kr",
-    };
-    navigate("/bokanu", { state: { serviceName: service.name, servicePrice: service.price } });
-  };
+
 
   const handleLearnMore = () => {
     if (scanRef.current) {
@@ -59,9 +52,6 @@ const MainInfo = ({ scanRef }) => {
         <p className="mr-layout-price">16 200 KR</p>
 
         {/* Buttons now trigger navigation just like in AnimationBody */}
-        <button className="mr-layout-button-primary" onClick={handleBook}>
-         Boka nu
-        </button>
         <button className="mr-layout-button-secondary" onClick={handleLearnMore}>
           Vad kan man upptäcka?
         </button>
