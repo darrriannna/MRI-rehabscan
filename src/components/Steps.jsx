@@ -37,8 +37,8 @@ const GifToggle = () => {
         transition={{ type: "spring", stiffness: 100 }}
       >
         <div className="step-box"><span className="step-number">1.</span> Fyll i en bokningsförfrågan  </div>
-        <div className="step-box"><span className="step-number">2.</span> Vi garanterar undersökning inom 7 arbetsdagar </div>
-        <div className="step-box"><span className="step-number">3.</span> Få dina resultat</div>
+        <div className="step-box"><span className="step-number">2.</span> Få din undersökningstid inom 7 arbetsdagar </div>
+        <div className="step-box"><span className="step-number">3.</span>  Få din individuella rapport med MR-svar</div>
       </motion.div>
     </div>
   );

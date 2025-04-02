@@ -77,6 +77,11 @@ const MRFullBodyScan = forwardRef((props, ref)  => {
   return (
     <div ref={ref} className="mr-scan-container">
       <h2 className="mr-scan-title">Vad ingår i MR-Helkropp?</h2>
+      <div className='grid-deceases'>
+          <div className='containers-deceases-info' >
+          <p >MR helkropp är en översiktsundersökning, för att hinna avbida de viktigaste delarna på ca 60 minuter måste vi dra ner på antalet MR-serier/kroppsdel och bildupplösningen.
+ </p>
+        </div></div>
       <p className="mr-scan-subtitle">
         Vi utför scanning av följande kroppsdelar och organ:
       </p>

@@ -40,13 +40,17 @@ const MainInfo = ({ scanRef }) => {
               </Link>
      
         <h1 className="mr-layout-heading">MR-Helkropp</h1>
-        <p className="mr-layout-subheading">Avancerad hälsoundersökning</p>
+        <div className='grid-deceases'>
+          <div className='containers-deceases-info' >
+          <p >MR helkropp är en översiktsundersökning, för att hinna avbida de viktigaste delarna på ca 60 minuter måste vi dra ner på antalet MR-serier/kroppsdel och bildupplösningen.
+ </p>
+        </div></div>
         <ul className="mr-layout-list">
           <li>
             MR-Helkroppsröntgen som upptäcker tecken på cancer, stroke,
             inflammation och annan sjukdom.
           </li>
-          <li>Få tid och svar inom 7 arbetsdagar.</li>
+          <li>Få tid inom 7 arbetsdagar.</li>
           <li>Innefattar MR scanning av 21 organ.</li>
         </ul>
         <p className="mr-layout-price">16 200 KR</p>

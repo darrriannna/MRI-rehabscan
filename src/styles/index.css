@@ -1785,7 +1785,14 @@ object-fit: cover;
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   min-width: 100px; 
 }
-
+.containers-deceases-partners{
+  background-color: #ffffff23;
+  border-radius: 0.5cm;
+  box-shadow: 1px 2px 3px #007bff;
+  padding: 20px;
+  flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+  min-width: 100px; 
+}
 @media (max-width: 768px) {
   .text-center-info{
     font-size: 15px;
