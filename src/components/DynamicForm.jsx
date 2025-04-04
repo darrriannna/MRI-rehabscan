@@ -154,15 +154,12 @@ const DynamicForm = () => {
   const location = useLocation(); // Use location to access passed state
 
   const cities = [
-    'Borås',
-  'Bäckefors',
   'Göteborg Backa',
   'Göteborg Haga',
   'Göteborg Mölndal',
   'Jönköping',
   'Karlstad',
   'Malmö Hyllie',
-  'Nynäshamn',
   'Stockholm Farsta',
   'Stockholm Järva',
   'Stockholm Klara Strand',
@@ -171,7 +168,6 @@ const DynamicForm = () => {
   'Stockholm Skärholmen',
   'Stockholm Sollentuna',
   'Stockholm Vällingby',
-  'Strömstad',
   'Sundsvall',
   'Umeå',
   'Uppsala',

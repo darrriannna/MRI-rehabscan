@@ -89,25 +89,6 @@ const MapSection = () => {
                     )}
                    </li> </ul>
                     </li>
-            <li className='list-map'>Strömstad
-            <ul className='list-of-clinics'>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Strömstad Röntgen</p>
-                  <p className='clinic-adress'>Västra Hamngatan 10-12, 452 37 Strömstad</p>
-                </li></ul>
-            </li>
-            <li className='list-map'>Nynäshamn
-            <ul className='list-of-clinics'>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Nynäshamn Röntgen</p>
-                  <p className='clinic-adress'>Idunvägen 1, 149 31 Nynäshamn</p>
-                </li></ul></li>
-            <li className='list-map'>Bäckefors
-            <ul className='list-of-clinics'>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Bäckefors Röntgen</p>
-                  <p className='clinic-adress'>Dalslands sjukhus, 668 88 Bäckefors</p>
-                </li></ul></li>
             <li className='list-map'>Malmö
             <ul className='list-of-clinics'>
                 <li className='clinic-details'>
@@ -119,12 +100,6 @@ const MapSection = () => {
                 <li className='clinic-details'>
                   <p className='clinic-name'>Evidia Umeå Röntgen</p>
                   <p className='clinic-adress'>Renmarkstorget 12, 903 26 Umeå</p>
-                </li></ul></li>
-            <li className='list-map'>Borås
-            <ul className='list-of-clinics'>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Borås Röntgen</p>
-                  <p className='clinic-adress'>Göteborgsvägen 4, 504 35 Borås</p>
                 </li></ul></li>
             <li className='list-map'>Karlstad
             <ul className='list-of-clinics'>

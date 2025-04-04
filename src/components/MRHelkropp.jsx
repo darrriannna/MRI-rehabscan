@@ -79,7 +79,7 @@ const MRFullBodyScan = forwardRef((props, ref)  => {
       <h2 className="mr-scan-title">Vad ingår i MR-Helkropp?</h2>
       <div className='grid-deceases'>
           <div className='containers-deceases-info' >
-          <p >MR helkropp är en översiktsundersökning, för att hinna avbida de viktigaste delarna på ca 60 minuter måste vi dra ner på antalet MR-serier/kroppsdel och bildupplösningen.
+          <p >MR helkropp är en översiktsundersökning, för att hinna avbilda de viktigaste delarna på ca 60 minuter måste vi dra ner på antalet MR-serier/kroppsdel och bildupplösningen.
  </p>
         </div></div>
       <p className="mr-scan-subtitle">
