@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Footer, Navbar, Partners, Steps } from "../components";
+import { Footer, GoogleReviews, Navbar, Partners, Steps } from "../components";
 import "../styles/index.css"; // Updated CSS file
 
 const AboutPage = () => {
@@ -23,7 +23,7 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        
+        <GoogleReviews/>
         <Partners />
         <div className='p-3'>
         <Steps /></div>

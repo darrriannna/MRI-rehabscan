@@ -23,3 +23,4 @@ export { default as Pricelist } from './PricelistMRI';
 export { default as PricelistCT } from './PricelistCT';
 export { default as Before } from './BeforeScan';
 export { default as PricelistCTmedK } from './CTmedKontrast';
+export { default as GoogleReviews } from './Reviews';

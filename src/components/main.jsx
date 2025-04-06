@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Import motion for animations
 import '../styles/index.css';
 import MapSection from './MapSection';
+import GoogleReviews from './Reviews';
 
 
 const Home = () => {
@@ -96,7 +97,7 @@ const Home = () => {
      <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
             <MapSection />
           </motion.div>
-          
+          <GoogleReviews/>
         </div>
       </div>
     </motion.div>
