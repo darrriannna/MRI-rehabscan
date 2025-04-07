@@ -54,7 +54,6 @@ const Navbar = () => {
                                 <li><NavLink className="dropdown-item" to="/prislistaMR">MR (MRI)</NavLink></li>
                                 <li><NavLink className="dropdown-item" to="/prislista-kontrast">MR med kontrast</NavLink></li>
                                 <li><NavLink className="dropdown-item" to="/prislistaCT">CT/DT</NavLink></li>
-                                <li><NavLink className="dropdown-item" to="/prislistaCT-kontrast">CT/DT med kontrast</NavLink></li>
 </ul>
                         </li>
 
