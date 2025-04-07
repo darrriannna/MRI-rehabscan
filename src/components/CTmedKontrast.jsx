@@ -13,7 +13,6 @@ const PricelistCTmedK = () => {  const services = [
         { id: 105, name: 'CT Vänster Axel (K)', price: '6 100kr' },
         { id: 106, name: 'CT Bäcken/höftleder (K)', price: '5 900kr' },
         { id: 107, name: 'CT Vänster Knä (K)', price: '5 900kr' },
-        { id: 108, name: 'CT Helkropp (K)', price: '18 200kr' },
         { id: 109, name: 'CT Bröstrygg (K)', price: '5 900kr' },
         { id: 110, name: 'CT Höger Fot (K)', price: '5 900kr' },
         { id: 111, name: 'CT Vänster Fot (K)', price: '5 900kr' },

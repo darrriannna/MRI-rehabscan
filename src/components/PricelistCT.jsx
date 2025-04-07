@@ -12,7 +12,6 @@ const PricelistCT = () => {  const services = [
     { id: 71, name: 'CT Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/fZe4ix1eR7zhczSeW6' },
     { id: 72, name: 'CT Bäcken/höftleder', price: '3 900kr', paymentLink: 'https://buy.stripe.com/28og1f5v706PgQ829l' },
     { id: 73, name: 'CT Vänster Knä', price: '3 900kr', paymentLink: 'https://buy.stripe.com/aEUeXbg9L7zh57q7tG' },
-    { id: 74, name: 'CT Helkropp', price: '16 200kr', paymentLink: 'https://buy.stripe.com/00g2apbTv1aTgQ88xL' },
     { id: 75, name: 'CT Bröstrygg', price: '3 900kr', paymentLink: 'https://buy.stripe.com/dR68yN7Df2eXczS9BQ' },
     { id: 76, name: 'CT Höger Fot', price: '3 900kr', paymentLink: 'https://buy.stripe.com/14kaGV4r3dXFdDW29p' },
     { id: 77, name: 'CT Vänster Fot', price: '3 900kr', paymentLink: 'https://buy.stripe.com/cN202hg9LbPxarK15m' },
