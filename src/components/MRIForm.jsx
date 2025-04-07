@@ -89,18 +89,19 @@ const MRIForm = () => {
     localStorage.setItem("formData", JSON.stringify(updatedFormData));
   };
   
-  const validateTelefonnummer = () => {
+  const validateTelefonnummer = (isFinalCheck = false) => {
     const { telefonnummer } = formData;
     console.log("Validating:", telefonnummer);
   
-    const swedishRegex = /^\+46(7\d{8})$/; // +46 followed by 9 digits (starting with 7)
-    const danishRegex = /^\+45(\d{8})$/; // +45 followed by 8 digits
+    const swedishRegex = /^\+46(7\d{8})$/;
+    const danishRegex = /^\+45(\d{8})$/;
   
     const isValid = swedishRegex.test(telefonnummer) || danishRegex.test(telefonnummer);
-    
-    console.log("Is valid:", isValid);
   
-    if (!isValid) {
+    // Allow empty or partial input during typing
+    const isPossiblyValid = /^\+?$|^\+\d{0,2}$|^\+4[56]?$|^\+46(7\d{0,8})?$|^\+45(\d{0,8})?$/.test(telefonnummer);
+  
+    if (isFinalCheck || (!isValid && !isPossiblyValid)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         telefonnummer: "Telefonnumret måste börja med +46 (9 siffror) eller +45 (8 siffror).",
@@ -114,6 +115,7 @@ const MRIForm = () => {
     }));
     return true;
   };
+  
   
   
   const validatePersonnummer = () => {
@@ -172,20 +174,20 @@ const MRIForm = () => {
     const newErrors = {};
   
     // Validate Adress (allows letters, numbers, commas, periods, and hyphens)
-    if (!adress || !/^[a-zA-ZåäöÅÄÖ0-9 ,.-]+$/.test(adress)) {
+    if (!adress || !/^[a-zA-ZæøåÆØÅäöÄÖ0-9 ,.-]+$/.test(adress)) {
       newErrors.adress = 'Adress får endast innehålla bokstäver, siffror, mellanslag och tillåtna tecken (, . -).';
       isValid = false;
     }
   
     // Validate Postort (City) (allows letters and spaces, including Swedish letters)
-    if (!postcity || !/^[a-zA-ZåäöÅÄÖ ]+$/.test(postcity)) {
+    if (!postcity || !/^[a-zA-ZæøåÆØÅäöÄÖ ]+$/.test(postcity)) {
       newErrors.postcity = 'Postort får endast innehålla bokstäver och mellanslag.';
       isValid = false;
     }
   
     // Validate Postnummer (Postal Code) (matches both "12345" or "123 45" format)
-    if (!postnum || !/^\d{3}\s?\d{2}$/.test(postnum)) {
-      newErrors.postnum = 'Postnummer måste följa formatet "12345" eller "123 45".';
+    if (!postnum || !/^(\d{4}|\d{5}|\d{3}\s?\d{2}|\d{6})$/.test(postnum)) {
+      newErrors.postnum = 'Postnummer måste vara 4, 5 eller 6 siffror långt. Mellanslag är tillåtet mellan tredje och fjärde siffran.';
       isValid = false;
     }
   
