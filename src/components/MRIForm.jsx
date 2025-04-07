@@ -66,7 +66,7 @@ const MRIForm = () => {
     let updatedFormData = { ...formData };
   
     if (name === "telefonnummer") {
-      let formattedValue = value.replace(/\D/g, ""); // Remove all non-numeric characters
+      let formattedValue = value.replace(/[^\d+]/g, ""); // Remove all non-numeric characters
   
       if (formattedValue.startsWith("46")) {
         formattedValue = "+46" + formattedValue.slice(2); // Ensure +46 is prefixed
