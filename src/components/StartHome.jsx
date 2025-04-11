@@ -67,3 +67,4 @@ const MainInfo = ({ scanRef }) => {
 
 export default MainInfo;
 
+
