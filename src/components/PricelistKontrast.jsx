@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import '../styles/index.css';
-import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -41,11 +41,7 @@ const PricelistK = () => {  const services = [
    
       
 ];
-  const navigate = useNavigate();
-  const handleBook = (service) => {
-    // Navigate to the DynamicForm page and pass the service information via state
-    navigate('/bokanu', { state: { serviceName: service.name, servicePrice: service.price } });
-  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -69,6 +65,10 @@ MR använder magnetfält och radiovågor istället för röntgenstrålar. Person
     </div>
   </div>
 </div>
+<div className='containers-deceases-info' >
+          <h4 className='text-center-info'>Innan du bokar en CT- eller MR-undersökning med kontrast, vänligen kontakta oss via e-post eller telefon för att rådgöra om undersökningen är möjlig samt för att beskriva dina symtom.
+       Vid intresse maila oss på info@rehabscan.se eller ring 010-210 22 31 </h4>
+        </div>
 <div className='container-prices'>
 <h2 className='center-text fw-3 p-3 mb-4 header' >Prislista</h2>
 <div className="card-grid">
@@ -79,7 +79,6 @@ MR använder magnetfält och radiovågor istället för röntgenstrålar. Person
     <p>med kontrast</p>
     <p>Pris: {service.price}</p>
   </div>
-  <button className="btn-book-now" onClick={() => handleBook(service)}>Boka nu</button>
 </div>
 ))}
 </div></div>
