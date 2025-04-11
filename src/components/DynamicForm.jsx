@@ -48,22 +48,14 @@ const DynamicForm = () => {
   const cities = [
   'Göteborg Backa',
   'Göteborg Haga',
-  'Göteborg Mölndal',
+  'Göteborg Mölndal GoCo',
   'Jönköping',
   'Karlstad',
   'Malmö Hyllie',
-  'Stockholm Farsta',
-  'Stockholm Järva',
   'Stockholm Klara Strand',
-  'Stockholm Nacka',
   'Stockholm Sabbatsberg',
-  'Stockholm Skärholmen',
-  'Stockholm Sollentuna',
-  'Stockholm Vällingby',
   'Sundsvall',
   'Umeå',
-  'Uppsala',
-  'Västerås'
      ];
 
   // Extract serviceName from the passed state

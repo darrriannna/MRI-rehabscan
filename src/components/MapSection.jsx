@@ -29,37 +29,14 @@ const MapSection = () => {
               {openDropdown === 'Stockholm' && (
               <ul className='list-of-clinics'> 
                 <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Farsta Röntgen</p>
-                  <p className='clinic-adress'>Karlandaplan 6, 123 47 Farsta</p>
-                </li>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Järva Röntgen</p>
-                  <p className='clinic-adress'>Rinkebysvängen 70D, 163 74 Spånga</p>
-                </li>
-                <li className='clinic-details'>
                   <p className='clinic-name'>Unilabs Klara Strand Röntgen</p>
                   <p className='clinic-adress'>Blekholmstorget 30, 111 64 Stockholm</p>
-                </li>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Nacka Röntgen</p>
-                  <p className='clinic-adress'>Lasarettsvägen 6, 131 45 Nacka</p>
                 </li>
                 <li className='clinic-details'>
                   <p className='clinic-name'>Evidia Sabbatsberg Röntgen</p>
                   <p className='clinic-adress'>Olivecronas väg 1, 113 24 Stockholm</p>
                 </li>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Skärholmen Röntgen</p>
-                  <p className='clinic-adress'>Storholmsgatan 19, 127 48 Skärholmen</p>
-                </li>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Unilabs Sollentuna röntgen </p>
-                  <p className='clinic-adress'>Nytorpsvägen 10, 191 35 Sollentuna</p>
-                </li>
-                <li className='clinic-details'>
-                  <p className='clinic-name'>Evidia Vällingby Röntgen </p>
-                  <p className='clinic-adress'> Indalsbacken 2, 162 65 Vällingby</p>
-                </li>
+
                 </ul>
                     )}
                    </li>
