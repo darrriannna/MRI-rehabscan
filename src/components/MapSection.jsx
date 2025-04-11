@@ -24,7 +24,7 @@ const MapSection = () => {
               <ul>
                 <li className='list-of-clinics'>
               <button className='button-clinic' onClick={() => toggleDropdown('Stockholm')}>
-                {openDropdown === 'Stockholm' ? '▲ 8 alternativ' : '▼ 8 alternativ'}
+                {openDropdown === 'Stockholm' ? '▲ 2 alternativ' : '▼ 2 alternativ'}
               </button>
               {openDropdown === 'Stockholm' && (
               <ul className='list-of-clinics'> 

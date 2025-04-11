@@ -57,7 +57,7 @@ const MainInfo = ({ scanRef }) => {
         </button>
 
         <div className="mr-layout-discount">
-          <p>Finns i flera städer som Stockholm, Göteborg, Malmö, Strömstad, Nynäshamn, Bäckefors, Umeå, Borås, Karlstad, Sundsvall, Jönköping</p>
+          <p>Finns i flera städer som Stockholm, Göteborg, Malmö, Umeå, Karlstad, Sundsvall, Jönköping</p>
           <p className="mr-layout-discount-time">INGEN REMISS KRÄVS</p>
         </div>
       </div>
