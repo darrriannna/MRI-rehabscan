@@ -13,14 +13,7 @@ const tjData = [
    subtitle: "När används MR? ",
     features: ["Kartlägga nervsystemet", "Undersöka leder, muskler och skelett ", "Bedöma hjärta och blodkärl", "Granska bukorgan och bäcken", "Upptäcka och följa tumörer"],
   },
-  {
-    id: "Datortomografi (DT)",
-    packageType: "Datortomografi (DT)",
-    title: "Datortomografi",    description:
-    " Datortomografi (DT) är en speciell typ av röntgen som skapar detaljerade bilder av kroppens organ, vilket gör det lättare för läkaren att upptäcka sjukdomar och skador i exempelvis huvud, bröstkorg, skelett eller mage. Bilderna används för att bedöma sjukdomens omfattning och avgöra vilka behandlingar som bör erbjudas. DT-undersökningar kan även hjälpa läkaren att utvärdera behandlingens resultat samt planera en eventuell operation eller strålbehandling. Under undersökningen ligger du på en brits som förs genom en cirkelformad skanner. Röntgenapparaten tar flera bilder ur olika vinklar, som sedan sätts ihop till en detaljerad 3D-bild. I vissa fall ges kontrastvätska för att bättre framhäva blodkärl och organ. Undersökningen är snabb och tar oftast bara några minuter. ",
-    subtitle: "När används DT? ",
-    features: ["Diagnostisera skador och sjukdomar", "Undersöka hjärnan och nervsystemet", "Bedöma bröstkorg och lungor", "Analysera bukorganen", "Kartlägga blodkärl"],
-  },
+
   {
     id: "Magnetröntgen med kontrast",
     packageType: "Magnetröntgen (MR) med kontrast",
@@ -29,16 +22,8 @@ const tjData = [
     "Magnetröntgen, eller magnetkamera (MR), är en undersökningsmetod som skapar detaljerade bilder av kroppens organ och vävnader med hjälp av magnetfält och radiovågor. I vissa fall används kontrastmedel för att förbättra bildkvaliteten och göra det lättare att upptäcka sjukdomar eller skador. Vid en MR-undersökning med kontrast får du först en vanlig magnetkameraundersökning. Därefter injiceras kontrastmedlet, oftast gadolinium, i en ven i armen. Efter injektionen tas fler bilder för att se hur kontrastmedlet fördelas i kroppen. Undersökningen tar vanligtvis 30–60 minuter. Det är viktigt att ligga stilla under bildtagningen för att få skarpa bilder. Under hela undersökningen kan du kommunicera med sjukvårdspersonalen.",
     subtitle: "Varför används kontrastmedel? ",
     features: ["Förbättra synligheten av blodkärl, inflammationer och tumörer.", "Skilja mellan olika typer av vävnader och sjukdomsförändringar.", "Bedöma blodflödet i kärl och eventuella förträngningar."],
-  },
-  {
-    id: "Datortomografi (DT) med kontrast",
-    packageType: "Datortomografi (DT) med kontrast",
-    title: "Datortomografi med kontrast",
-    description:
-    "Datortomografi (DT), även kallad skiktröntgen eller CT, är en avancerad röntgenundersökning som ger detaljerade bilder av kroppens organ och vävnader. I många fall används kontrastmedel för att förbättra bildkvaliteten och tydligare framhäva blodkärl, organ och eventuella sjukdomsförändringar. Vid en DT-undersökning ligger du på en brits som förs genom en cirkelformad skanner. Om kontrastmedel behövs, ges det oftast via en ven i armen. I vissa fall kan du också få dricka ett kontrastmedel för att undersöka mag-tarmkanalen. Efter injektionen kan du känna en kortvarig värmekänsla i kroppen. Själva bildtagningen går snabbt och tar oftast bara några minuter, men hela besöket kan ta upp till en timme. Det är viktigt att ligga stilla under undersökningen för att få skarpa bilder.",
-    subtitle: "Varför används kontrastmedel?",
-    features: ["Förbättra synligheten av blodkärl, inflammationer och tumörer.", "Skilja mellan olika typer av vävnader och sjukdomsförändringar.", "Bedöma blodflödet i kärl och eventuella förträngningar."],
-  },
+  }
+
 ];
 
 const WhyMR = () => {

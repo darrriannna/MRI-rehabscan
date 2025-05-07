@@ -53,7 +53,6 @@ const Navbar = () => {
                             <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} aria-labelledby="pricelistDropdown">
                                 <li><NavLink className="dropdown-item" to="/prislistaMR">MR (MRI)</NavLink></li>
                                 <li><NavLink className="dropdown-item" to="/prislista-kontrast">MR med kontrast</NavLink></li>
-                                <li><NavLink className="dropdown-item" to="/prislistaCT">CT/DT</NavLink></li>
 </ul>
                         </li>
 

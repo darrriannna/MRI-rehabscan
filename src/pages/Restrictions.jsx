@@ -16,7 +16,7 @@ const Restrictions = () => {
           <h5>Uppföljning</h5>
           <p>
           Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist, därefter får du ditt röntgen svar via post.
-
+          Uteblivet besök eller avbokning senare än 24 timmar innan inbokad tid debiteras fullt och återbetalas ej.
           </p>
         </section>
         <section>
@@ -29,7 +29,7 @@ const Restrictions = () => {
         <section>
           <h5>Hur bokas min undersökning in efter beställning?</h5>
           <p>
-          Efter att du har gjort din beställning kommer vi att kontakta kliniken och dom bokar sedan in dig vid första tillgängliga undersökning. Om du har frågor vänligen kontakta oss på info@rehabscan.se, Även att ringa oss går bra på 010-201 22 31. 
+          Efter att du har gjort din beställning kommer vi att kontakta kliniken och dom bokar sedan in dig vid första tillgängliga undersökning. Om du har frågor vänligen kontakta oss på info@rehabscan.se, Även att ringa oss går bra på 010-201 22 31. Uteblivet besök eller avbokning senare än 24 timmar innan inbokad tid debiteras fullt och återbetalas ej.
           </p>
          
         </section>
