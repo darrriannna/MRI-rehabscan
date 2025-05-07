@@ -65,7 +65,7 @@ MR använder magnetfält och radiovågor istället för röntgenstrålar. Person
 </div>
 <div className='grid-deceases'>
         <div className='containers-deceases-info' >
-          <h4 className='text-center-info'>Innan du bokar en CT- eller MR-undersökning med kontrast, vänligen kontakta oss via e-post eller telefon för att rådgöra om undersökningen är möjlig samt för att beskriva dina symtom.
+          <h4 className='text-center-info'>Innan du bokar en MR-undersökning med kontrast, vänligen kontakta oss via e-post eller telefon för att rådgöra om undersökningen är möjlig samt för att beskriva dina symtom.
        Vid intresse maila oss på info@rehabscan.se eller ring 010-210 22 31 </h4>
         </div></div>
 <div className='container-prices'>
