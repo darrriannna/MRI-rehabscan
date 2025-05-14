@@ -90,6 +90,17 @@ const Home = () => {
                     </p>
                   )}
                 </motion.div>
+                <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
+                  <div className="faq-question" onClick={() => toggleSection(5)}>
+                    <h4>Hur gör man för att avboka eller ändra tiden?</h4>
+                    <span>{openSection === 5 ? '▲' : '▼'}</span>
+                  </div>
+                  {openSection === 5 && (
+                    <p className="faq-answer">
+                   För att avboka måste du ringa kliniken där du bokade tiden senast 24 timmar före undersökningen. Uteblivet besök eller avbokning senare än 24 timmar innan inbokad tid debiteras fullt och återbetalas ej. För att ändra tiden kan du också ringa kliniken där din undersökning är bokad.
+                    </p>
+                  )}
+                </motion.div>
               </div>
             </div>
           </motion.div>
