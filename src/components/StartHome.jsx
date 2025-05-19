@@ -49,7 +49,7 @@ const MainInfo = ({ scanRef }) => {
           <li>Få tid inom 7 arbetsdagar.</li>
           <li>Innefattar MR scanning av 21 organ.</li>
         </ul>
-        <p className="mr-layout-price">16 200 KR</p>
+        <p className="mr-layout-price">18 400 KR</p>
 
         {/* Buttons now trigger navigation just like in AnimationBody */}
         <button className="mr-layout-button-secondary" onClick={handleLearnMore}>
