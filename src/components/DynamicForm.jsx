@@ -150,7 +150,7 @@ const DynamicForm = () => {
               <p className='form-price'>Pris: {selectedService?.price}</p>
             </div>
             <div className="form-group">
-              <button type="button" className="btn-navbar" onClick={handleBookClick}>
+              <button type="button" className="booking-button" onClick={handleBookClick}>
                 Boka undersökning
               </button>
             </div>

@@ -16,7 +16,7 @@ const MRIForm = () => {
     lastname: '',
     email: '',
     personnummer: '',
-    telefonnummer: '+46',
+    telefonnummer: '',
     message: '',
     adress: '',
     postcity: '',
@@ -66,14 +66,8 @@ const MRIForm = () => {
     let updatedFormData = { ...formData };
   
     if (name === "telefonnummer") {
-      let formattedValue = value.replace(/[^\d+]/g, ""); // Remove all non-numeric characters
-  
-      if (formattedValue.startsWith("46")) {
-        formattedValue = "+46" + formattedValue.slice(2); // Ensure +46 is prefixed
-      } else if (formattedValue.startsWith("45")) {
-        formattedValue = "+45" + formattedValue.slice(2); // Ensure +45 is prefixed
-      }
-  
+      // Allow only digits, spaces, dashes, parentheses, and optional +
+      let formattedValue = value.replace(/[^\d\s\-()+]/g, "");
       updatedFormData[name] = formattedValue;
     } else if (name === "personnummer") {
       let formattedValue = value.replace(/\D/g, "");
@@ -93,28 +87,28 @@ const MRIForm = () => {
     const { telefonnummer } = formData;
     console.log("Validating:", telefonnummer);
   
-    const swedishRegex = /^\+46(7\d{8})$/;
-    const danishRegex = /^\+45(\d{8})$/;
+    // Accepts any digits, spaces, dashes, or parentheses
+    const generalPhoneRegex = /^[\d\s\-()]+$/;
   
-    const isValid = swedishRegex.test(telefonnummer) || danishRegex.test(telefonnummer);
+    const isValid = generalPhoneRegex.test(telefonnummer) && telefonnummer.replace(/\D/g, '').length >= 7;
   
-    // Allow empty or partial input during typing
-    const isPossiblyValid = /^\+?$|^\+\d{0,2}$|^\+4[56]?$|^\+46(7\d{0,8})?$|^\+45(\d{0,8})?$/.test(telefonnummer);
-  
-    if (isFinalCheck || (!isValid && !isPossiblyValid)) {
+    if (isFinalCheck && !isValid) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        telefonnummer: "Telefonnumret måste börja med +46 (9 siffror) eller +45 (8 siffror).",
+        telefonnummer: "Ange ett giltigt telefonnummer (minst 7 siffror).",
       }));
       return false;
     }
   
+    // Clear error if it's valid or while typing
     setErrors((prevErrors) => ({
       ...prevErrors,
       telefonnummer: null,
     }));
+  
     return true;
   };
+  
   
   
   
@@ -312,7 +306,7 @@ const MRIForm = () => {
           {errors.personnummer && <p className="error-text">{errors.personnummer}</p>}
         </div>
         <div>
-          <label>Telefonnummer: (+46/+45)</label>
+          <label>Telefonnummer:</label>
           <input className='input-field' type="text" name="telefonnummer" value={formData.telefonnummer} onChange={handleChange} required  maxLength="13" />
           {errors.telefonnummer && <p className="error-text">{errors.telefonnummer}</p>}
         </div>

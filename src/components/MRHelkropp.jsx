@@ -75,7 +75,7 @@ const MRFullBodyScan = forwardRef((props, ref)  => {
   ];
 
   return (
-    <div ref={ref} className="mr-scan-container">
+    <div id="mr-helkropp" ref={ref} className="mr-scan-container">
       <h2 className="mr-scan-title">Vad ingår i MR-Helkropp?</h2>
       <div className='grid-deceases'>
           <div className='containers-deceases-info' >

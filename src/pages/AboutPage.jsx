@@ -23,13 +23,11 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <GoogleReviews/>
+        <div className='p-4'>
+        <GoogleReviews/></div>
+        <div>
         <Partners />
-        <div className='p-3'>
-        <Steps /></div>
-        <div className="btn-center">
-          <Link to="/bokanu" className="btn-navbar m-3 text-decoration-none">Boka undersökning</Link>
-        </div>
+</div>
         
         <Footer />
       </div>

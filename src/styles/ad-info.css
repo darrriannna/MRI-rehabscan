@@ -200,8 +200,8 @@
   margin: 0 auto;
   padding: 20px;
   padding-bottom: 20px;
-  background-color: #1e40af;
-  color: white;
+  background-color: #31bac776;
+  color: black;
 
 }
 
@@ -211,14 +211,14 @@
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: white;
+  color: black;
 }
 
 .mr-scan-subtitle {
   text-align: center;
   font-size: 18px;
   margin-bottom: 30px;
- color: white;
+ color: black;
 }
 
 /* Grid Layout */
@@ -230,7 +230,7 @@
 
 /* Category Box */
 .mr-scan-category {
-  background-color: #1b3a5c;
+  background-color: rgba(255, 255, 255, 0.68);
   padding: 25px;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
@@ -243,7 +243,7 @@
 .mr-scan-category-title {
   font-size: 18px;
   font-weight: bold;
-  color: #ec4899;
+  color: #31BBC7;
   margin-bottom: 10px;
 }
 
@@ -421,7 +421,7 @@
 
 /* Button styles */
 .package-nav-btn {
-  background-color: #007bff;
+  background-color: #31BBC7;
   color: white;
   border: none;
   width: 270px;
@@ -435,12 +435,12 @@
 
 /* Active button styles */
 .package-nav-btn.active {
-  background-color: #0056b3;
+  background-color: #066972;
 }
 
 /* Hover effect for buttons */
 .package-nav-btn:hover {
-  background-color: #0056b3;
+  background-color: #0f8d99;
 }
 
 /* Package info (description) styling */
@@ -659,4 +659,262 @@
 .google-icon {
   width: 24px;
   height: 24px;
+}
+.private-mri-section {
+  padding: 4rem 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.mri-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .mri-content {
+    flex-direction: row;
+  }
+}
+
+.info-box {
+  flex: 1;
+  background: rgba(52, 171, 198, 0.58);
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.learn-more-btn {
+  min-width: 200px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: white;
+  border: 3px solid white;
+  font-size: 1.3rem;
+  cursor: pointer;
+
+}
+
+.learn-more-link {
+  min-width: 200px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: #0baed3;
+  border: 3px solid #0baed3;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+.learn-more-btn a{
+  text-decoration: none;
+  color: #f8f8f8;
+  font-weight: 500 ;
+}
+
+.price-box {
+  flex: 1;
+  background: white;
+  border: 1px solid #0baed3;
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: 4px 4px 4px #0baed3;
+}
+
+.price-box h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.price-box h3 span {
+  color: #0baed3;
+  font-weight: 500;
+}
+
+.price-box ul {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.price-box .note {
+  margin-top: 1.3rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.price-box h4 {
+  font-size: 1.6rem;
+  margin-top: 1.3rem;
+}
+
+.price-box .price {
+  font-size: 1.7rem;
+  color: #0baed3;
+  font-weight: bold;
+  
+}
+
+.price-box a {
+  color: #0baed3;
+  text-decoration: none;
+  font-weight: 500;
+}
+.steps-home-container{
+  max-width: 1000px;
+  width: 100%;
+  min-height: 250px;
+  background-image: url(../../public/assets/small-screen-top.png);
+  border-radius: 30px;
+ display: inline;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    top: 50%;
+  }
+}
+
+.step-card {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(237, 237, 237, 0.5) 100%);
+  border-radius: 30px;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 3rem 1rem 1rem;
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.step-circle {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 84px;
+  height: 84px;
+  background: #c2f4ff;
+  border: 5px solid white;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 84px;
+  text-align: center;
+}
+.booking-button-steps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px ;
+}
+.booking-button-price {
+  background-color: #0BAED3;
+  border: 3px solid #0BAED3;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 18px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.booking-button-price:hover {
+  background-color: #0998ba;
+  text-decoration: none;
+  color: white;
+}
+.booking-main-link{
+  text-decoration: none;
+  color: white;
+}
+.text-small-step{
+  text-align: center;
+}
+
+.radiologist-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .radiologist-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.radiologist-text {
+  max-width: 500px;
+}
+
+.radiologist-text h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.radiologist-text p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000;
+}
+
+.radiologist-image img {
+  width: 100%;
+  max-width: 713px;
+  max-height: 300px;
+  border-radius: 30px;
+  object-fit: cover;
 }

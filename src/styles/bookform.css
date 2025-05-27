@@ -29,7 +29,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   line-height: 1;
-  border-radius: 500px;
+
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
   border: 1px solid transparent;
@@ -42,13 +42,13 @@ button {
   padding: 16px 14px 18px;
   color: #fefcfc;
 
-  background-color: #3181f0;
+  background-color: #0BAED3;
   height: 48px;
 }
 
 .submit-button:hover {
   color: #fff;
-  background-color: #515cf9;
+  background-color: #0b7788;
 }
 
 .book-time-container {
@@ -73,10 +73,11 @@ textarea {
 }
 
 .header-mri {
-  color: #0f6a74;
+  color: black ;
+  font-size: 2rem;
   padding-top: 10px;
   padding-bottom: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .text-form-mri-container {
   background-color: #63656327;
@@ -92,27 +93,13 @@ textarea {
   margin-top: 5px;
 }
 .input-field {
-  border-radius: 15px;
-  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px #63656327;
+  border: solid 1px #0BAED3;
   min-height: 50px;
 }
-.service-buttons {
-  display: flex;
-  flex-direction: column;
-}
 
-.service-button {
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
 
-.service-button.selected {
-  background-color: #007bff;
-  color: white;
-}
 .message-after {
   margin: auto;
   max-width: 800px;
@@ -126,4 +113,7 @@ label {
   display: block; /* Ensures the label is on its own line */
    /* Makes the label stand out */
   margin-bottom: 5px; /* Adds spacing between the label and input field */
+}
+.fs-italic{
+  font-style: italic;
 }

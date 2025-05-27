@@ -99,7 +99,7 @@ const MapSection = () => {
         </ul>
       </div>
       <div className="map-container">
-        <img src="./assets/Map.png" alt="Magnetröntgen utan remiss över hela Sverige hos RehabScan" className="map-image" />
+        <img src="./assets/newmap.png" alt="Magnetröntgen utan remiss över hela Sverige hos RehabScan" className="map-image" />
       </div>
     </div></div>
   );

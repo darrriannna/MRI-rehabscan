@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="col-md-4">
               <img
-                src="./assets/logo-wh.png"
+                src="./assets/Footer-logi.svg"
                 alt="Magnetröntgen utan remiss Sverige - RehabScan"
                 style={{ height: '65px' }}
               />

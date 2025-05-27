@@ -26,7 +26,7 @@ const Home = () => {
         <div className="container"> 
          
           <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
-            <div className="left-column">
+            <div id='fragor' className="left-column">
               <div className="text-center">
                 <h2 className="question-title">Vanliga frågor</h2>
               </div>

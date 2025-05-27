@@ -11,11 +11,8 @@ const Partners = () => {
 
   return (
     <div className="partners-container">
-      <div className='grid-deceases'>
-          <div className='containers-deceases-partners' >
-          <h4 className='text-center-info'> Undersökningen utförs av Evidia och Unilabs. Kliniken kontaktar dig inom ett par dagar efter bokningen för att hitta en tid som passar dig bäst. </h4>
-        </div></div>
-      <h3 className="text-center header p-3">Betala med</h3>
+     
+      <h2 className="text-center header p-3">Betala med</h2>
       <div className="partner-grid">
       {cards.map((card, index) => (
           <div key={index} className="partner-card">
@@ -23,7 +20,29 @@ const Partners = () => {
           </div>
         ))} 
        
+    
+</div>
+<div className='p-4 mr-3'>
+      <section className="radiologist-section">
+      <div className="radiologist-text">
+        <h2>
+          En erfaren röntgenläkare <br />
+          undersöker alltid röntgen <br />
+          bilderna
+        </h2>
+        <p>
+          <em>
+            Undersökningen utförs av Evidia och Unilabs. Kliniken kontaktar dig
+            inom ett par dagar efter bokningen för att hitta en tid som passar
+            dig bäst.
+          </em>
+        </p>
       </div>
+      <div className="radiologist-image">
+        <img src="./assets/vara-tjanster.jpg" alt="Röntgenbilder på skärm" />
+      </div>
+      
+    </section></div>
     </div>
   );
 };
