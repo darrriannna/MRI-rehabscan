@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const TopHome = () => {
   return (
     <div>
-    <section className="booking-hero">
+    <section className="booking-hero slide-in-left delay-0">
       <div className="booking-content">
         <h1 className="booking-title">
           Boka privat<br />
@@ -18,14 +18,14 @@ const TopHome = () => {
         </p>
         <Link to="/villkor" className="booking-link">Villkor och Begränsningar</Link>
         <div>
-        <button className="booking-button"><Link to="/bokanu" className='booking-main-link'>Boka undersökning</Link></button>
+        <button className="booking-button "><Link to="/bokanu" className='booking-main-link'>Boka undersökning</Link></button>
       </div></div>
-      <div className="booking-image-container">
+      <div className="booking-image-container  fade-in delay-5">
         <img src='./assets/Top-home.png' alt="MR-maskin" className="booking-image" />
       </div>
     </section>
    
-<section className="scan-highlight">
+<section className="scan-highlight slide-in-right delay-0">
   <div className="scan-image-wrapper">
     <img src="./assets/magnetrontgen-sverige.jpg" alt="Patient undergoing MRI" className="scan-image" />
 

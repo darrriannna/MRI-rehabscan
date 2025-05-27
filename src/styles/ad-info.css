@@ -703,6 +703,25 @@
   line-height: 1.6;
   font-weight: 400;
 }
+@media (max-width: 824px){
+  .info-box h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+  .info-box ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .price-box ul {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
+}
 
 .learn-more-btn {
   min-width: 200px;
@@ -779,6 +798,15 @@
   color: #0baed3;
   font-weight: bold;
   
+}
+@media (max-width: 824px){
+  
+  .price-box ul {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 .price-box a {
@@ -910,7 +938,24 @@
   line-height: 35px;
   color: #000;
 }
-
+@media (max-width: 824px){
+  .radiologist-text h2 {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.5rem;
+  }
+  
+  .radiologist-text p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #000;
+  }
+}
 .radiologist-image img {
   width: 100%;
   max-width: 713px;
