@@ -16,8 +16,10 @@ const Restrictions = () => {
           <h5>Uppföljning</h5>
           <p>
           Efter att du har genomgått din undersökning granskas dina röntgenbilder av en röntgenspecialist, därefter får du ditt röntgen svar via post.
-          Uteblivet besök eller avbokning senare än 24 timmar innan inbokad tid debiteras fullt och återbetalas ej.
+          Uteblivet besök eller avbokning senare än 24 timmar innan inbokad tid debiteras fullt och återbetalas ej. 
           </p>
+          <h5>Ångerrätt och transktionavgift</h5>
+          <p>Vid utnyttjande av ångerrätt återbetalas hela beloppet med avdrag för bankens transaktionsavgift. En avgift på 3,5 % av det totala beloppet dras för att täcka kostnader för hantering av betalningen.</p>
         </section>
         <section>
           <h5>Innebär det någon risk att undersökas med magnetkamera(MR)?</h5>
