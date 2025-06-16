@@ -27,7 +27,6 @@ export default function HomePriceInfo() {
           </h3>
           <ul>
             <li>• MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg – 4 500 kr</li>
-            <li>• MR Hjärna – 5 900 kr</li>
             <li>• MR Helrygg – 9 000 kr</li>
             <li className="note">För andra undersökningar gå till prislista.</li>
           </ul>
