@@ -96,7 +96,7 @@ const WhyMR = () => {
           </motion.div>
         </AnimatePresence>
       </div>
-      <StepsIcons />
+    
     </div>
   );
 };
