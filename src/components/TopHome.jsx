@@ -20,7 +20,7 @@ const TopHome = () => {
         <div>
         <button className="booking-button "><Link to="/bokanu" className='booking-main-link'>Boka undersökning</Link></button>
       </div></div>
-      <div className="booking-image-container  fade-in delay-5">
+      <div className="booking-image-container  ">
         <img src='./assets/Top-home.png' alt="MR-maskin" className="booking-image" />
       </div>
     </section>

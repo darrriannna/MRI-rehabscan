@@ -93,24 +93,12 @@ Till skillnad från röntgen använder magnetkameran magnetfält och radiovågor
         <div className='grid-deceases'>
           <div className='containers-deceases-info' >
           <h4 className='text-center-info'>För kontrastmedel i samband med MR maila oss innan bokning.  
-       Vi har även Datortomografi (DT/CT), konventionell röntgen (tex skelett- och lungröntgen) samt ultraljud. 
        Vid intresse maila oss på info@rehabscan.se eller ring 010-210 22 31 </h4>
         </div></div>
         <h2 className='p-4 '>MR kan bland annat användas för att upptäcka följande åkommor</h2>
         <div className='grid-deceaces'>
           
-          <div className='containers-deceases'>
-            <h4>MR Rygg</h4>
-            <p>Tumör, diskbråck, förträngningar av nerver i ryggraden / spinalstenos, traumatiska skador, MS.</p>
-          </div>
-          <div className='containers-deceases'>
-            <h4>MR Buk</h4>
-            <p>Tumörer i bl.a. njurar, gallblåsa, lever, bukspottkörtel, binjurar.</p>
-          </div>
-          <div className='containers-deceases'>
-            <h4>MR Gynorgan</h4>
-            <p>Tumörer i bl.a livmoder, äggstockar. Tecken till endometrios.</p>
-          </div>
+         
         </div>
       </div>
     </div>

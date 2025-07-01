@@ -1769,6 +1769,9 @@ object-fit: cover;
   bottom: 0;
   left: 0;
 }
+.subtext-about{
+  font-size: 1rem;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -1781,7 +1784,7 @@ object-fit: cover;
     font-size: 1.3rem;
   }
   .subtext-about{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .bottom-text-about{
     font-size: 1.3rem;
@@ -2337,7 +2340,7 @@ min-height: 100%;
 }
 
 .scan-overlay-text {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -2346,7 +2349,7 @@ min-height: 100%;
   list-style-type: disc;
 
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 /* Responsive adjustments */
