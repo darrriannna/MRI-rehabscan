@@ -26,10 +26,10 @@ const MainInfo = ({ scanRef }) => {
 
       {/* Right Container */}
       <div className="mr-layout-right">
-        <h2 className="mr-layout-heading">Privat MR (från 3 900 kr)</h2>
+        <h2 className="mr-layout-heading">Privat MR (från 4 500 kr)</h2>
         <ul className="mr-layout-list">
           <li>
-           MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg - 3 900kr
+           MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg - 4 500kr
           </li>
           <li>MR Helrygg - 9 000kr </li>
         </ul>

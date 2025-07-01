@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/ad-info.css"; // Ensure styles are properly defined
 import { motion, AnimatePresence } from "framer-motion"; // For animations
-import StepsIcons from "./StepsIcons";
+
 
 const tjData = [
   {
