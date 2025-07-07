@@ -81,6 +81,7 @@ const MRFullBodyScan = forwardRef((props, ref)  => {
           <div className='containers-deceases-info' >
           <p >MR helkropp är en översiktsundersökning, för att hinna avbilda de viktigaste delarna på ca 60 minuter måste vi dra ner på antalet MR-serier/kroppsdel och bildupplösningen.
  </p>
+ <p>Kontakta oss för med info - info@rehabscan.se</p>
         </div></div>
       <p className="mr-scan-subtitle">
         Vi utför scanning av följande kroppsdelar och organ:

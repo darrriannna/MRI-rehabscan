@@ -34,6 +34,7 @@ export default function HomePriceInfo() {
 
           <h4>MR Helkropp</h4>
           <p>• Innefattar MR scanning av 21 organ.</p>
+          <p>Kontakta oss för med info - info@rehabscan.se</p>
           <p className="price">18 400 kr</p>
           <button className="learn-more-link" onClick={() => document.getElementById("mr-helkropp")?.scrollIntoView({ behavior: "smooth" })}> Vad kan man upptäcka?</button>
         </div>

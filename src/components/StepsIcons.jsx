@@ -22,14 +22,14 @@ const StepsIcons = () => {
         </div>
         <div className="custom-step">
           <img src="./assets/icon-book2.png" alt="Step 2" className="custom-step-icon" />
-          <h3 className="custom-step-title">Undersökning inom  arbetsdagar</h3>
+          <h3 className="custom-step-title">Undersökningstid inom 14 arbetsdagar</h3>
           <p className="custom-step-text">
-            Få din undersökningstid inom  arbetsdagar.
+            Få din undersökningstid inom 14 arbetsdagar.
           </p>
         </div>
         <div className="custom-step">
           <img src="./assets/icon-book3.png" alt="Step 3" className="custom-step-icon" />
-          <h3 className="custom-step-title">Resultat inom 7 arbetsdagar </h3>
+          <h3 className="custom-step-title">Få resultat elektronisk eller via post </h3>
           <p className="custom-step-text">
             Få din individuella rapport med MR-svar och rekommendation av specialistläkare. 
           </p>
