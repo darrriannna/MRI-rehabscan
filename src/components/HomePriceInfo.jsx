@@ -23,10 +23,10 @@ export default function HomePriceInfo() {
         {/* Right Box */}
         <div className="price-box">
           <h3>
-            Privat MR <span>(från 4 500 kr)</span>
+            Privat MR <span>(från 4 100 kr)</span>
           </h3>
           <ul>
-            <li>• MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg – 4 500 kr</li>
+            <li>• MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg – 4 100 kr</li>
             <li>• MR Helrygg – 9 000 kr</li>
             <li className="note">För andra undersökningar gå till prislista.</li>
           </ul>
