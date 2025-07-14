@@ -45,7 +45,7 @@ export default function HomePriceInfo() {
       <div className="steps">
         {[
           { number: '1', text: 'Fyll i en bokningsförfrågan' },
-          { number: '2', text: 'Få din undersökningstid inom 7 arbetsdagar' },
+          { number: '2', text: 'Få din undersökningstid inom 7-14 arbetsdagar' },
           { number: '3', text: 'Få din individuella rapport med MR-svar' },
         ].map((step) => (
           <div className="step-card" key={step.number}>
