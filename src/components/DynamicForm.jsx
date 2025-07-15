@@ -9,6 +9,7 @@ const services = [
   { id: 3, name: 'MR Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/dR68yN0aNf1J1VefZz' },
   { id: 4, name: 'MR Bäcken/höftleder', price: '4 100kr', paymentLink: 'https://buy.stripe.com/8wM9CR6zbbPxarK8wZ' },
   { id: 5, name: 'MR Vänster Knä', price: '4 100kr', paymentLink: 'https://buy.stripe.com/3csaGV3mZg5N6bu9AK' },
+  { id: 6, name: 'MR Helkropp', price: '18 400kr', paymentLink: 'https://buy.stripe.com/4gw9CRcXz1aT2Zi5kB' },
   { id: 7, name: 'MR Bröstrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/00gbKZ2iVg5N6bu8x1' },
   { id: 8, name: 'MR Höger Fot', price: '4 100kr', paymentLink: 'https://buy.stripe.com/eVa2ap5v74n58jC9AS' },
   { id: 9, name: 'MR Vänster Fot', price: '4 100kr', paymentLink: 'https://buy.stripe.com/14k16l4r34n5bvO7sA' },
