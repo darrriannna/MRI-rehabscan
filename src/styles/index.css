@@ -744,7 +744,8 @@ button {
   touch-action: manipulation;
   align-self: auto;
   background-color: transparent;
-  border: 3px solid #0BAED3;
+  border: 2px solid #0BAED3;
+  border-radius: 8px;
   box-shadow: rgba(112, 186, 246, 0.01) 0 41px 17px, rgba(11, 134, 143, 0.05) 0 23px 14px, rgba(24, 216, 238, 0.09) 0 10px 10px, rgba(131, 50, 234, .1) 0 3px 6px;
   color: #050505;
   font-size: 1.3rem;

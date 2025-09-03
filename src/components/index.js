@@ -20,7 +20,7 @@ export { default as Partners } from './Partners';
 export { default as PricelistK } from './PricelistKontrast';
 export { default as Pricelist } from './PricelistMRI';
 export { default as PricelistCT } from './PricelistCT';
-
+export { default as ProductCarousel } from './CarouselDiscount';
 export { default as GoogleReviews } from './Reviews';
 export { default as TopHome } from './TopHome';
 export { default as HomePriceInfo} from './HomePriceInfo';

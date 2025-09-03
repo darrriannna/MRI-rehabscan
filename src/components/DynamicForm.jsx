@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 import "../styles/index.css";
 
 const services = [
-  { id: 1, name: 'MR Ländrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/6oE5mBf5HcTB43maF6' },
-  { id: 2, name: 'MR Höger Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/aEU9CRbTv4n56bufZi' },
-  { id: 3, name: 'MR Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/dR68yN0aNf1J1VefZz' },
-  { id: 4, name: 'MR Bäcken/höftleder', price: '4 100kr', paymentLink: 'https://buy.stripe.com/8wM9CR6zbbPxarK8wZ' },
-  { id: 5, name: 'MR Vänster Knä', price: '4 100kr', paymentLink: 'https://buy.stripe.com/3csaGV3mZg5N6bu9AK' },
+  { id: 1, name: 'MR Ländrygg', price: '4 200kr', paymentLink: 'https://buy.stripe.com/6oE5mBf5HcTB43maF6' },
+  { id: 2, name: 'MR Höger Axel', price: '4 200kr', paymentLink: 'https://buy.stripe.com/aEU9CRbTv4n56bufZi' },
+  { id: 3, name: 'MR Vänster Axel', price: '4 200kr', paymentLink: 'https://buy.stripe.com/dR68yN0aNf1J1VefZz' },
+  { id: 4, name: 'MR Bäcken/höftleder', price: '4 500kr', paymentLink: 'https://buy.stripe.com/8wM9CR6zbbPxarK8wZ' },
+  { id: 5, name: 'MR Vänster Knä', price: '4 500kr', paymentLink: 'https://buy.stripe.com/3csaGV3mZg5N6bu9AK' },
   { id: 6, name: 'MR Helkropp', price: '18 400kr', paymentLink: 'https://buy.stripe.com/4gw9CRcXz1aT2Zi5kB' },
   { id: 7, name: 'MR Bröstrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/00gbKZ2iVg5N6bu8x1' },
   { id: 8, name: 'MR Höger Fot', price: '4 100kr', paymentLink: 'https://buy.stripe.com/eVa2ap5v74n58jC9AS' },
@@ -24,8 +24,8 @@ const services = [
   { id: 18, name: 'MR Vänster Underben', price: '4 100kr', paymentLink: 'https://buy.stripe.com/cN2eXbf5HdXF2ZiaEI' },
   { id: 19, name: 'MR Sacrum/Sacroliacaleder', price: '4 100kr', paymentLink: 'https://buy.stripe.com/cN202hg9LbPx1Ve28F' },
   { id: 22, name: 'MR Nacke/Halsrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/6oEaGVbTvaLt57q6oW' },
-  { id: 23, name: 'MR Helrygg', price: '9 000kr', paymentLink: 'https://buy.stripe.com/4gw4ix9Ln8Dl8jC8wL' },
-  { id: 26, name: 'MR Höger Knä', price: '4 100kr', paymentLink: 'https://buy.stripe.com/7sI4ix7DfcTBbvO9AT'  },
+  { id: 23, name: 'MR Helrygg', price: '11 500kr', paymentLink: 'https://buy.stripe.com/4gw4ix9Ln8Dl8jC8wL' },
+  { id: 26, name: 'MR Höger Knä', price: '4 500kr', paymentLink: 'https://buy.stripe.com/7sI4ix7DfcTBbvO9AT'  },
   {id: 29, name: 'MR Höger Överarm', price: '4 100kr', paymentLink: 'https://buy.stripe.com/8wM3etaPrf1JczSbJ5' },
   {id: 30, name: 'MR Vänster Överarm', price: '4 100kr', paymentLink: 'https://buy.stripe.com/9AQdT70aNf1J7fy6or' },
   {id: 31, name: 'MR Höger Underarm', price: '4 100kr', paymentLink: 'https://buy.stripe.com/aEU8yN0aN5r9fM4eV6' },
@@ -149,7 +149,7 @@ const DynamicForm = () => {
               <p className='form-price'>Pris: {selectedService?.price}</p>
             </div>
             <div className="form-group">
-              <button type="button" className="booking-button" onClick={handleBookClick}>
+              <button type="button" className="btn-book-now" onClick={handleBookClick}>
                 Boka undersökning
               </button>
             </div>

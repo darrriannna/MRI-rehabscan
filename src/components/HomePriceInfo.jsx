@@ -26,8 +26,8 @@ export default function HomePriceInfo() {
             Privat MR <span>(från 4 100 kr)</span>
           </h3>
           <ul>
-            <li>• MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg – 4 100 kr</li>
-            <li>• MR Helrygg – 9 000 kr</li>
+            <li>• MR Ländrygg, Nacke/Halsrygg – 4 200 kr</li>
+            <li>• MR Helrygg – 11 500 kr</li>
             <li className="note">För andra undersökningar gå till prislista.</li>
           </ul>
           <button className="learn-more-link"><Link to="/prislistaMR">Gå till Prislista</Link></button>
@@ -55,7 +55,7 @@ export default function HomePriceInfo() {
         ))}
       </div>
       <div className='booking-button-steps'>
-      <button className="booking-button-price"> <Link className='booking-main-link' to="/bokanu">Boka undersökning</Link></button>
+      <button className="btn-book-now"> <Link className='booking-main-link' to="/bokanu">Boka undersökning</Link></button>
       </div>
       </div>
       <section className="radiologist-section">
