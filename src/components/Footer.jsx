@@ -26,11 +26,7 @@ const Footer = () => {
               <p className="link-footer">Mån-Fre 07:00 - 19:00</p>
             </div>
             <div className="col-md-4">
-              <img
-                src="./assets/Footer-logi.svg"
-                alt="Magnetröntgen utan remiss Sverige - RehabScan"
-                style={{ height: '65px' }}
-              />
+            
             </div>
           </div>
 

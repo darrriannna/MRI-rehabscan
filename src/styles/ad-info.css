@@ -738,7 +738,7 @@
 
 .learn-more-link {
   background-color: transparent;
-  
+
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
@@ -1092,7 +1092,7 @@
   }
 
   .carousel-image {
-    height: 120px;
+    height: 150px;
   }
 }
 .service-description {

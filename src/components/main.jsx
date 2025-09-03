@@ -28,12 +28,12 @@ const Home = () => {
           <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
             <div id='fragor' className="left-column">
               <div className="text-center">
-                <h2 className="question-title">Vanliga frågor</h2>
+                <h3 className="question-title">Vanliga frågor</h3>
               </div>
               <div className="faq-container">
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 1.8 }}>
                   <div className="faq-question" onClick={() => toggleSection(0)}>
-                    <h4>Vad är magnetröntgen?</h4>
+                    <h5>Vad är magnetröntgen?</h5>
                     <span>{openSection === 0 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 0 && (
@@ -47,7 +47,7 @@ const Home = () => {
 
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
                   <div className="faq-question" onClick={() => toggleSection(1)}>
-                    <h4>Hur får man remiss till magnetröntgen?</h4>
+                    <h5>Hur får man remiss till magnetröntgen?</h5>
                     <span>{openSection === 1 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 1 && (
@@ -59,7 +59,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
                   <div className="faq-question" onClick={() => toggleSection(2)}>
-                    <h4>Vem har tillgång till mina resultat?</h4>
+                    <h5>Vem har tillgång till mina resultat?</h5>
                     <span>{openSection === 2 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 2 && (
@@ -70,7 +70,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
                   <div className="faq-question" onClick={() => toggleSection(3)}>
-                    <h4>Vad händer efter att jag har bokat?</h4>
+                    <h5>Vad händer efter att jag har bokat?</h5>
                     <span>{openSection === 3 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 3 && (
@@ -81,7 +81,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
                   <div className="faq-question" onClick={() => toggleSection(4)}>
-                    <h4>Kan jag själv bestämma tiden för undersökningen?</h4>
+                    <h5>Kan jag själv bestämma tiden för undersökningen?</h5>
                     <span>{openSection === 4 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 4 && (
@@ -92,7 +92,7 @@ const Home = () => {
                 </motion.div>
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
                   <div className="faq-question" onClick={() => toggleSection(5)}>
-                    <h4>Hur gör man för att avboka eller ändra tiden?</h4>
+                    <h5>Hur gör man för att avboka eller ändra tiden?</h5>
                     <span>{openSection === 5 ? '▲' : '▼'}</span>
                   </div>
                   {openSection === 5 && (
