@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Footer, GoogleReviews, Navbar, Partners, Steps } from "../components";
+
+import { Footer, GoogleReviews, Navbar, Partners} from "../components";
 import "../styles/index.css"; // Updated CSS file
 
 const AboutPage = () => {
