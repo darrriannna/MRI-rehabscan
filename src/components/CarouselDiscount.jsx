@@ -74,7 +74,13 @@ const ProductCarousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setCardsPerView(window.innerWidth < 768 ? 2 : 4);
+      if (window.innerWidth < 480) {
+        setCardsPerView(1); // Mobile
+      } else if (window.innerWidth < 768) {
+        setCardsPerView(2); // Tablet
+      } else {
+        setCardsPerView(4); // Desktop
+      }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
