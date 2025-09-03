@@ -23,7 +23,7 @@ const services = [
   { id: 17, name: 'MR Höger Underben', price: '4 100kr', paymentLink: 'https://buy.stripe.com/00g16l0aNdXF2Zi28z' },
   { id: 18, name: 'MR Vänster Underben', price: '4 100kr', paymentLink: 'https://buy.stripe.com/cN2eXbf5HdXF2ZiaEI' },
   { id: 19, name: 'MR Sacrum/Sacroliacaleder', price: '4 100kr', paymentLink: 'https://buy.stripe.com/cN202hg9LbPx1Ve28F' },
-  { id: 22, name: 'MR Nacke/Halsrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/6oEaGVbTvaLt57q6oW' },
+  { id: 22, name: 'MR Nacke/Halsrygg', price: '4 500kr', paymentLink: 'https://buy.stripe.com/6oEaGVbTvaLt57q6oW' },
   { id: 23, name: 'MR Helrygg', price: '11 500kr', paymentLink: 'https://buy.stripe.com/4gw4ix9Ln8Dl8jC8wL' },
   { id: 26, name: 'MR Höger Knä', price: '4 500kr', paymentLink: 'https://buy.stripe.com/7sI4ix7DfcTBbvO9AT'  },
   {id: 29, name: 'MR Höger Överarm', price: '4 100kr', paymentLink: 'https://buy.stripe.com/8wM3etaPrf1JczSbJ5' },

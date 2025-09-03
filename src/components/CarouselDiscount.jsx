@@ -32,6 +32,13 @@ const ProductCarousel = () => {
       image: "/assets/landrygg.jpg",
     },
     {
+        name: "MR Nacke/Halsrygg",
+        description: "Upptäck skador, diskbråck eller påverkad nervfunktion.",
+        oldPrice: "5 200kr",
+        newPrice: "4 500kr",
+        image: "/assets/nacke.jpg",
+      },
+    {
       name: "MR Bäcken/höftleder",
       description: "Påvisa inflammation eller artros i höftleder.",
       oldPrice: "4 900kr",

@@ -26,7 +26,7 @@ export default function HomePriceInfo() {
             Privat MR <span>(från 4 100 kr)</span>
           </h3>
           <ul>
-            <li>• MR Ländrygg, Nacke/Halsrygg – 4 200 kr</li>
+            <li>• MR Ländrygg, Nacke/Halsrygg – från 4 200 kr</li>
             <li>• MR Helrygg – 11 500 kr</li>
             <li className="note">För andra undersökningar gå till prislista.</li>
           </ul>
