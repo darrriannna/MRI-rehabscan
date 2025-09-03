@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/ad-info.css";
 
 const ProductCarousel = () => {
   const navigate = useNavigate();
-
+  const trackRef = useRef(null);
   const handleBook = (service) => {
     navigate("/bokanu", { state: { serviceName: service.name, servicePrice: service.newPrice } });
   };
@@ -68,19 +68,14 @@ const ProductCarousel = () => {
       image: "/assets/helrygg.jpg",
     },
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(4);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 480) {
-        setCardsPerView(1); // Mobile
-      } else if (window.innerWidth < 768) {
-        setCardsPerView(2); // Tablet
-      } else {
-        setCardsPerView(4); // Desktop
-      }
+      if (window.innerWidth < 480) setCardsPerView(1);
+      else if (window.innerWidth < 768) setCardsPerView(2);
+      else setCardsPerView(4);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -88,15 +83,11 @@ const ProductCarousel = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev + cardsPerView >= services.length ? 0 : prev + cardsPerView
-    );
+    setCurrentIndex((prev) => (prev + 1 >= services.length ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev - cardsPerView < 0 ? services.length - cardsPerView : prev - cardsPerView
-    );
+    setCurrentIndex((prev) => (prev - 1 < 0 ? services.length - 1 : prev - 1));
   };
 
   return (
@@ -109,9 +100,9 @@ const ProductCarousel = () => {
         <div className="carousel-track-wrapper">
           <div
             className="carousel-track"
+            ref={trackRef}
             style={{
-              transform: `translateX(-${(100 / cardsPerView) * currentIndex}%)`,
-              gridTemplateColumns: `repeat(${services.length}, calc(100% / ${cardsPerView}))`,
+              transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
             }}
           >
             {services.map((service, index) => (
