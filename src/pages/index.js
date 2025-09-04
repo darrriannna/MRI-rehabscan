@@ -10,5 +10,5 @@ export { default as ServicesPage } from './ServicesPage';
 export { default as Restrictions } from './Restrictions';
 export { default as Kontrast } from './Kontrast';
 export { default as CT } from './CT';
-
+export { default as SuccessPage } from './Success';
 

@@ -1039,18 +1039,6 @@ button {
 
 
 
-.payment-success h1 {
-  font-size: 2.5em;
-  color: #107a8b;
-  margin-bottom: 20px;
-}
-
-.payment-success p {
-  font-size: 1.2em;
-  color: #333;
-  margin: 15px 0;
-}
-
 .actions {
   margin-top: 30px;
 }
@@ -1072,18 +1060,6 @@ button {
 padding-top: 10px;
 }
 
-
-.payment-success{
-  justify-content: center;
-  margin: auto;
-  text-align: center;
-  padding: 30px;
-}
-.icon-success{
-  width: 80px;
-  height: 80px;
-  margin: 30px;
-}
 
 .failed-payment-page{
   justify-content: center;
