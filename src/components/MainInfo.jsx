@@ -13,7 +13,7 @@ const MainInfo = () => {
       </h2>
       
          <ul className="unique-mri-list">
-                  <li >Få tid för magnetkameraundersökning inom 7-14 arbetsdagar.</li>
+                  <li >Få tid för magnetkameraundersökning inom 1-7 arbetsdagar.</li>
                   <li>Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
                   <li>Vi skickar din remiss, därefter får du kallelse till undersökning</li>
                   <li>Möjlighet att diskutera dina röntgen svar med legitimerad personal.</li>
