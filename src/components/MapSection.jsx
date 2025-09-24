@@ -71,6 +71,10 @@ const MapSection = () => {
                 <li className='clinic-details'>
                   <p className='clinic-name'>Evidia Malmö Entré Röntgen</p>
                   <p className='clinic-adress'>Fredsgatan 12, 212 12 Malmö</p>
+                </li>
+                <li className='clinic-details'>
+                  <p className='clinic-name'>Unilabs Malmö Arena Röntgen</p>
+                  <p className='clinic-adress'>Hyllie Stationsväg, 216 23 Malmö</p>
                 </li></ul></li>
             <li className='list-map'>Umeå
             <ul className='list-of-clinics'>
@@ -99,7 +103,7 @@ const MapSection = () => {
         </ul>
       </div>
       <div className="map-container">
-        <img src="./assets/newmap.png" alt="Magnetröntgen utan remiss över hela Sverige hos RehabScan" className="map-image" />
+        <img src="./assets/Map.gif" alt="Magnetröntgen utan remiss över hela Sverige hos RehabScan" className="map-image" />
       </div>
     </div></div>
   );

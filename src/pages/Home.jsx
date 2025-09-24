@@ -1,4 +1,4 @@
-import { Navbar, Main, Footer, MRFullBodyScan, TopHome, HomePriceInfo} from "../components";
+import { Navbar, Main, Footer, MRFullBodyScan, TopHome, HomePriceInfo, FeaturesOffer} from "../components";
 import React, { useEffect, useState, useRef } from 'react'; 
 import Loader from '../components/Loader'; 
 import '../styles/index.css';
@@ -22,9 +22,10 @@ function Home() {
         <div className="body">
       <Navbar />
       <div className="home-parent">
-    <TopHome/>
+    <TopHome/> 
+     <FeaturesOffer scrollToScan={scanRef}/>
     <HomePriceInfo/>
-
+  
     
 </div>
       <Main />

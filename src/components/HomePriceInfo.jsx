@@ -1,81 +1,67 @@
 import React from 'react';
 import '../styles/ad-info.css';
-import { Link } from "react-router-dom";
 
 
 export default function HomePriceInfo() {
   return (
     <section className="private-mri-section">
-      <div className="mri-content">
-        {/* Left Box */}
-        <div className="info-box">
-          <h2>
-            Undvik köer och väntetider med <em>privat magnetröntgen.</em>
-          </h2>
-          <ul>
-            <li>→ Få tid för magnetkameraundersökning inom 7–14 arbetsdagar.</li>
-            <li>→ Dina röntgenbilder kontrolleras av röntgenspecialister.</li>
-            <li>→ Vi skickar din remiss, därefter får du kallelse till undersökning.</li>
-          </ul>
-          <button className="learn-more-btn" onClick={() => document.getElementById("fragor")?.scrollIntoView({ behavior: "smooth" })}>Läs mer</button>
-        </div>
+ 
 
-        {/* Right Box */}
-        <div className="price-box">
-          <h3>
-            Privat MR <span>(från 4 100 kr)</span>
-          </h3>
-          <ul>
-            <li>• MR Ländrygg, Nacke/Halsrygg – från 4 200 kr</li>
-            <li>• MR Helrygg – 11 500 kr</li>
-            <li className="note">För andra undersökningar gå till prislista.</li>
-          </ul>
-          <button className="learn-more-link"><Link to="/prislistaMR">Gå till Prislista</Link></button>
+      <div className="steps-home-container">
+  <h2 className="steps-title">Beställ magnetröntgen – fyra enkla steg</h2>
+  <div className="steps-grid">
+    {[
+      {
+        step: "Steg 1",
+        title: "Beställ magnetröntgen",
+        text: "Lägg in dina uppgifter och önskemål för undersökningen. Det tar bara några minuter.",
+      },
+      {
+        step: "Steg 2",
+        title: "Aktivera remissen",
+        text: "Efter förfrågan blir du kontaktad för att bekräfta tid och eventuella detaljer.",
+      },
+      {
+        step: "Steg 3",
+        title: "Genomför röntgen",
+        text: "Du får din tid inom 1–7 arbetsdagar och besöker kliniken för din MR-undersökning.",
+      },
+      {
+        step: "Steg 4",
+        title: "Resultat och utlåtande",
+        text: "Efter undersökningen får du en personlig rapport med MR-svar från specialistläkare.",
+      },
+    ].map((step, index) => (
+      <div className="step-card" key={index}>
+        <h4 className="step-label">{step.step}</h4>
+        <h3 className="step-title">{step.title}</h3>
+        <p className="step-text">{step.text}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
-          <h4>MR Helkropp</h4>
-          <p>• Innefattar MR scanning av 21 organ.</p>
-          <p>Kontakta oss för med info - info@rehabscan.se</p>
-          <p className="price">18 400 kr</p>
-          <button className="learn-more-link" onClick={() => document.getElementById("mr-helkropp")?.scrollIntoView({ behavior: "smooth" })}> Vad kan man upptäcka?</button>
-        </div>
-      </div>
-
-      {/* Steps */}
-      <div className='steps-home-container'>
-      <div className="steps">
-        {[
-          { number: '1', text: 'Fyll i en bokningsförfrågan' },
-          { number: '2', text: 'Få din undersökningstid inom 1-7 arbetsdagar' },
-          { number: '3', text: 'Få din individuella rapport med MR-svar' },
-        ].map((step) => (
-          <div className="step-card" key={step.number}>
-            <div className="step-circle">{step.number}</div>
-            <p className='p-3 fs-5 text-small-step'>{step.text}</p>
-          </div>
-        ))}
-      </div>
-      <div className='booking-button-steps'>
-      <button className="btn-book-now"> <Link className='booking-main-link' to="/bokanu">Boka undersökning</Link></button>
-      </div>
-      </div>
       <section className="radiologist-section">
-      <div className="radiologist-text">
-        <h2>
-          En erfaren röntgenläkare <br />
-          undersöker alltid röntgen <br />
-          bilderna
-        </h2>
-        <p>
-          <em>
-            Undersökningen utförs av Evidia och Unilabs. Kliniken kontaktar dig
-            inom ett par dagar efter bokningen för att hitta en tid som passar
-            dig bäst.
-          </em>
-        </p>
+      <div className="providers-wrapper">
+      <div className="providers-top">
+        <div className="providers-text">
+          <h2 className="providers-title">
+            Dina undersökningar genomförs av ackrediterade
+            vårdgivare
+          </h2>
+          <p className="providers-desc">
+             MR-undersökningar utförs av Unilabs Radiologi och Evidia Röntgen – säkert,
+            tillgängligt och med högsta medicinsk kvalitet.
+          </p>
+        </div>
+     
       </div>
-      <div className="radiologist-image">
-        <img src="./assets/vara-tjanster.jpg" alt="Röntgenbilder på skärm" />
+
+      <div className="providers-logos">
+        <img src="/assets/unilabs.png" alt="Unilabs" />
+        <img src="/assets/lab-port.webp" alt="Labportalen" />
       </div>
+    </div>
     </section>
     </section>
     

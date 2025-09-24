@@ -9,7 +9,7 @@ import '../src/styles/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions, Kontrast, CT, SuccessPage } from "./pages";
+import { Home, AboutPage,  PageNotFound, BookTime, MRIbookTime, ServicesPage, VarforMR, Restrictions, SuccessPage } from "./pages";
 import MRI from './pages/MRI';
 import { DynamicForm, Success, Failed} from './components';
 import ScrollToTop from './components/ScrollToTop';
@@ -28,8 +28,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/prislistaMR" element={<MRI />} />
-          <Route path="/prislistaCT" element={<CT />} />
-          <Route path="/prislista-kontrast" element={<Kontrast />} />
+
           <Route path="/om-oss" element={<AboutPage />} />
           <Route path="/bokanu" element={<BookTime />} />
           <Route path="/tack" element={<SuccessPage />} />

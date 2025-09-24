@@ -4,9 +4,8 @@ import React, { useEffect, useState } from 'react';
 const Banner = () => {
     const messages = [
         "MR utan remiss",
-        "7-12 dagar väntetid på MR",
+        "1-7 arbetsdagar väntetid på MR",
         "Billigast i Sverige",
-        "Leveranstid på produkter 1-3 dagar",
     ];
 
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);

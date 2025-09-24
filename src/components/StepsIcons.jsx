@@ -22,9 +22,9 @@ const StepsIcons = () => {
         </div>
         <div className="custom-step">
           <img src="./assets/icon-book2.png" alt="Step 2" className="custom-step-icon" />
-          <h3 className="custom-step-title">Undersökningstid inom 14 arbetsdagar</h3>
+          <h3 className="custom-step-title">Undersökningstid inom 7 arbetsdagar</h3>
           <p className="custom-step-text">
-            Få din undersökningstid inom 14 arbetsdagar.
+            Få din undersökningstid inom 7 arbetsdagar.
           </p>
         </div>
         <div className="custom-step">

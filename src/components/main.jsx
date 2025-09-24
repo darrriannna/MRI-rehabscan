@@ -23,12 +23,13 @@ const Home = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <div className="main">
+      <MapSection />
         <div className="container"> 
          
           <motion.div className="container-home" {...fadeIn} transition={{ delay: 1.6 }}>
             <div id='fragor' className="left-column">
               <div className="text-center">
-                <h3 className="question-title">Vanliga frågor</h3>
+                <h4 className="question-title">Vanliga frågor och svar om MR-magnetröntgen</h4>
               </div>
               <div className="faq-container">
                 <motion.div className="service-info" {...fadeIn} transition={{ delay: 1.8 }}>
@@ -101,12 +102,23 @@ const Home = () => {
                     </p>
                   )}
                 </motion.div>
+                <motion.div className="service-info" {...fadeIn} transition={{ delay: 2 }}>
+                  <div className="faq-question" onClick={() => toggleSection(6)}>
+                    <h5>Vad är viktigt att tänka på inför en MR-undersökning?</h5>
+                    <span>{openSection === 6 ? '▲' : '▼'}</span>
+                  </div>
+                  {openSection === 6 && (
+                    <p className="faq-answer">
+                   Inför din MR-undersökning måste du informera om implantat, ta av metallföremål och kunna ligga stilla i 30–60 minuter. 
+                    </p>
+                  )}
+                </motion.div>
               </div>
             </div>
           </motion.div>
    
      <motion.div {...fadeIn} transition={{ delay: 1.4 }}>
-            <MapSection />
+         
           </motion.div>
           <GoogleReviews/>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/index.css";
-import TranslateWidget from './TranslateWidget';  // Ensure TranslateWidget is imported
+ // Ensure TranslateWidget is imported
 
 const Footer = () => {
   return (
@@ -30,11 +30,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Insert Translate Widget directly here without <p> tag */}
-          <div className="footer-translate-widget">
-            {/* The Translate Widget should appear here */}
-            <TranslateWidget />
-          </div>
+
 
         </div>
       </footer>

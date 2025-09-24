@@ -65,7 +65,7 @@ background: #fdfdfd66;
   position: relative;
 }
 .question-title{
-font-size: 2.5rem;
+font-size: 2rem;
 padding: 10px;
 margin-top: 20px;
 font-weight: 500;
@@ -143,14 +143,14 @@ color: black;
   width: 100%;
   font-size: 16px;
   background-color: #ffffffe7;
-  border: solid 1px #31bbc7;
-  box-shadow: 1px 2px 3px #20b3c7;
+  box-shadow: 1px 1px 2px #424242;
   padding: 20px;
-  border-radius: 0.5cm;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
 .service-info:hover{
+  background-color: #97bcbc60;
   transition-duration: 1s;
   transform: scale(1.05); /* Zoom effect */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -493,7 +493,7 @@ height: 35px;
 .containers-deceases{
   background-color: #c0cfff66;
   border-radius: 0.5cm;
-  box-shadow: 1px 2px 3px #19aec1;
+
   padding: 20px;
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   min-width: 100px; 
@@ -605,25 +605,13 @@ border-radius: 30px;
   font-weight: 600;
 }
 .btn-book-now{
-  display: inline-block;
-  outline: none;
+  background: #19aec1;
+  color: white;
+  border: none;
+  padding:1.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
-  transition-duration: .3s;
-  border: 1px solid transparent;
-  letter-spacing: 2px;
-  min-width: 160px;
-  text-transform: uppercase;
-  white-space: normal;
-  font-weight: 700;
-  text-align: center;
-  padding: 16px 14px 18px;
-  margin-bottom: 0;
-  color: #31bbc7;
-  height: 48px;
-background: none;
-border: solid 3px #31bbc7;
+  border-radius: 4px;
 
 }
 
@@ -631,6 +619,21 @@ border: solid 3px #31bbc7;
       color: black;
       background-color: #c7effc;
   }
+  .btn-book-now-ban{
+    background: #19aec1;
+    color: white;
+    border: none;
+    padding:1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  
+  }
+  
+  .btn-book-now-ban:hover{
+        color: black;
+        background-color: #c7effc;
+    }
 .container-pricelist {
   width: 90%;
   max-width: 1200px;
@@ -732,8 +735,8 @@ border: solid 3px #31bbc7;
   margin: 0 auto;
   padding: 20px;
   background: white;
-  box-shadow: 0px 6px 4px rgb(26, 172, 209);
-  
+  border: 1px solid #000000;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
@@ -943,12 +946,11 @@ button {
 }
 .map-section-container{
   width: 100%;
-  max-width: 1000px;
+  max-width: 1300px;
   margin: auto;
-  background-color: #31bac74e;
   border-radius: 30px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgb(8, 125, 129);
+
 }
 .map-section-container h2 {
   font-size: 2.5em;
@@ -996,7 +998,7 @@ button {
 
 .map-image {
   width: 100%;
-  min-width: 200px;
+  min-width: 300px;
   max-width: 400px;
   height: auto;
   
@@ -1037,6 +1039,38 @@ button {
   }
 }
 
+.map-section {
+  display: flex;
+  flex-direction: row; /* default side-by-side */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* On smaller screens, stack vertically */
+@media (max-width: 950px) {
+  .map-section {
+    flex-direction: column; /* stack vertically */
+    align-items: center; /* center map */
+    text-align: center;
+  }
+
+  .map-container {
+    order: -1; /* move map ABOVE text */
+    margin-bottom: 20px;
+  }
+
+  .map-image {
+    display: block; /* ensure it's visible */
+    max-width: 90%;
+    height: auto;
+  }
+
+  .list-map-container {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
 
 
 .actions {
@@ -1628,7 +1662,7 @@ object-fit: cover;
   background-color: rgba(255, 255, 255, 0.742);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 2px 1px #31bbc7;
+
   flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
   min-width: 100px; 
 }
@@ -1671,30 +1705,7 @@ object-fit: cover;
   position: relative;
 }
 
-.custom-row-ct{
-  background-image: url("../../public/assets/Scan-CT.jpg"); /* Ensure the path is correct */
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 40vh;
-  display: flex;
-  align-items: flex-start; /* Align content to the top */
-  justify-content: flex-start; /* Align to the left */
-  padding: 2rem;
-  position: relative;
-}
-.custom-row-k{
-  background-image: url("../../public/assets/ScanMR-k.jpg"); /* Ensure the path is correct */
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  min-height: 55vh;
-  display: flex;
-  align-items: flex-start; /* Align content to the top */
-  justify-content: flex-start; /* Align to the left */
-  padding: 2rem;
-  position: relative;
-}
+
 .custom-row-mr{
   background-image: url("../../public/assets/ScanMR.jpg"); /* Ensure the path is correct */
   background-size: cover;
@@ -1926,7 +1937,8 @@ color: #082e58;
   padding: 0 !important;
 }
 .clinic-details{
-  background-color: rgba(255, 255, 255, 0.769);
+  background-color: rgba(234, 234, 234, 0.456);
+  box-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.363);
   padding: 10px;
   margin: 5px;
  border-radius: 20px;
@@ -2436,3 +2448,121 @@ min-height: 100%;
 .delay-4 { animation-delay: 0.8s; }
 .delay-5 { animation-delay: 1s; }
 .delay-6 { animation-delay: 1.2s; }
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  align-items: center;
+}
+
+/* Content area on left */
+.banner-content {
+  max-width: 700px;
+  padding: 2rem 4rem;
+  color: white;
+  text-align: left;
+  z-index: 1;
+}
+
+/* Headline */
+.banner-main-slogan {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Subtext */
+.banner-subtext {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: #00b894;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background: #009874;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.banner-section{
+  position: relative;
+  width: 100%;
+  height: 50vh;   
+  overflow: hidden;
+  background: black;
+}
+@media (max-width: 768px) {
+  .banner-section{
+    height: 70vh;
+  }
+}
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Close button */
+.modal-close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background-color: #003d99;
+}

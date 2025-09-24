@@ -83,9 +83,7 @@ const MRFullBodyScan = forwardRef((props, ref)  => {
  </p>
  <p>Kontakta oss för med info - info@rehabscan.se</p>
         </div></div>
-      <p className="mr-scan-subtitle">
-        Vi utför scanning av följande kroppsdelar och organ:
-      </p>
+     
       <div className="mr-scan-grid">
         {scanData.map((section, index) => (
           <div key={index} className="mr-scan-category">

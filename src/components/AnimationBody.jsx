@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+
 import { useNavigate } from 'react-router-dom';
 import '../styles/index.css'; // Import your CSS styles
 
@@ -11,10 +11,6 @@ const AnimationBody = () => {
     // Navigate to the DynamicForm page and pass the service information via state
     navigate('/bokanu', { state: { serviceName: service.name, servicePrice: service.price } });
   };
- /* const handleLearnMore = (service) => {
-    // Navigate to the ServiceInfo page and pass the service information
-    navigate('/lasmer', { state: { serviceName: service.name, serviceTitle: service.title, serviceDetail: service.detail } });
-  }; */
 
 
   const services = [
@@ -50,30 +46,10 @@ const AnimationBody = () => {
   
 
   ];
-  const [isOpen, setIsOpen] = useState(false);
-
+ 
   return (
     <div className='main-pricelist'>
-    <div className="container-banner">
-      
-    <div className="container-about-services">
-  <div className="custom-row-k">
-   
-    <div className="custom-description">
-    <h3 className="text-center toggle-btn-sub" onClick={() => setIsOpen(!isOpen)}>
-             MR(MRI)  <span className={`arrow-sub ${isOpen ? "rotated" : ""}`}>▾</span>
-            </h3>
-            <div className={`subtext-container ${isOpen ? "open" : ""}`}>
-    <p className='subtext-about'>En magnetkamera kan skapa detaljerade bilder av nästan alla organ i kroppen och används för att upptäcka sjukdomar, kartlägga skador och följa upp behandlingar.  
-
-Vid en magnetkameraundersökning (MR) ligger du på en brits inne i en så kallad magnettunnel. Under hela undersökningen har du möjlighet att kommunicera med en sjuksköterska. Undersökningen tar mellan 20 och 45 minuter, och det är viktigt att ligga helt stilla för att bilderna ska bli skarpa. Om du tycker att undersökningen känns obehaglig kan du ta med en vän, och i vissa fall kan lugnande läkemedel erbjudas.  
-
-Till skillnad från röntgen använder magnetkameran magnetfält och radiovågor för att skapa bilder. Eftersom magnetfältet påverkar elektronisk utrustning och magnetiska föremål bör personer med exempelvis pacemaker eller annan elektronisk utrustning i kroppen inte genomgå undersökningen.
-    </p>
-</div>
-    </div>
-  </div>
-</div>
+    
 
 <div className="container-pricelist">
       <h2 className='center-text fw-3 p-3 mb-4 header' >Prislista Magnetröntgen</h2>
@@ -99,7 +75,7 @@ Till skillnad från röntgen använder magnetkameran magnetfält och radiovågor
       </div>
     </div>
     </div>
-    </div>
+    
   );
 };
 
