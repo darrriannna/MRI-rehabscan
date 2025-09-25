@@ -15,13 +15,13 @@ const ProductCarousel = () => {
       name: "MR Vänster Axel",
       description: "Upptäck skador i axelledens muskler och senor.",
       oldPrice: "4 900kr",
-      newPrice: "4 200kr",
+      newPrice: "4 100kr",
       image: "/assets/axel.jpg",
     }, {
       name: "MR Vänster Knä",
       description: "Upptäck skador på korsband, menisk och ledband.",
       oldPrice: "4 900kr",
-      newPrice: "4 500kr",
+      newPrice: "4 100kr",
       image: "/assets/kna-hoger.jpg",
     },
     {
@@ -35,28 +35,28 @@ const ProductCarousel = () => {
         name: "MR Nacke/Halsrygg",
         description: "Upptäck skador, diskbråck eller påverkad nervfunktion.",
         oldPrice: "5 200kr",
-        newPrice: "4 500kr",
+        newPrice: "4 100kr",
         image: "/assets/nacke.jpg",
       },
     {
       name: "MR Bäcken/höftleder",
       description: "Påvisa inflammation eller artros i höftleder.",
       oldPrice: "4 900kr",
-      newPrice: "4 500kr",
+      newPrice: "4 100kr",
       image: "/assets/backen.jpg",
     },
     {
       name: "MR Höger Axel",
       description: "Upptäck inflammation eller artros i axeln.",
       oldPrice: "4 900kr",
-      newPrice: "4 200kr",
+      newPrice: "4 100kr",
       image: "/assets/axel.jpg", // replace with your image path
     },
     {
       name: "MR Höger Knä",
       description: "Identifiera vanliga knäskador och inflammationer.",
       oldPrice: "4 900kr",
-      newPrice: "4 500kr",
+      newPrice: "4 100kr",
       image: "/assets/kna-vanster.jpg",
     },
     {
