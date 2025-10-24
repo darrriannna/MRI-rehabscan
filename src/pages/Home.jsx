@@ -1,6 +1,6 @@
-import { Navbar, Main, Footer, MRFullBodyScan, TopHome, HomePriceInfo, FeaturesOffer} from "../components";
-import React, { useEffect, useState, useRef } from 'react'; 
-import Loader from '../components/Loader'; 
+import { Navbar, Main, Footer, TopHome, HomePriceInfo, FeaturesOffer } from "../components";
+import React, { useEffect, useState, useRef } from 'react';
+import Loader from '../components/Loader';
 import '../styles/index.css';
 
 function Home() {
@@ -17,20 +17,19 @@ function Home() {
   }, []);
   return (
     <>
-     {loading && <Loader />}  {/* Show the loader when loading is true */}
+      {loading && <Loader />}  {/* Show the loader when loading is true */}
       {!loading && (
         <div className="body">
-      <Navbar />
-      <div className="home-parent">
-    <TopHome/> 
-     <FeaturesOffer scrollToScan={scanRef}/>
-    <HomePriceInfo/>
-  
-    
-</div>
-      <Main />
-      <MRFullBodyScan ref={scanRef}/>
-      <Footer /></div>
+          <Navbar />
+          <div className="home-parent">
+            <TopHome />
+            <FeaturesOffer scrollToScan={scanRef} />
+            <HomePriceInfo />
+
+
+          </div>
+          <Main />
+          <Footer /></div>
       )}
     </>
   )

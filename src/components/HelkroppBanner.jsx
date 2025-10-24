@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/FeatureOffer.css";
-import { useNavigate } from 'react-router-dom';
+
 
 const FeaturesOffer = ({ scrollToScan }) => {
   const features = [
@@ -20,17 +20,7 @@ const FeaturesOffer = ({ scrollToScan }) => {
       text: "Vår läkare kontaktar dig inom 1 arbetsdag efter beställning, därefter skickas remissen direkt.",
     },
   ];
-  const navigate = useNavigate();
 
-  const handleOrderClick = () => {
-    navigate('/bokanu', { state: { serviceName: 'MR Helkropp' } });
-  };
-
-  const handleScrollClick = () => {
-    if (scrollToScan?.current) {
-      scrollToScan.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="features-offer-wrapper">
@@ -46,7 +36,7 @@ const FeaturesOffer = ({ scrollToScan }) => {
       </div>
 
       {/* --- Offer Section --- */}
-      <div className="offer-container">
+      {/* <div className="offer-container">
         <div className="offer-image">
           <img src="/assets/helkropp-img.png" alt="MR Helkropp" />
           
@@ -70,7 +60,7 @@ const FeaturesOffer = ({ scrollToScan }) => {
           <div>
           <button className="scan-btn" onClick={handleScrollClick}>Vad kan man upptäcka?</button>
         </div></div>
-      </div>
+      </div> */}
     </div>
   );
 };
