@@ -9,6 +9,7 @@ const services = [
   { id: 3, name: 'MR Vänster Axel', price: '4 100kr', paymentLink: 'https://buy.stripe.com/dR68yN0aNf1J1VefZz' },
   { id: 4, name: 'MR Bäcken/höftleder', price: '4 100kr', paymentLink: 'https://buy.stripe.com/8wM9CR6zbbPxarK8wZ' },
   { id: 5, name: 'MR Vänster Knä', price: '4 100kr', paymentLink: 'https://buy.stripe.com/3csaGV3mZg5N6bu9AK' },
+  { id: 6, name: 'MR Helkropp', price: '19 200kr', paymentLink: 'https://buy.stripe.com/4gw9CRcXz1aT2Zi5kB' },
   { id: 7, name: 'MR Bröstrygg', price: '4 100kr', paymentLink: 'https://buy.stripe.com/00gbKZ2iVg5N6bu8x1' },
   { id: 8, name: 'MR Höger Fot', price: '3 900kr', paymentLink: 'https://buy.stripe.com/eVa2ap5v74n58jC9AS' },
   { id: 9, name: 'MR Vänster Fot', price: '3 900kr', paymentLink: 'https://buy.stripe.com/14k16l4r34n5bvO7sA' },
@@ -31,7 +32,8 @@ const services = [
   { id: 32, name: 'MR Vänster Underarm', price: '3 900kr', paymentLink: 'https://buy.stripe.com/dR616l6zb6vd6bu3ce' },
   { id: 33, name: 'MR Höger Handled', price: '3 900kr', paymentLink: 'https://buy.stripe.com/7sI6qFcXzf1JczSeVi' },
   { id: 34, name: 'MR Vänster Handled', price: '3 900kr', paymentLink: 'https://buy.stripe.com/fZe8yN0aNaLtgQ85kl' },
-
+  { id: 35, name: 'MR Buk', price: '7200kr', paymentLink: 'https://buy.stripe.com/bJe28scmJaQce7mbSP6g82m' },
+  { id: 35, name: 'MR Prostata', price: '7400kr', paymentLink: 'https://buy.stripe.com/00w6oIeuR3nKe7m4qn6g82n' },
 ];
 
 const DynamicForm = () => {

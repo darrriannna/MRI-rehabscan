@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/FeatureOffer.css";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const FeaturesOffer = ({ scrollToScan }) => {
@@ -20,6 +22,17 @@ const FeaturesOffer = ({ scrollToScan }) => {
       text: "Vår läkare kontaktar dig inom 1 arbetsdag efter beställning, därefter skickas remissen direkt.",
     },
   ];
+  const navigate = useNavigate();
+
+  const handleOrderClick = () => {
+    navigate('/bokanu', { state: { serviceName: 'MR Helkropp' } });
+  };
+  const handleScrollClick = () => {
+    if (scrollToScan?.current) {
+      scrollToScan.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 
 
   return (
@@ -35,11 +48,10 @@ const FeaturesOffer = ({ scrollToScan }) => {
         ))}
       </div>
 
-      {/* --- Offer Section --- */}
-      {/* <div className="offer-container">
+      <div className="offer-container">
         <div className="offer-image">
           <img src="/assets/helkropp-img.png" alt="MR Helkropp" />
-          
+
         </div>
 
         <div className="offer-content">
@@ -53,14 +65,15 @@ const FeaturesOffer = ({ scrollToScan }) => {
           </ul>
 
           <div className="offer-pricing">
-            <span className="new-price">18 400 kr</span>
+            <span className="old-price">21 795kr</span>{" "}
+            <span className="new-price">19 200 kr</span>
           </div>
 
           <button className="offer-btn" onClick={handleOrderClick}>Beställ nu →</button>
           <div>
-          <button className="scan-btn" onClick={handleScrollClick}>Vad kan man upptäcka?</button>
-        </div></div>
-      </div> */}
+            <button className="scan-btn" onClick={handleScrollClick}>Vad kan man upptäcka?</button>
+          </div></div>
+      </div>
     </div>
   );
 };

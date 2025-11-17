@@ -29,17 +29,17 @@ const MainInfo = ({ scanRef }) => {
         <h2 className="mr-layout-heading">Privat MR (från 4 100 kr)</h2>
         <ul className="mr-layout-list">
           <li>
-           MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg - 4 100kr
+            MR Ländrygg, Bäcken/höftleder, Nacke/Halsrygg - 4 100kr
           </li>
           <li>MR Helrygg - 9 000kr </li>
         </ul>
         <p className="mr-layout-subheading">För andra undersökningar gå till prislista.</p>
         <Link to="/prislistaMR" className="mr-layout-button-secondary text-center">
-               Gå till Prislista
-              </Link>
-     
+          Gå till Prislista
+        </Link>
+
         <h1 className="mr-layout-heading">MR-Helkropp</h1>
-        
+
         <ul className="mr-layout-list">
           <li>
             MR-Helkroppsröntgen som upptäcker tecken på cancer, stroke,
@@ -48,7 +48,7 @@ const MainInfo = ({ scanRef }) => {
           <li>Få tid inom 1-7 arbetsdagar.</li>
           <li>Innefattar MR scanning av 21 organ.</li>
         </ul>
-        <p className="mr-layout-price">18 400 KR</p>
+        <p className="mr-layout-price">19 200 KR</p>
 
         {/* Buttons now trigger navigation just like in AnimationBody */}
         <button className="mr-layout-button-secondary" onClick={handleLearnMore}>
