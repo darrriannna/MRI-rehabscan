@@ -65,7 +65,7 @@ const FeaturesOffer = ({ scrollToScan }) => {
           </ul>
 
           <div className="offer-pricing">
-            <span className="old-price">21 795kr</span>{" "}
+            <span className="old-price">21 975kr</span>{" "}
             <span className="new-price">19 200 kr</span>
           </div>
 
